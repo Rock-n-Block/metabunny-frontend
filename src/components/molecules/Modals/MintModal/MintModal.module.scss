@@ -1,0 +1,73 @@
+@import '../../../../styles/mixins/media.scss';
+
+.modal {
+  background-color: #000000;
+  padding: 36px 10px 41px;
+  text-align: center;
+  width: 500px;
+  @include b(mobile) {
+    padding: 20px 10px;
+  }
+}
+
+.text {
+  background: linear-gradient(180deg, #000000 0%, rgba(50, 50, 50, 0.85) 100%);
+  border: 2px solid #676767;
+  box-sizing: border-box;
+  box-shadow: inset 0px 0px 7px 0.5px #787878;
+  border-radius: 12px;
+  padding: 12px 18px;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: normal;
+  width: 434px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 43px;
+}
+
+.amountWrapper {
+  display: flex;
+}
+
+.amount {
+  background: #000000;
+  box-sizing: border-box;
+  border: 4px solid #ff1616;
+  border-radius: 12px;
+  padding: 17px 31px;
+  font-family: 'TL', sans-serif;
+  span {
+    min-width: 33px;
+    width: 100%;
+  }
+}
+
+.changeAmount {
+  background: transparent;
+
+  font-family: 'TL', sans-serif;
+  font-size: 50px;
+  line-height: 58px;
+
+  & + .amount {
+    margin-right: 27px;
+    margin-left: 27px;
+  }
+}
+
+.mint {
+  background: #db5555;
+  border: 2px solid #000000;
+  box-sizing: border-box;
+  box-shadow: inset 0px 0px 7px 0.5px #ff1616;
+  border-radius: 12px;
+  padding: 17px 30px;
+  font-family: 'TL', sans-serif;
+  font-size: 22px;
+  line-height: 25px;
+  letter-spacing: 0.2em;
+}

@@ -1,0 +1,65 @@
+@import '../../../styles/mixins/container.scss';
+@import '../../../styles/mixins/media.scss';
+
+.header {
+  background: url('../../../assets/img/sections/landing/header/bg.png') center center no-repeat,
+  #000000;
+  background-size: cover;
+  width: 100%;
+  // transform: translateY(-110px);
+  &_inner {
+    @include container;
+    padding-top: 32px;
+    padding-bottom: 79px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include b(extramobile) {
+      padding: 10px;
+      justify-content: center;
+    }
+  }
+
+  @include b(extramobile) {
+    position: relative;
+    padding: 0;
+  }
+}
+
+.logo {
+  img {
+    width: 60px;
+    height: 60px;
+    @include b(extramobile) {
+      width: 43px;
+      height: 43px;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  @include b(extramobile) {
+    display: none;
+  }
+  .link {
+    font-family: 'TL', sans-serif;
+    font-size: 22px;
+    line-height: 25px;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+  }
+  .link + .link {
+    margin-left: 40px;
+  }
+}
+
+.button {
+  font-family: 'TL', sans-serif;
+  font-size: 22px;
+  line-height: 25px;
+}
