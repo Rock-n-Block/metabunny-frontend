@@ -41,7 +41,10 @@
 }
 
 .amount {
-  padding: 17px 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
 
   box-sizing: border-box;
 

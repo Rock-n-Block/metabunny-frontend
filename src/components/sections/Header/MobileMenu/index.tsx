@@ -7,9 +7,10 @@ import s from './styles.module.scss';
 
 type Props = {
   className?: string;
+  connectWallet: () => void
 };
 
-const MobileMenu: FC<Props> = ({ className }) => {
+const MobileMenu: FC<Props> = ({ className, connectWallet }) => {
   return (
     <div className={cx(s.container, className)}>
       <div className={s.nav}>
@@ -27,7 +28,7 @@ const MobileMenu: FC<Props> = ({ className }) => {
         </a>
       </div>
       <div className={s.footer}>
-        <Button title="Connect Wallet" className={s.button} />
+        <Button title="Connect Wallet" className={s.button} onClick={connectWallet} />
       </div>
     </div>
   );

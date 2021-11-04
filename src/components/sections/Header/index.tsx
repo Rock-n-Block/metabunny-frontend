@@ -178,6 +178,7 @@ const Header: React.FC = () => {
       {isMenuOpen && (
         <MobileMenu
           // toggleMenu={toggleMenu}
+          connectWallet={() => setModal('wallet')}
           className={cn(s.mobileMenu, { [s.mobileMenuOpen]: isMenuOpen })}
         />
       )}
