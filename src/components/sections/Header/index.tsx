@@ -1,13 +1,16 @@
-import React, {  useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import WalletModal from '../../molecules/Modals/WalletModal';
+import cn from 'classnames'
 import s from './Header.module.scss';
 import { useWeb3Context } from '../../../context/WalletConnect';
 import { useModals } from '../../../context/Modal';
 
 import logo from '../../../assets/img/sections/landing/header/logo60x60.png';
 import Button from '../../atoms/Button';
+import Burger from '../../atoms/Burger';
 import { notify } from '../../../utils/notify';
 import { is_production, backendUrl } from '../../../config/index';
+import MobileMenu from './MobileMenu';
 
 function timeToDate(date: string) {
   let secondsToDate = Math.round((+new Date(date) - +new Date(Date.now())) / 1000);
@@ -33,12 +36,13 @@ const PRESALE_DATE_END = '2021-09-19T21:00:00';
 const Header: React.FC = () => {
   const { init, sendEth } = useWeb3Context();
   const { setModal } = useModals();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const toggleMenu = useCallback(() => setIsMenuOpen(!isMenuOpen), [isMenuOpen]);
 
   const [timeBeforeEnd, setTimeBeforeEnd] = useState(timeToDate(PRESALE_DATE_END));
   // const [lastTimerId, setLastTimerId] = useState<Array<NodeJS.Timeout>>([]);
   // const [modalsData, setModalsData] = useState<Array<IMintModalProps>>([]);
 
-  
   // const getInfoAboutTx = useCallback(
   //   async (txHash: string) => {
   //     const headers = await fetch(`${backendUrl}payments/${txHash}/`);
@@ -66,7 +70,6 @@ const Header: React.FC = () => {
   //   [setModal],
   // );
   const mintNft = async (wallet: 'MetaMask' | 'WalletConnect') => {
-
     if (!Object.values(timeBeforeEnd).every((el) => el === 0) && is_production) {
       notify("The presale hasn't started yet", 'error');
       return;
@@ -150,7 +153,8 @@ const Header: React.FC = () => {
     <header className={s.header}>
       <div className={s.header_inner}>
         <div className={s.logo}>
-          <img src={logo} alt="logo" />
+          <Burger className={s.burger} onClick={toggleMenu} isMenuOpen={isMenuOpen} />
+          <img src={logo} alt="logo" className={s.logoImg} />
         </div>
         <div className={s.nav}>
           <a href="#project" className={s.link}>
@@ -169,6 +173,12 @@ const Header: React.FC = () => {
         <Button title="Connect wallet" className={s.button} onClick={() => setModal('wallet')} />
       </div>
       <WalletModal mintNft={mintNft} />
+      {isMenuOpen && (
+        <MobileMenu
+          // toggleMenu={toggleMenu}
+          className={cn(s.mobileMenu, { [s.mobileMenuOpen]: isMenuOpen })}
+        />
+      )}
     </header>
   );
 };

@@ -7,14 +7,6 @@
   background-size: 100% 60%;
   padding-top: 81px;
   margin-top: 140px;
-  // display: flex;
-  // justify-content: space-between;
-  // align-items: center;
-  // grid-template-columns: 1fr 1fr;
-  // padding-bottom: 100px;
-  // max-width: 1130px;
-  // padding: 0 15px;
-  // margin: 0 auto;
   @include b(mobile) {
     flex-wrap: wrap-reverse;
     justify-content: center;
@@ -32,6 +24,16 @@
 .teammates {
   display: flex;
   margin-top: 80px;
+  @include b(mobile) {
+    display: none;
+  }
+  &Mobile {
+    display: none;
+    @include b(mobile) {
+      display: block;
+      margin-top: 33px;
+    }
+  }
 }
 
 .teammate {
@@ -73,6 +75,8 @@
   }
   @include b(mobile) {
     text-align: center;
+    font-size: 25px;
+    line-height: 29px;
   }
 }
 
@@ -94,4 +98,8 @@
   & + & {
     margin-top: 25px;
   }
+}
+
+.slide {
+  max-width: 100vw;
 }

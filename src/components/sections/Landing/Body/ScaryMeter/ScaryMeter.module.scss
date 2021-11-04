@@ -27,7 +27,7 @@
   justify-content: center;
   align-items: center;
   grid-template-columns: 1fr 1fr;
-  @include b(mobile){
+  @include b(mobile) {
     flex-direction: column;
   }
 }
@@ -36,8 +36,16 @@
   display: flex;
   align-items: center;
   margin-right: 27px;
-  @include b(mobile){
+  @include b(mobile) {
     flex-direction: column;
+  }
+}
+
+.right {
+  @include b(mobile) {
+    .image {
+      width: 100%;
+    }
   }
 }
 
@@ -57,14 +65,22 @@
   }
   @include b(mobile) {
     text-align: center;
+    font-size: 25px;
+    line-height: 29px;
   }
 }
 
 .levels {
   display: flex;
   flex-direction: column;
-  @include b(mobile){
-    flex-direction: row;
+  &Mobile {
+    display: none;
+    @include b(mobile) {
+      display: block;
+    }
+  }
+  @include b(mobile) {
+    display: none;
   }
 }
 
@@ -78,6 +94,10 @@
   &.active {
     background: #ea3b3b;
   }
+  @include b(mobile) {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
 
 .description {
@@ -90,6 +110,11 @@
   margin-left: 26px;
   max-height: 374px;
   max-width: 374px;
+  @include b(mobile) {
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
 
 .subtitle {
@@ -105,7 +130,10 @@
   }
 }
 
-.right {
+.slider {
+  margin-top: 36px;
+  margin-bottom: 39px;
+  max-width: 100vw;
 }
 
 .head {
@@ -119,6 +147,11 @@
   position: relative;
   margin-bottom: 17px;
   height: 42px;
+  @include b(mobile) {
+    justify-content: flex-start;
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
 
 .price {

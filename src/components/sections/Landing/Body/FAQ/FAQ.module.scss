@@ -14,8 +14,9 @@
   }
 
   @include b(mobile) {
-    padding: 0 15px;
+    padding: 0;
     padding-bottom: 75px;
+    background: none;
   }
 }
 
@@ -32,13 +33,16 @@
   margin: 0 auto;
   margin-top: 357px;
   @include b(mobile) {
-    font-size: 50px;
+    font-size: 25px;
+    line-height: 29px;
+    margin-top: 40px;
   }
 }
 
 .faqs {
   margin-top: 80px;
   @include b(mobile) {
+    padding: 0 15px;
     margin-top: 40px;
   }
 }
@@ -87,5 +91,12 @@
       opacity: 1;
       max-height: 500px;
     }
+  }
+}
+
+.background {
+  width: 100%;
+  @media (min-width: 768px) {
+    display: none;
   }
 }

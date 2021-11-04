@@ -3,6 +3,7 @@ import cn from 'classnames';
 
 import s from './Nfts.module.scss';
 import Button from '../../../../atoms/Button';
+import SimpleSlider from '../../../../atoms/Carousel';
 import { useState } from 'react';
 
 const pages = ['08', '09', '10', '11', '12', '13', '14', '15'];
@@ -24,6 +25,18 @@ const Nfts: React.FC = () => {
             <img src={bunny} alt="bunny" className={s.image} />
           </div>
         ))}
+      </div>
+      <div className={s.nftsMobile}>
+        <SimpleSlider classNameProp={s.slide}>
+          {[1, 2, 3].map((item: number) => (
+            <div className={s.nft}>
+              <div className={s.head}>
+                <p className={s.number}>NFT #{item}</p>
+              </div>
+              <img src={bunny} alt="bunny" className={s.image} />
+            </div>
+          ))}
+        </SimpleSlider>
       </div>
       <div className={s.pages}>
         {pages.map((page: string) => (

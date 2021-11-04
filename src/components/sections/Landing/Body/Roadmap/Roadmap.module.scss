@@ -15,10 +15,7 @@
   padding: 105px 170px 0;
   position: relative;
   @include b(mobile) {
-    padding-top: 0px;
-  }
-  @include b(tablet) {
-    padding-bottom: 50px;
+    padding: 0px 15px;
   }
   &_body {
     display: flex;
@@ -40,8 +37,14 @@
   margin: 234px auto 0;
 
   @include b(tablet) {
+    margin-top: 60px;
     font-size: 50px;
     margin-bottom: 20px;
+  }
+
+  @include b(mobile) {
+    font-size: 25px;
+    line-height: 29px;
   }
 }
 

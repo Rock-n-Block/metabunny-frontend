@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import bg from '../../../../../assets/img/sections/landing/body/faq.png';
 import s from './FAQ.module.scss';
 
 import cn from 'classnames';
@@ -92,6 +92,7 @@ const FaqData = [
 const FAQ: React.FC = () => {
   return (
     <section className={s.section} id="faq">
+    <img src={bg} alt="background" className={s.background} />
       <div className={s.section_inner}>
         <div className={s.title}>FAQ</div>
         <div className={s.faqs}>

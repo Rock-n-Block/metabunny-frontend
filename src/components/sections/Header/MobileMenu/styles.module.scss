@@ -1,0 +1,62 @@
+@import '../../../../styles/mixins/media';
+
+.container {
+  padding: 50px 30px 30px 30px;
+  background: url('../../../../assets/img/sections/landing/header/bg.png') 0 0 no-repeat,
+    url('../../../../assets/img/sections/landing/body/bg_upside.png') bottom no-repeat, #000000;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: -webkit-fill-available;
+  z-index: 9;
+  padding: 119px 44px 85px;
+  // border-bottom: 1px solid $color-neutral-80;
+}
+
+.container .connectBtn > p {
+  font-size: 20px;
+}
+
+.bottomText {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  @include b(extramobile) {
+    align-items: flex-start;
+  }
+  .link {
+    font-family: 'TL', sans-serif;
+    font-size: 22px;
+    line-height: 25px;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+  }
+  .link + .link {
+    margin-top: 40px;
+  }
+}
+
+.footer {
+  background: url('../../../../assets/img/sections/landing/body/bg_upside.png') bottom 0 no-repeat,
+    #000000;
+  background-size: contain;
+}
+
+.button {
+  font-family: 'TL', sans-serif;
+  font-size: 22px;
+  line-height: 25px;
+  margin: 277px auto 0;
+}

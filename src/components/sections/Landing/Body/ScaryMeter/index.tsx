@@ -2,6 +2,7 @@ import { useState } from 'react';
 import cn from 'classnames';
 import s from './ScaryMeter.module.scss';
 import Button from '../../../../atoms/Button';
+import SimpleSlider from '../../../../atoms/Carousel';
 import bunny from '../../../../../assets/img/sections/landing/body/bunny1.png';
 
 const levels = [
@@ -58,6 +59,20 @@ const ScaryMeter: React.FC = () => {
                 insideShadow
               />
             ))}
+          </div>
+          <div className={s.levelsMobile}>
+            <SimpleSlider classNameProp={s.slider} slidesToShow={1}>
+              {levels.map((level: any) => {
+                return (
+                  <Button
+                    title={level.title}
+                    className={cn(s.level, { [s.active]: level.key === activeLevel.key })}
+                    onClick={() => handleLevel(level)}
+                    insideShadow
+                  />
+                );
+              })}
+            </SimpleSlider>
           </div>
           <div className={s.description}>{activeLevel.descr}</div>
         </div>

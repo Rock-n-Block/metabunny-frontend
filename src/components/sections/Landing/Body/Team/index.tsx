@@ -1,5 +1,6 @@
 import s from './Team.module.scss';
 import ellipse from '../../../../../assets/img/sections/landing/body/ellipse.png';
+import SimpleSlider from '../../../../atoms/Carousel';
 
 const teammates = [
   {
@@ -35,6 +36,17 @@ const Team: React.FC = () => {
               <span className={s.description}>{teammate.descr}</span>
             </div>
           ))}
+        </div>
+        <div className={s.teammatesMobile}>
+          <SimpleSlider classNameProp={s.slide}>
+            {teammates.map((teammate: any) => (
+              <div className={s.teammate}>
+                <img src={teammate.avatar} alt="avatar" className={s.avatar} />
+                <span className={s.name}>{teammate.name}</span>
+                <span className={s.description}>{teammate.descr}</span>
+              </div>
+            ))}
+          </SimpleSlider>
         </div>
       </div>
     </section>

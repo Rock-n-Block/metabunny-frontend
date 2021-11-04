@@ -1,9 +1,9 @@
 @import '../../../../styles/mixins/media.scss';
 
 .block {
-//   background: url('../../../../assets/img/sections/landing/first-block/bg.png') center 0 no-repeat;
-//   // #4F4F4F;
-//   background-size: contain;
+  //   background: url('../../../../assets/img/sections/landing/first-block/bg.png') center 0 no-repeat;
+  //   // #4F4F4F;
+  //   background-size: contain;
   // height: 100vh;
   // height: 100%;
   // width: 100%;
@@ -43,11 +43,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   position: absolute;
-  top: -150px;
-  left: calc(50% - 313px);
-  .overview {
-    transform: translate(-29px, -56px);
+  top: -70px;
+  svg {
+    position: absolute;
+    top: -80px;
+    @include b(extramobile){
+      // top: -50px;
+      width: 50px;
+    }
+  }
+  @include b(extramobile){
+    width: 100%;
+    // top: -30px;
   }
 }
 
