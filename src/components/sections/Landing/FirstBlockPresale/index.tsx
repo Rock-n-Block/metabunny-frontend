@@ -1,17 +1,16 @@
 import { useCallback, useEffect, useState } from 'react';
 
-import { useWeb3Context } from '../../../../context/WalletConnect';
-import { useModals } from '../../../../context/Modal';
-import { notify } from '../../../../utils/notify';
-import WalletModal from '../../../molecules/Modals/WalletModal/index';
-import MintModal, { IMintModalProps } from '../../../molecules/Modals/MintModal/index';
-import { is_production, backendUrl } from '../../../../config/index';
-
-import s from './FirstBlockPresale.module.scss';
-
+import cosmo from '../../../../assets/img/sections/landing/first-block-presale/cosmo-nft.png';
 import devil from '../../../../assets/img/sections/landing/first-block-presale/devil-nft.png';
 import light from '../../../../assets/img/sections/landing/first-block-presale/lightning-nft.png';
-import cosmo from '../../../../assets/img/sections/landing/first-block-presale/cosmo-nft.png';
+import { backendUrl, is_production } from '../../../../config/index';
+import { useModals } from '../../../../context/Modal';
+import { useWeb3Context } from '../../../../context/WalletConnect';
+import { notify } from '../../../../utils/notify';
+import MintModal, { IMintModalProps } from '../../../molecules/Modals/MintModal/index';
+import WalletModal from '../../../molecules/Modals/WalletModal/index';
+
+import s from './FirstBlockPresale.module.scss';
 
 function timeToDate(date: string) {
   let secondsToDate = Math.round((+new Date(date) - +new Date(Date.now())) / 1000);

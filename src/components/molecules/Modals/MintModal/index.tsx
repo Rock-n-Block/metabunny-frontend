@@ -1,8 +1,9 @@
-import ModalWrapper from '../Modal';
+import { useState } from 'react';
+
 import { useModals } from '../../../../context/Modal';
+import ModalWrapper from '../Modal';
 
 import s from './MintModal.module.scss';
-import { useState } from 'react';
 
 export interface IMintModalProps {
   type: 'COMMON' | 'LEGENDARY';

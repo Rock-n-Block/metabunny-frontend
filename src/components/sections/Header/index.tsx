@@ -1,16 +1,18 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import WalletModal from '../../molecules/Modals/WalletModal';
-import cn from 'classnames'
-import s from './Header.module.scss';
-import { useWeb3Context } from '../../../context/WalletConnect';
-import { useModals } from '../../../context/Modal';
+import cn from 'classnames';
 
 import logo from '../../../assets/img/sections/landing/header/logo60x60.png';
-import Button from '../../atoms/Button';
-import Burger from '../../atoms/Burger';
+import { backendUrl, is_production } from '../../../config/index';
+import { useModals } from '../../../context/Modal';
+import { useWeb3Context } from '../../../context/WalletConnect';
 import { notify } from '../../../utils/notify';
-import { is_production, backendUrl } from '../../../config/index';
+import Burger from '../../atoms/Burger';
+import Button from '../../atoms/Button';
+import WalletModal from '../../molecules/Modals/WalletModal';
+
 import MobileMenu from './MobileMenu';
+
+import s from './Header.module.scss';
 
 function timeToDate(date: string) {
   let secondsToDate = Math.round((+new Date(date) - +new Date(Date.now())) / 1000);

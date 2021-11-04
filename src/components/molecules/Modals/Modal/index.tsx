@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import cn from 'classnames';
 
-import s from './Modal.module.scss';
+import { ReactComponent as Cross } from '../../../../assets/img/icons/cross.svg';
 
-import {ReactComponent as Cross} from '../../../../assets/img/icons/cross.svg';
+import s from './Modal.module.scss';
 
 interface IModalWrapperProps {
   isActive: boolean;

@@ -1,8 +1,9 @@
 import { FC } from 'react';
 import cx from 'classnames';
 
-import s from './styles.module.scss';
 import Button from '../../../atoms/Button';
+
+import s from './styles.module.scss';
 
 type Props = {
   className?: string;

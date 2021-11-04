@@ -1,6 +1,7 @@
-import s from './Project.module.scss';
 import bunny from '../../../../../assets/img/sections/landing/first-block/bg.png';
-import bg from '../../../../../assets/img/sections/landing/mint/bg.png'
+import bg from '../../../../../assets/img/sections/landing/mint/bg.png';
+
+import s from './Project.module.scss';
 
 const Project: React.FC = () => {
   return (

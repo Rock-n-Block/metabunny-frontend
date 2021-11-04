@@ -1,6 +1,7 @@
-import s from './Team.module.scss';
 import ellipse from '../../../../../assets/img/sections/landing/body/ellipse.png';
 import SimpleSlider from '../../../../atoms/Carousel';
+
+import s from './Team.module.scss';
 
 const teammates = [
   {

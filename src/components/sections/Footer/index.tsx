@@ -1,4 +1,5 @@
 import Button from '../../atoms/Button';
+
 import s from './Footer.module.scss';
 
 const Footer: React.FC = () => {

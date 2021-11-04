@@ -1,12 +1,15 @@
 .button {
-  background: #000000;
-  border: 2px solid #db5555;
-  box-sizing: border-box;
-  box-shadow: 0px 0px 20px 2px #ff1616;
-  border-radius: 12px;
   padding: 17px 30px;
+
+  box-sizing: border-box;
+
+  background: #000;
+  border: 2px solid #db5555;
+  border-radius: 12px;
+  box-shadow: 0 0 20px 2px #ff1616;
+
   &.insideShadow {
-    box-shadow: inset 0px 0px 7px 0.5px #ff1616;
+    box-shadow: inset 0 0 7px 0.5px #ff1616;
   }
 
   // &.transparent {

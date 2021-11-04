@@ -1,7 +1,7 @@
 import React, { FC, PropsWithChildren, useCallback, useState } from 'react';
+import nextId from 'react-id-generator';
 import Slider, { ResponsiveObject } from 'react-slick';
 import cx from 'classnames';
-import nextId from 'react-id-generator';
 
 import styles from './styles.module.scss';
 
@@ -58,7 +58,7 @@ const SimpleSlider: FC<PropsWithChildren<Props>> = ({
       <div className={cx(styles.indicator, { [styles.active]: i === activeSlideIndex })} />
     ),
     arrows: false,
-    centerMode: true, 
+    centerMode: true,
     beforeChange: handleBeforeChange,
     afterChange: handleAfterChange,
     responsive,

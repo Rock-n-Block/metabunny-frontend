@@ -1,4 +1,3 @@
-
 .slide {
   margin: 0 auto;
 }
@@ -95,6 +94,7 @@
 .slick-slide {
   img {
     display: block;
+
     width: 100%;
   }
 
@@ -110,6 +110,7 @@
 .slick-initialized .slick-slide {
   display: flex;
   justify-content: center;
+
   & > * {
     &:first-child {
       width: 100%;

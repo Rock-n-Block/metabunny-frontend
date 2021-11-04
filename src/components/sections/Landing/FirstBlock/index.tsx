@@ -1,9 +1,10 @@
-import Button from '../../../atoms/Button';
-import s from './FirstBlock.module.scss';
-import banner from '../../../../assets/img/sections/landing/header/banner.png';
 import { ReactComponent as Meta } from '../../../../assets/img/icons/meta.svg';
-import MintModal from '../../../molecules/Modals/MintModal/index';
+import banner from '../../../../assets/img/sections/landing/header/banner.png';
 import { useModals } from '../../../../context/Modal';
+import Button from '../../../atoms/Button';
+import MintModal from '../../../molecules/Modals/MintModal/index';
+
+import s from './FirstBlock.module.scss';
 
 const FirstBlock: React.FC = () => {
   const { setModal } = useModals();

@@ -1,4 +1,5 @@
 import { toast, ToastOptions } from 'react-toastify';
+
 import 'react-toastify/dist/ReactToastify.css';
 
 export const notify = (msg: string, type: 'success' | 'info' | 'error' = 'info') => {

@@ -2,15 +2,17 @@
 @import '../../../../../styles/mixins/media.scss';
 
 .section {
-  background: url('../../../../../assets/img/sections/landing/header/bg.png') center 0 no-repeat,
-    #000000;
-  background-size: 100% 60%;
-  padding-top: 81px;
   margin-top: 140px;
+  padding-top: 81px;
+
+  background: url('../../../../../assets/img/sections/landing/header/bg.png') center 0 no-repeat,
+    #000;
+  background-size: 100% 60%;
   @include b(mobile) {
-    flex-wrap: wrap-reverse;
-    justify-content: center;
     padding-bottom: 50px;
+
+    justify-content: center;
+    flex-wrap: wrap-reverse;
   }
 }
 
@@ -22,16 +24,19 @@
 }
 
 .teammates {
-  display: flex;
   margin-top: 80px;
+
+  display: flex;
   @include b(mobile) {
     display: none;
   }
+
   &Mobile {
     display: none;
     @include b(mobile) {
-      display: block;
       margin-top: 33px;
+
+      display: block;
     }
   }
 }
@@ -41,60 +46,72 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   & + & {
     margin-left: 112px;
   }
 }
 
 .avatar {
+  margin-bottom: 20px;
+
   width: 100%;
   max-width: 214px;
-  margin-bottom: 20px;
 }
 
 .name {
+  margin-bottom: 10px;
+
   font-family: 'TL', sans-serif;
   font-size: 22px;
   line-height: 32px;
-  margin-bottom: 10px;
 }
 
 .title {
-  background: #000000;
-  box-sizing: border-box;
-  border: 4px solid #ff1616;
-  border-radius: 12px;
+  margin: 0 auto;
   padding: 17px 30px;
+
+  box-sizing: border-box;
+  width: fit-content;
+
+  font-family: 'TL', sans-serif;
   font-size: 50px;
   line-height: 58px;
-  font-family: 'TL', sans-serif;
-  width: fit-content;
-  margin: 0 auto;
+
+  background: #000;
+  border: 4px solid #ff1616;
+  border-radius: 12px;
   @include b(tablet) {
     font-size: 50px;
   }
   @include b(mobile) {
-    text-align: center;
     font-size: 25px;
     line-height: 29px;
+    text-align: center;
   }
 }
 
 .description {
+  max-width: 236px;
+
   font-size: 16px;
   line-height: 20px;
   text-align: center;
-  max-width: 236px;
 }
 
 .subtitle {
   max-width: 500px;
+
   line-height: 1.5;
+
   transition-delay: 1s !important;
+
   span {
     font-weight: 700;
+
     color: #fd7d48;
   }
+
   & + & {
     margin-top: 25px;
   }

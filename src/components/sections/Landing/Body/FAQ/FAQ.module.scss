@@ -1,11 +1,13 @@
 @import '../../../../../styles/mixins/media.scss';
 
 .section {
+  margin-top: 139px;
+  padding: 120px;
+
   background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7)),
     url('../../../../../assets/img/sections/landing/body/faq.png') center 0 no-repeat;
   background-size: 100% 818px;
-  padding: 120px;
-  margin-top: 139px;
+
   &_inner {
     display: flex;
     flex-direction: column;
@@ -16,62 +18,77 @@
   @include b(mobile) {
     padding: 0;
     padding-bottom: 75px;
+
     background: none;
   }
 }
 
 .title {
-  background: #000000;
-  box-sizing: border-box;
-  border: 4px solid #ff1616;
-  border-radius: 12px;
-  padding: 17px 30px;
-  font-size: 50px;
-  line-height: 58px;
-  font-family: 'TL', sans-serif;
-  width: fit-content;
   margin: 0 auto;
   margin-top: 357px;
+  padding: 17px 30px;
+
+  box-sizing: border-box;
+  width: fit-content;
+
+  font-family: 'TL', sans-serif;
+  font-size: 50px;
+  line-height: 58px;
+
+  background: #000;
+  border: 4px solid #ff1616;
+  border-radius: 12px;
   @include b(mobile) {
+    margin-top: 40px;
+
     font-size: 25px;
     line-height: 29px;
-    margin-top: 40px;
   }
 }
 
 .faqs {
   margin-top: 80px;
   @include b(mobile) {
-    padding: 0 15px;
     margin-top: 40px;
+    padding: 0 15px;
   }
 }
 
 .item {
-  cursor: pointer;
-  overflow: hidden;
   padding: 12px 18px;
-  background: linear-gradient(180deg, #000000 0%, rgba(50, 50, 50, 0.85) 100%);
-  border: 2px solid #676767;
+
+  overflow: hidden;
+
   box-sizing: border-box;
-  box-shadow: inset 0px 0px 7px 0.5px #787878;
-  border-radius: 12px;
-  transition: 0.4s linear;
   max-width: 1000px;
+
+  cursor: pointer;
+
+  background: linear-gradient(180deg, #000 0%, rgba(50, 50, 50, 0.85) 100%);
+  border: 2px solid #676767;
+  border-radius: 12px;
+  box-shadow: inset 0 0 7px 0.5px #787878;
+
+  transition: 0.4s linear;
+
   &Active {
     background: linear-gradient(180deg, #780a0a 0%, rgba(0, 0, 0, 0.85) 100%);
   }
   @include b(mobile) {
     max-width: 100%;
   }
+
   & + & {
     margin-top: 10px;
   }
+
   &_title {
     font-family: 'MSR', sans-serif;
     font-size: 18px;
-    transition: 0.4s ease;
     line-height: 32px;
+
+    transition: 0.4s ease;
+
     &Active {
       font-weight: bold;
     }
@@ -79,17 +96,24 @@
       font-size: 30px;
     }
   }
+
   &_subtitle {
-    max-height: 0px;
-    opacity: 0;
+    max-height: 0;
+
     font-size: 18px;
-    line-height: 32px;
-    transition: 0.4s ease;
     font-weight: normal;
+    line-height: 32px;
+
+    opacity: 0;
+
+    transition: 0.4s ease;
+
     &.active {
       margin-top: 10px;
-      opacity: 1;
+
       max-height: 500px;
+
+      opacity: 1;
     }
   }
 }

@@ -1,10 +1,10 @@
-import Project from './Project/index';
-import ScaryMeter from './ScaryMeter/index';
-import Nfts from './Nfts/index';
-import FAQ from './FAQ/index';
 import Community from './Community/index';
-import Team from './Team/index';
+import FAQ from './FAQ/index';
+import Nfts from './Nfts/index';
+import Project from './Project/index';
 import Roadmap from './Roadmap/index';
+import ScaryMeter from './ScaryMeter/index';
+import Team from './Team/index';
 
 import s from './Body.module.scss';
 

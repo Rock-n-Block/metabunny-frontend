@@ -2,20 +2,22 @@
 
 .wrapper {
   background: url('../../../../assets/img/sections/landing/header/bg.png') center center no-repeat,
-    #000000;
+    #000;
   background-size: cover;
 }
 
 .modal {
   padding: 20px 36px 43px;
+
   text-align: center;
 }
 
 .title {
-  font-weight: 500;
-  font-size: 34px;
-  line-height: 41px;
   margin-bottom: 10px;
+
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 41px;
 }
 
 .subtitle {
@@ -24,27 +26,34 @@
 }
 
 .wallet {
-  background: #000000;
-  border: 2px solid #db5555;
-  box-sizing: border-box;
-  box-shadow: 0px 0px 20px 2px #ff1616;
-  border-radius: 12px;
-  padding: 17px 30px;
-  min-width: 330px;
   margin-top: 30px;
-  @include b(extramobile) {
-    min-width: 250px;
-  }
+  padding: 17px 30px;
+  padding: 16px 28px;
+
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+  min-width: 330px;
+
   text-align: left;
+
+  background: #000;
+  border: 2px solid #db5555;
+  border-radius: 12px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 2px #ff1616;
+
   transition: 0.4s ease;
+
   &:hover {
     background: #727171;
   }
-  border-radius: 10px;
-  padding: 16px 28px;
-  display: flex;
-  align-items: center;
+
   &_icon {
     margin-right: 30px;
+  }
+  @include b(extramobile) {
+    min-width: 250px;
   }
 }

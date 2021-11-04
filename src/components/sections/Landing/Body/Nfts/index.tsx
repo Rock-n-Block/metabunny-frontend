@@ -1,10 +1,11 @@
-import bunny from '../../../../../assets/img/sections/landing/body/bunny1.png';
+import { useState } from 'react';
 import cn from 'classnames';
 
-import s from './Nfts.module.scss';
+import bunny from '../../../../../assets/img/sections/landing/body/bunny1.png';
 import Button from '../../../../atoms/Button';
 import SimpleSlider from '../../../../atoms/Carousel';
-import { useState } from 'react';
+
+import s from './Nfts.module.scss';
 
 const pages = ['08', '09', '10', '11', '12', '13', '14', '15'];
 

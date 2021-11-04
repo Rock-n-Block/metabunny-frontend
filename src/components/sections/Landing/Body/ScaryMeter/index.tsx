@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import cn from 'classnames';
-import s from './ScaryMeter.module.scss';
+
+import bunny from '../../../../../assets/img/sections/landing/body/bunny1.png';
 import Button from '../../../../atoms/Button';
 import SimpleSlider from '../../../../atoms/Carousel';
-import bunny from '../../../../../assets/img/sections/landing/body/bunny1.png';
+
+import s from './ScaryMeter.module.scss';
 
 const levels = [
   {

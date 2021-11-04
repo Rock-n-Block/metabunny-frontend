@@ -1,5 +1,6 @@
-import s from './Roadmap.module.scss';
 import cn from 'classnames';
+
+import s from './Roadmap.module.scss';
 
 const stages = [
   { title: '10%', descr: 'To be revealed' },

@@ -1,11 +1,11 @@
 import React from 'react';
-import ModalWrapper from '../Modal';
-import { useModals } from '../../../../context/Modal';
-
-import s from './WalletModal.module.scss';
 
 import metamask from '../../../../assets/img/icons/metamask.svg';
 import walletconnect from '../../../../assets/img/icons/walletconnect.svg';
+import { useModals } from '../../../../context/Modal';
+import ModalWrapper from '../Modal';
+
+import s from './WalletModal.module.scss';
 
 interface IWalletModalProps {
   mintNft?: (wallet: 'MetaMask' | 'WalletConnect') => void;

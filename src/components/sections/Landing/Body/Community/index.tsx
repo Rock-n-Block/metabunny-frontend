@@ -1,5 +1,6 @@
-import s from './Community.module.scss';
 import bunny from '../../../../../assets/img/sections/landing/body/bunny2.png';
+
+import s from './Community.module.scss';
 
 const Community: React.FC = () => {
   return (

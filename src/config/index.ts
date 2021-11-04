@@ -6,12 +6,9 @@ export const show_logs = true;
 
 export const is_presale = false;
 
-export const open_sea_link =
-  '';
+export const open_sea_link = '';
 
-export const backendUrl = is_production
-  ? ''
-  : '';
+export const backendUrl = is_production ? '' : '';
 
 export const chain: IChainConfig = {
   name: is_production ? 'Ethereum Mainnet' : 'Ethereum Testnet Rinkeby',
