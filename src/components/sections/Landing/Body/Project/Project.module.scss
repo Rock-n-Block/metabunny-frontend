@@ -7,7 +7,7 @@
 }
 
 .block {
-  padding-top: 61px;
+  padding: 61px 170px 0;
 
   background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.85)),
     url('../../../../../assets/img/sections/landing/mint/bg.png') center center no-repeat;
@@ -20,6 +20,7 @@
 
   @include b(mobile) {
     background: none;
+    padding: 61px 0 0 0;
   }
 
   &_inner {
@@ -111,7 +112,7 @@
 }
 
 .title {
-  padding: 17px 30px;
+  padding: 17px 45px;
 
   box-sizing: border-box;
   width: fit-content;

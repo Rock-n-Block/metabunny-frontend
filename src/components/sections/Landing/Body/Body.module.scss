@@ -2,4 +2,8 @@
 
 .block {
   transform: translateY(-50px);
+
+  @include b(mobile){
+    width: 100vw;
+  }
 }

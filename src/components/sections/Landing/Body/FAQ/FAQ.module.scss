@@ -107,6 +107,9 @@
     }
     @include b(mobile) {
       font-size: 30px;
+      .arrow {
+        right: -10px;
+      }
     }
   }
 
