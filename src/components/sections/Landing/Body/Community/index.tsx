@@ -7,9 +7,6 @@ const Community: React.FC = () => {
     <section className={s.section}>
       <div className={s.content}>
         <div className={s.left}>
-          <img src={bunny} alt="bunny" className={s.image} />
-        </div>
-        <div className={s.right}>
           <div className={s.title}>Community</div>
           <div className={s.text}>
             We are a group of people that love games and fun, so we want the community to be like
@@ -19,6 +16,9 @@ const Community: React.FC = () => {
             the member ranked 1st as well as the most participated member of each month will receive
             a special 1 of 1 Metabunny
           </div>
+        </div>
+        <div className={s.right}>
+          <img src={bunny} alt="bunny" className={s.image} />
         </div>
       </div>
     </section>

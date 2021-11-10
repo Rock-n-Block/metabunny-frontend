@@ -1,9 +1,6 @@
 @import '../../../../../styles/mixins/media.scss';
 
 .section {
-  margin-top: 139px;
-  padding: 120px;
-
   background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7)),
     url('../../../../../assets/img/sections/landing/body/faq.png') center 0 no-repeat;
   background-size: 100% 818px;
@@ -88,9 +85,25 @@
     line-height: 32px;
 
     transition: 0.4s ease;
+    position: relative;
+
+    .arrow {
+      position: absolute;
+      top: calc(50% - 7px / 2);
+      right: 18px;
+      transition: 0.5s;
+    }
 
     &Active {
       font-weight: bold;
+
+      .arrow {
+        position: absolute;
+        top: calc(50% - 7px / 2);
+        right: 18px;
+        // transform: rotate(180deg);
+        transition: 0.5s;
+      }
     }
     @include b(mobile) {
       font-size: 30px;

@@ -5,9 +5,9 @@
   margin-top: 140px;
   padding-top: 81px;
 
-  background: url('../../../../../assets/img/sections/landing/header/bg.png') center 0 no-repeat,
+  background: url('../../../../../assets/img/sections/landing/body/roadmap.png') center 0 no-repeat,
     #000;
-  background-size: 100% 60%;
+  background-size: cover;
   @include b(mobile) {
     padding-bottom: 50px;
 
@@ -27,6 +27,8 @@
   margin-top: 80px;
 
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   @include b(mobile) {
     display: none;
   }

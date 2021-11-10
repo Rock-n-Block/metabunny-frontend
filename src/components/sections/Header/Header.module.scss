@@ -3,20 +3,26 @@
 
 .header {
   width: 100%;
-
-  background: url('../../../assets/img/sections/landing/header/bg.png') center center no-repeat,
-    #000;
-  background-size: cover;
+  position: absolute;
+  background: url('../../../assets/img/sections/landing/header/bg.png') center 0 no-repeat,
+    transparent;
+  background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
   // transform: translateY(-110px);
+  // height: 331px;
   &_inner {
     @include container;
     padding-top: 32px;
     padding-bottom: 79px;
+    width: -webkit-fill-available;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @include b(extramobile) {
+    @include b(mobile) {
+      justify-content: center;
     }
   }
 
@@ -28,18 +34,68 @@
 }
 
 .logo {
+  display: flex;
   .logoImg {
-    width: 60px;
-    height: 60px;
+    // width: 60px;
+    // height: 60px;
     @include b(mobile) {
       display: none;
     }
   }
 }
 
+.bannerWrapper {
+  position: relative;
+  display: flex;
+  @include b(mobile) {
+    display: none;
+  }
+  &Mobile {
+    display: none;
+
+    @include b(mobile) {
+      display: flex;
+      .banner {
+        margin: 0 auto;
+        width: fit-content;
+      }
+    }
+    @include b(extramobile) {
+      .banner {
+        margin: 0 auto;
+        width: 50%;
+      }
+    }
+  }
+}
+
+.banner {
+  margin: 0 auto;
+  width: 27%;
+}
+
+.bannerButton {
+  position: absolute;
+  bottom: -108px;
+  left: calc(50% - 171px / 2);
+  padding: 16px 32px;
+  font-size: 39.2562px;
+  line-height: 45px;
+  font-family: 'TL', sans-serif;
+  letter-spacing: 0.2em;
+
+  @include b(mobile) {
+    bottom: 0;
+    left: calc(50% - 133px / 2);
+    font-size: 25px;
+    line-height: 29px;
+  }
+}
+
 .nav {
   display: flex;
   align-items: center;
+  margin-left: 30px;
   @include b(mobile) {
     display: none;
   }
@@ -47,7 +103,6 @@
   .link {
     font-family: 'TL', sans-serif;
     font-size: 22px;
-    font-size: 14px;
     line-height: 25px;
     text-decoration: none;
     text-transform: uppercase;
@@ -55,10 +110,39 @@
     cursor: pointer;
 
     color: #fff;
+
+    @include b(tablet) {
+      font-size: 16px;
+      line-height: 19px;
+    }
   }
 
   .link + .link {
     margin-left: 40px;
+
+    @include b(tablet) {
+      margin-left: 20px;
+    }
+  }
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  @include b(mobile) {
+    display: none;
+  }
+}
+
+.socials {
+  display: flex;
+  margin-right: 54px;
+  .socialLink + .socialLink {
+    margin-left: 10px;
+  }
+
+  @include b(tablet) {
+    margin-right: 14px;
   }
 }
 
@@ -66,8 +150,10 @@
   font-family: 'TL', sans-serif;
   font-size: 22px;
   line-height: 25px;
-  @include b(mobile) {
-    display: none;
+
+  @include b(tablet) {
+    font-size: 16px;
+    line-height: 19px;
   }
 }
 

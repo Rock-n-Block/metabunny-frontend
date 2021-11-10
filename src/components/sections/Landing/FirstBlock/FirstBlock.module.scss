@@ -7,7 +7,12 @@
   // height: 100vh;
   // height: 100%;
   // width: 100%;
-
+  transform: translateY(-50px);
+  overflow: hidden;
+  position: relative;
+  @include b(mobile){
+    transform: none;
+  }
   @include b(extramobile) {
     height: 278px;
   }
@@ -18,12 +23,16 @@
   //   background-size: cover;
   // }
 }
-
+.bunny {
+  width: 170%;
+  transform: translateX(-19%);
+  @include b(mobile){
+    width: 100%;
+    transform: none;
+  }
+}
 .block_inner {
   position: relative;
-
-  margin: 100px auto 0;
-  padding-top: 50px;
 
   display: flex;
   flex-direction: column;
@@ -42,42 +51,13 @@
   }
 }
 
-.banner {
-  position: absolute;
-  top: -70px;
-
-  margin: 0 auto;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-
-  svg {
-    position: absolute;
-    top: -80px;
-    @include b(extramobile) {
-      // top: -50px;
-      width: 50px;
-    }
-  }
-  @include b(extramobile) {
-    width: 100%;
-    // top: -30px;
-  }
-}
-
 .button {
   z-index: 2;
-
-  width: fit-content;
-  height: fit-content;
-
-  font-size: 18.247px;
-  font-weight: bold;
-  line-height: 22px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
+  font-size: 39.2562px;
+  line-height: 45px;
+  position: absolute;
+  font-family: 'TL', sans-serif;
+  top: 30%;
 }
 
 .left {

@@ -12,6 +12,9 @@ type Props = {
   slidesToShow?: number;
   hideArrows?: boolean;
   responsive?: ResponsiveObject[];
+  dots?: boolean;
+  classNameSlide?: string;
+  classNameSlideActive?: string;
 };
 
 const SimpleSlider: FC<PropsWithChildren<Props>> = ({
@@ -19,7 +22,10 @@ const SimpleSlider: FC<PropsWithChildren<Props>> = ({
   children,
   // classNameArrowRight,
   slidesToShow = 1,
-  responsive,
+  // responsive,
+  dots = false,
+  classNameSlide,
+  classNameSlideActive,
 }) => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
@@ -48,11 +54,11 @@ const SimpleSlider: FC<PropsWithChildren<Props>> = ({
   );
 
   const sliderConfig = {
-    dots: false,
+    dots,
     infinite: React.Children.count(children) > 3,
     speed: 400,
     slidesToShow,
-    slidesToScroll: slidesToShow,
+    // slidesToScroll: 1,
     dotsClass: styles.slickDots,
     customPaging: (i: number) => (
       <div className={cx(styles.indicator, { [styles.active]: i === activeSlideIndex })} />
@@ -61,12 +67,17 @@ const SimpleSlider: FC<PropsWithChildren<Props>> = ({
     centerMode: true,
     beforeChange: handleBeforeChange,
     afterChange: handleAfterChange,
-    responsive,
+    // responsive,
   };
+
   return (
     <Slider className={cx(classNameProp)} {...sliderConfig}>
-      {React.Children.map(children, (child) => (
-        <div onClickCapture={handleOnItemClick} key={nextId()}>
+      {React.Children.map(children, (child, index) => (
+        <div
+          onClickCapture={handleOnItemClick}
+          key={nextId()}
+          className={index === activeSlideIndex ? classNameSlideActive : classNameSlide}
+        >
           {child}
         </div>
       ))}

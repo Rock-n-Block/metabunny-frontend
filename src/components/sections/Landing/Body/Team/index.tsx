@@ -22,6 +22,18 @@ const teammates = [
     descr:
       'Text crowdsourced encyclopedia that rewards users for contributing and peer reviewing information. Lunyr was raised almost 48 000 ETH during ICO on April’17. It w',
   },
+  {
+    avatar: ellipse,
+    name: 'Name Name',
+    descr:
+      'Text crowdsourced encyclopedia that rewards users for contributing and peer reviewing information. Lunyr was raised almost 48 000 ETH during ICO on April’17. It w',
+  },
+  {
+    avatar: ellipse,
+    name: 'Name Name',
+    descr:
+      'Text crowdsourced encyclopedia that rewards users for contributing and peer reviewing information. Lunyr was raised almost 48 000 ETH during ICO on April’17. It w',
+  },
 ];
 
 const Team: React.FC = () => {
@@ -39,7 +51,7 @@ const Team: React.FC = () => {
           ))}
         </div>
         <div className={s.teammatesMobile}>
-          <SimpleSlider classNameProp={s.slide}>
+          <SimpleSlider classNameProp={s.slide} dots>
             {teammates.map((teammate: any) => (
               <div className={s.teammate}>
                 <img src={teammate.avatar} alt="avatar" className={s.avatar} />

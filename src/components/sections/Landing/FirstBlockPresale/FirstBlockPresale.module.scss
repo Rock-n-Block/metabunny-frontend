@@ -6,9 +6,9 @@
   height: calc(100vh + 114px);
 
   color: #333;
-  background: url('../../../../assets/img/sections/landing/first-block-presale/bg1.png') 0 0
-      no-repeat,
-    #7876b1;
+  // background: url('../../../../assets/img/sections/landing/first-block-presale/bg1.png') 0 0
+  //     no-repeat,
+  //   #7876b1;
   background-size: cover;
   @include b(mobile) {
     height: 100%;

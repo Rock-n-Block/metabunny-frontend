@@ -1,7 +1,11 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import cn from 'classnames';
 
-import logo from '../../../assets/img/sections/landing/header/logo60x60.png';
+import logo from '../../../assets/img/sections/landing/header/logo.png';
+import disc from '../../../assets/img/sections/landing/header/disc.png';
+import twit from '../../../assets/img/sections/landing/header/twit.png';
+import boat from '../../../assets/img/sections/landing/header/boat.png';
+import banner from '../../../assets/img/sections/landing/header/banner.png';
 import { backendUrl, is_production } from '../../../config/index';
 import { useModals } from '../../../context/Modal';
 import { useWeb3Context } from '../../../context/WalletConnect';
@@ -157,22 +161,43 @@ const Header: React.FC = () => {
         <div className={s.logo}>
           <Burger className={s.burger} onClick={toggleMenu} isMenuOpen={isMenuOpen} />
           <img src={logo} alt="logo" className={s.logoImg} />
+          <div className={s.nav}>
+            <a href="#project" className={s.link}>
+              Project
+            </a>
+            <a href="#roadmap" className={s.link}>
+              Roadmap
+            </a>
+            <a href="#team" className={s.link}>
+              Team
+            </a>
+            <a href="#faq" className={s.link}>
+              Faq
+            </a>
+          </div>
         </div>
-        <div className={s.nav}>
-          <a href="#project" className={s.link}>
-            Project
-          </a>
-          <a href="#roadmap" className={s.link}>
-            Roadmap
-          </a>
-          <a href="#team" className={s.link}>
-            Team
-          </a>
-          <a href="#faq" className={s.link}>
-            Faq
-          </a>
+      <div className={s.bannerWrapperMobile}>
+        <img src={banner} alt="banner" className={s.banner} />
+        <Button title="Mint" className={s.bannerButton} onClick={() => setModal('txHash')} />
+      </div>
+        <div className={s.right}>
+          <div className={s.socials}>
+            <a href="/" className={s.socialLink}>
+              <img src={disc} alt="disc" className={s.logoSoc} />
+            </a>
+            <a href="/" className={s.socialLink}>
+              <img src={twit} alt="twit" className={s.logoSoc} />
+            </a>
+            <a href="/" className={s.socialLink}>
+              <img src={boat} alt="boat" className={s.logoSoc} />
+            </a>
+          </div>
+          <Button title="Connect wallet" className={s.button} onClick={() => setModal('wallet')} />
         </div>
-        <Button title="Connect wallet" className={s.button} onClick={() => setModal('wallet')} />
+      </div>
+      <div className={s.bannerWrapper}>
+        <img src={banner} alt="banner" className={s.banner} />
+        <Button title="Mint" className={s.bannerButton} onClick={() => setModal('txHash')} />
       </div>
       <WalletModal mintNft={mintNft} />
       {isMenuOpen && (

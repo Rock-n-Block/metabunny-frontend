@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useState } from 'react';
 
-import cosmo from '../../../../assets/img/sections/landing/first-block-presale/cosmo-nft.png';
-import devil from '../../../../assets/img/sections/landing/first-block-presale/devil-nft.png';
-import light from '../../../../assets/img/sections/landing/first-block-presale/lightning-nft.png';
+// import cosmo from '../../../../assets/img/sections/landing/first-block-presale/cosmo-nft.png';
+// import devil from '../../../../assets/img/sections/landing/first-block-presale/devil-nft.png';
+// import light from '../../../../assets/img/sections/landing/first-block-presale/lightning-nft.png';
 import { backendUrl, is_production } from '../../../../config/index';
 import { useModals } from '../../../../context/Modal';
 import { useWeb3Context } from '../../../../context/WalletConnect';
@@ -188,7 +188,7 @@ const FirstBlockPresale: React.FC = () => {
       ))}
 
       <div className={s.block_inner}>
-        <div className={s.left}>
+        {/* <div className={s.left}>
           <div className={s.devil}>
             <img src={devil} alt="devil" />
           </div>
@@ -198,7 +198,7 @@ const FirstBlockPresale: React.FC = () => {
           <div className={s.cosmo}>
             <img src={cosmo} alt="cosmo" />
           </div>
-        </div>
+        </div> */}
         <div className={s.right}>
           <div className={`${s.title} anim`}>
             Presale Launch <span>starts in</span>

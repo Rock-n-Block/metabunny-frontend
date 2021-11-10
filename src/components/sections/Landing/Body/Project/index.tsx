@@ -1,4 +1,4 @@
-import bunny from '../../../../../assets/img/sections/landing/first-block/bg.png';
+// import bunny from '../../../../../assets/img/sections/landing/first-block/bg.png';
 import bg from '../../../../../assets/img/sections/landing/mint/bg.png';
 
 import s from './Project.module.scss';
@@ -6,7 +6,7 @@ import s from './Project.module.scss';
 const Project: React.FC = () => {
   return (
     <>
-      <img src={bunny} alt="bunny" className={s.bunny} />
+      {/* <img src={bunny} alt="bunny" className={s.bunny} /> */}
       <section className={s.block} id="project">
         <div className={s.block_inner}>
           <div className={s.head}>

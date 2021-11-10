@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import cn from 'classnames';
 
-import bunny from '../../../../../assets/img/sections/landing/body/bunny1.png';
+// import bunny from '../../../../../assets/img/sections/landing/body/bunny1.png';
 import Button from '../../../../atoms/Button';
-import SimpleSlider from '../../../../atoms/Carousel';
 
 import s from './Nfts.module.scss';
 
@@ -17,7 +16,7 @@ const Nfts: React.FC = () => {
   };
   return (
     <section className={s.section}>
-      <div className={s.nfts}>
+      {/* <div className={s.nfts}>
         {[1, 2, 3].map((item: number) => (
           <div className={s.nft}>
             <div className={s.head}>
@@ -38,7 +37,7 @@ const Nfts: React.FC = () => {
             </div>
           ))}
         </SimpleSlider>
-      </div>
+      </div> */}
       <div className={s.pages}>
         {pages.map((page: string) => (
           <Button

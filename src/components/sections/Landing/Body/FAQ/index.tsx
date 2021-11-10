@@ -2,6 +2,8 @@ import { useState } from 'react';
 import cn from 'classnames';
 
 import bg from '../../../../../assets/img/sections/landing/body/faq.png';
+import arrow from '../../../../../assets/img/icons/arrow.svg';
+import arrowWhite from '../../../../../assets/img/icons/arrowWhite.svg';
 
 import s from './FAQ.module.scss';
 
@@ -21,7 +23,10 @@ const FAQItem: React.FC<IFAQItemProps> = ({ title, subtitle }) => {
       role="button"
       onClick={() => setIsOpen(!isOpen)}
     >
-      <div className={cn(s.item_title, { [s.item_titleActive]: isOpen })}>{title}</div>
+      <div className={cn(s.item_title, { [s.item_titleActive]: isOpen })}>
+        {title}
+        <img src={isOpen ? arrowWhite : arrow} alt="arrow" className={s.arrow} />
+      </div>
       <div className={cn(s.item_subtitle, { [s.active]: isOpen })}>{subtitle}</div>
     </div>
   );
@@ -30,61 +35,61 @@ const FAQItem: React.FC<IFAQItemProps> = ({ title, subtitle }) => {
 const FaqData = [
   {
     id: 1,
-    title: '– What are the creation fees for the Token contract?',
+    title: 'What are the creation fees for the Token contract?',
     subtitle:
       'Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased) Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased)',
   },
   {
     id: 2,
-    title: '– Can I use my Token contract with other contracts?',
+    title: 'Can I use my Token contract with other contracts?',
     subtitle:
       'Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased) Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased)',
   },
   {
     id: 3,
-    title: '– How To Add custom ERC20 Tokens in MEW wallet',
+    title: 'How To Add custom ERC20 Tokens in MEW wallet',
     subtitle:
       'Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased) Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased)',
   },
   {
     id: 4,
-    title: '– Can I use the same token in the preSALE and publicSALE contracts?',
+    title: 'Can I use the same token in the preSALE and publicSALE contracts?',
     subtitle:
       'Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased) Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased)',
   },
   {
     id: 5,
-    title: '– How to verify my token contract on Etherscan?',
+    title: 'How to verify my token contract on Etherscan?',
     subtitle:
       'Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased) Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased)',
   },
   {
     id: 6,
-    title: '– What are the creation fees for the Token contract?',
+    title: 'What are the creation fees for the Token contract?',
     subtitle:
       'Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased) Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased)',
   },
   {
     id: 7,
-    title: '– Can I use my Token contract with other contracts?',
+    title: 'Can I use my Token contract with other contracts?',
     subtitle:
       'Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased) Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased)',
   },
   {
     id: 8,
-    title: '– How To Add custom ERC20 Tokens in MEW wallet',
+    title: 'How To Add custom ERC20 Tokens in MEW wallet',
     subtitle:
       'Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased) Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased)',
   },
   {
     id: 9,
-    title: '– Can I use the same token in the preSALE and publicSALE contracts?',
+    title: 'Can I use the same token in the preSALE and publicSALE contracts?',
     subtitle:
       'Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased) Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased)',
   },
   {
     id: 10,
-    title: '– How to verify my token contract on Etherscan?',
+    title: 'How to verify my token contract on Etherscan?',
     subtitle:
       'Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased) Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased)',
   },

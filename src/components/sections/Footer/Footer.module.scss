@@ -2,11 +2,12 @@
 
 .footer {
   padding-top: 235px;
-  padding-bottom: 107px;
+  padding-bottom: 17px;
 
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 
   background: url('../../../assets/img/sections/landing/body/bg_upside.png') center 0 no-repeat,
     #000;
@@ -17,8 +18,44 @@
   font-family: 'TL', sans-serif;
   font-size: 50px;
   line-height: 58px;
+  margin: 30px auto 45px;
   @include b(mobile) {
     font-size: 33.956px;
     line-height: 39px;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  @include b(mobile) {
+    display: none;
+  }
+
+  .link {
+    font-family: 'TL', sans-serif;
+    font-size: 22px;
+    line-height: 25px;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    color: #fff;
+
+    @include b(tablet) {
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+
+  .link + .link {
+    margin-left: 40px;
+
+    @include b(tablet) {
+      margin-left: 20px;
+    }
   }
 }

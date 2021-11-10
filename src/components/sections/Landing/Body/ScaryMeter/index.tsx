@@ -51,40 +51,61 @@ const ScaryMeter: React.FC = () => {
     <section className={s.section}>
       <div className={s.title}>Scary Meter</div>
       <div className={s.content}>
-        <div className={s.left}>
-          <div className={s.levels}>
-            {levels.map((level: any) => (
-              <Button
-                title={level.title}
-                className={cn(s.level, { [s.active]: level.key === activeLevel.key })}
-                onClick={() => handleLevel(level)}
-                insideShadow
-              />
+        <div className={s.top}>
+          <div className={s.left}>
+            <div className={s.levels}>
+              {levels.map((level: any) => (
+                <Button
+                  title={level.title}
+                  className={cn(s.level, { [s.active]: level.key === activeLevel.key })}
+                  onClick={() => handleLevel(level)}
+                  insideShadow
+                />
+              ))}
+            </div>
+            <div className={s.levelsMobile}>
+              <SimpleSlider classNameProp={s.slider} slidesToShow={1}>
+                {levels.map((level: any) => {
+                  return (
+                    <Button
+                      title={level.title}
+                      className={cn(s.level, { [s.active]: level.key === activeLevel.key })}
+                      onClick={() => handleLevel(level)}
+                      insideShadow
+                    />
+                  );
+                })}
+              </SimpleSlider>
+            </div>
+          </div>
+          <div className={s.right}>
+            <img src={bunny} alt="bunny" className={s.image} />
+          </div>
+        </div>
+        <div className={s.nftsMobile}>
+          <SimpleSlider classNameProp={s.slide} dots>
+            {[1, 2, 3, 4, 5].map(() => (
+              <div className={s.nft}>
+                <img src={bunny} alt="bunny" className={s.nftImage} />
+              </div>
             ))}
-          </div>
-          <div className={s.levelsMobile}>
-            <SimpleSlider classNameProp={s.slider} slidesToShow={1}>
-              {levels.map((level: any) => {
-                return (
-                  <Button
-                    title={level.title}
-                    className={cn(s.level, { [s.active]: level.key === activeLevel.key })}
-                    onClick={() => handleLevel(level)}
-                    insideShadow
-                  />
-                );
-              })}
-            </SimpleSlider>
-          </div>
-          <div className={s.description}>{activeLevel.descr}</div>
+          </SimpleSlider>
         </div>
-        <div className={s.right}>
-          <div className={s.head}>
-            <p className={s.nft}>NFT #7</p>
-            <div className={s.price}>$5</div>
-          </div>
-          <img src={bunny} alt="bunny" className={s.image} />
-        </div>
+      </div>
+      <div className={s.nfts}>
+        <SimpleSlider
+          classNameProp={s.slide}
+          slidesToShow={4}
+          dots
+          classNameSlide={s.nftSlide}
+          classNameSlideActive={s.nftSlideActive}
+        >
+          {[1, 2, 3, 4, 5].map(() => (
+            <div className={s.nft}>
+              <img src={bunny} alt="bunny" className={s.nftImage} />
+            </div>
+          ))}
+        </SimpleSlider>
       </div>
     </section>
   );
