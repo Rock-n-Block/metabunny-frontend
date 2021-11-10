@@ -29,6 +29,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 112px;
   @include b(mobile) {
     display: none;
   }
@@ -48,10 +49,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  & + & {
-    margin-left: 112px;
-  }
 }
 
 .avatar {
