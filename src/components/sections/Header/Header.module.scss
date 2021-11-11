@@ -172,7 +172,8 @@
 }
 
 .mobileMenu {
-  position: absolute;
+  position: fixed;
+  height: -webkit-fill-available;
   z-index: 99;
   top: 0;
   left: 0;

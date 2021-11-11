@@ -3,12 +3,11 @@
 .container {
   z-index: 9;
 
-  padding: 50px 30px 30px 30px;
   padding: 119px 44px 85px;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
   width: -webkit-fill-available;
@@ -65,8 +64,6 @@
 }
 
 .button {
-  margin: 277px auto 0;
-
   font-family: 'TL', sans-serif;
   font-size: 22px;
   line-height: 25px;

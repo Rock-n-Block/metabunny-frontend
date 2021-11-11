@@ -4,6 +4,7 @@
   transform: translateY(-50px);
 
   @include b(mobile){
+    transform: none;
     width: 100vw;
   }
 }

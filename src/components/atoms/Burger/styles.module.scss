@@ -41,3 +41,7 @@
 .ham.active .bottom {
   stroke-dashoffset: -138px;
 }
+
+.ham.active{
+  position: fixed;
+}

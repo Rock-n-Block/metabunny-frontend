@@ -202,7 +202,7 @@ const Header: React.FC = () => {
       <WalletModal mintNft={mintNft} />
       {isMenuOpen && (
         <MobileMenu
-          // toggleMenu={toggleMenu}
+          toggleMenu={toggleMenu}
           connectWallet={() => setModal('wallet')}
           className={cn(s.mobileMenu, { [s.mobileMenuOpen]: isMenuOpen })}
         />

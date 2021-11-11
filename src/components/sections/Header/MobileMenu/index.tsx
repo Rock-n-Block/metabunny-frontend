@@ -7,25 +7,56 @@ import s from './styles.module.scss';
 
 type Props = {
   className?: string;
-  connectWallet: () => void
+  connectWallet: () => void;
+  toggleMenu: () => void
 };
 
-const MobileMenu: FC<Props> = ({ className, connectWallet }) => {
+const MobileMenu: FC<Props> = ({ className, connectWallet, toggleMenu }) => {
+  const handleScroll = (link: string) => {
+    toggleMenu()
+    const element = document.getElementById(link);
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className={cx(s.container, className)}>
       <div className={s.nav}>
-        <a href="#project" className={s.link}>
+        <div
+          onClick={() => handleScroll('project')}
+          tabIndex={0}
+          onKeyDown={() => {}}
+          role="button"
+          className={s.link}
+        >
           Project
-        </a>
-        <a href="#roadmap" className={s.link}>
+        </div>
+        <div
+          onClick={() => handleScroll('roadmap')}
+          tabIndex={0}
+          onKeyDown={() => {}}
+          role="button"
+          className={s.link}
+        >
           Roadmap
-        </a>
-        <a href="#team" className={s.link}>
+        </div>
+        <div
+          onClick={() => handleScroll('team')}
+          tabIndex={0}
+          onKeyDown={() => {}}
+          role="button"
+          className={s.link}
+        >
           Team
-        </a>
-        <a href="#faq" className={s.link}>
+        </div>
+        <div
+          onClick={() => handleScroll('faq')}
+          tabIndex={0}
+          onKeyDown={() => {}}
+          role="button"
+          className={s.link}
+        >
           Faq
-        </a>
+        </div>
       </div>
       <div className={s.footer}>
         <Button title="Connect Wallet" className={s.button} onClick={connectWallet} />
