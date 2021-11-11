@@ -57,7 +57,7 @@
       display: flex;
       .banner {
         margin: 0 auto;
-        width: fit-content;
+        width: 70%;
       }
     }
     @include b(extramobile) {

@@ -2,6 +2,7 @@ import React, { FC, PropsWithChildren, useCallback, useState } from 'react';
 import nextId from 'react-id-generator';
 import Slider, { ResponsiveObject } from 'react-slick';
 import cx from 'classnames';
+import arrowLeft from '../../../assets/img/icons/arrowLeft.svg';
 
 import styles from './styles.module.scss';
 
@@ -15,6 +16,7 @@ type Props = {
   dots?: boolean;
   classNameSlide?: string;
   classNameSlideActive?: string;
+  showArrows?: boolean;
 };
 
 const SimpleSlider: FC<PropsWithChildren<Props>> = ({
@@ -26,9 +28,37 @@ const SimpleSlider: FC<PropsWithChildren<Props>> = ({
   dots = false,
   classNameSlide,
   classNameSlideActive,
+  showArrows = false,
 }) => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  function PrevArrow(props: any) {
+    const { className, onClick } = props;
+    return (
+      <button
+        type="button"
+        className={cx(className, styles.arrow, styles.arrowLeft)}
+        onClick={onClick}
+      >
+        <img src={arrowLeft} alt="" />
+      </button>
+    );
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  function NextArrow(props: any) {
+    const { className, onClick } = props;
+    return (
+      <button
+        type="button"
+        className={cx(className, styles.arrow, styles.arrowRight)}
+        onClick={onClick}
+      >
+        <img src={arrowLeft} alt="" />
+      </button>
+    );
+  }
   const [dragging, setDragging] = useState(false);
 
   const handleBeforeChange = useCallback(
@@ -63,7 +93,9 @@ const SimpleSlider: FC<PropsWithChildren<Props>> = ({
     customPaging: (i: number) => (
       <div className={cx(styles.indicator, { [styles.active]: i === activeSlideIndex })} />
     ),
-    arrows: false,
+    prevArrow: showArrows ? <PrevArrow /> : undefined,
+    nextArrow: showArrows ? <NextArrow /> : undefined,
+    arrows: showArrows,
     centerMode: true,
     beforeChange: handleBeforeChange,
     afterChange: handleAfterChange,

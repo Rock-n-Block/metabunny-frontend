@@ -30,7 +30,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 109px;
+  margin-top: 40px;
   @include b(mobile) {
     flex-direction: column;
   }
@@ -39,16 +39,14 @@
 .top {
   display: flex;
   margin-bottom: 20px;
-  @include b(mobile) {
-    flex-direction: column;
-  }
+  flex-direction: column;
+  align-items: center;
 }
 
 .left {
-  margin-right: 64px;
-
   display: flex;
   align-items: center;
+  margin-bottom: 40px;
   @include b(mobile) {
     flex-direction: column;
     margin-right: 0px;
@@ -89,7 +87,6 @@
 
 .levels {
   display: flex;
-  flex-direction: column;
 
   &Mobile {
     display: none;
@@ -109,7 +106,7 @@
   line-height: 29px;
 
   & + & {
-    margin-top: 13px;
+    margin-left: 13px;
   }
 
   &.active {
@@ -241,5 +238,13 @@
       // padding-top: 0;
       transform: scaleY(1.2);
     }
+  }
+}
+
+.text {
+  text-align: center;
+  padding: 20px 15px 120px;
+  @include b(mobile) {
+    padding-bottom: 50px;
   }
 }

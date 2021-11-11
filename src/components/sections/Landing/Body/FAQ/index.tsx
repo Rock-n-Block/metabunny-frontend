@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import cn from 'classnames';
 
-import bg from '../../../../../assets/img/sections/landing/body/faq.png';
 import arrow from '../../../../../assets/img/icons/arrow.svg';
 import arrowWhite from '../../../../../assets/img/icons/arrowWhite.svg';
 
@@ -98,7 +97,6 @@ const FaqData = [
 const FAQ: React.FC = () => {
   return (
     <section className={s.section} id="faq">
-      <img src={bg} alt="background" className={s.background} />
       <div className={s.section_inner}>
         <div className={s.title}>FAQ</div>
         <div className={s.faqs}>

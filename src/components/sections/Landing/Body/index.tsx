@@ -1,7 +1,7 @@
 import Community from './Community/index';
 import FAQ from './FAQ/index';
 // import Nfts from './Nfts/index';
-import Project from './Project/index';
+// import Project from './Project/index';
 import Roadmap from './Roadmap/index';
 import ScaryMeter from './ScaryMeter/index';
 import Team from './Team/index';
@@ -11,7 +11,7 @@ import s from './Body.module.scss';
 const LandingBody: React.FC = () => {
   return (
     <section className={s.block}>
-      <Project />
+      {/* <Project /> */}
       <ScaryMeter />
       {/* <Nfts /> */}
       <Roadmap />

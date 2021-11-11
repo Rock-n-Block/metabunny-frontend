@@ -1,8 +1,8 @@
 @import '../../../../../styles/mixins/media.scss';
 
 .section {
-  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7)),
-    url('../../../../../assets/img/sections/landing/body/faq.png') center 0 no-repeat;
+  background: url('../../../../../assets/img/sections/landing/body/roadmap.png') center 0 no-repeat,
+  #000;
   background-size: 100% 818px;
 
   &_inner {

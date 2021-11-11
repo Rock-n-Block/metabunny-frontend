@@ -70,20 +70,37 @@
   border-radius: 40px;
 }
 
-.arrowLeft {
-  top: -100px;
-  right: 5%;
+.arrow {
+  padding: 5px;
+  box-sizing: border-box;
 
-  border-radius: unset;
+  background: #000;
+  border: 4px solid #db5555;
+  border-radius: 6px;
+  box-shadow: 0 0 20px 2px #ff1616;
+  display: flex;
+  align-items: center;
+}
+
+.arrowLeft {
+  position: absolute;
+  top: 23%;
+  z-index: 99;
+  left: 20px;
+  @include b(mobile){
+    top: 100%;
+  }
 }
 
 .arrowRight {
-  top: -100px;
-  right: 0;
-
-  border-radius: unset;
-
+  position: absolute;
+  top: 23%;
+  z-index: 99;
+  right: 20px;
   transform: rotate(180deg);
+  @include b(mobile){
+    top: 100%;
+  }
 }
 
 .slide {
@@ -175,12 +192,6 @@
   min-height: 1px;
   .nft {
     padding-top: 10px;
-  }
-}
-
-.slideActive {
-  @include b(mobile) {
-    transform: scale(1.05);
   }
 }
 

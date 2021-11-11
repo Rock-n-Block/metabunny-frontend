@@ -38,7 +38,6 @@ const Roadmap: React.FC = () => {
   return (
     <section className={s.section} id="roadmap">
       <div className={s.title}>Roadmap</div>
-      <span className={s.subtitle}>100 NFT pcs airdrop to first 10% buyers</span>
       <div className={s.section_body}>
         <div className={s.stages}>
           {stages.map((stage: any, index: number) => (

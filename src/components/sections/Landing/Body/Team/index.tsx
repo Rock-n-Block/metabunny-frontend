@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import ellipse from '../../../../../assets/img/sections/landing/body/ellipse.png';
 import SimpleSlider from '../../../../atoms/Carousel';
 
@@ -37,6 +38,35 @@ const teammates = [
 ];
 
 const Team: React.FC = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [slides, setSlides] = useState(4);
+
+  const getWindowWidth = () => {
+    const { innerWidth: width } = window;
+    return width;
+  };
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowWidth(getWindowWidth());
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (windowWidth <= 1200) {
+      setSlides(3)
+    }
+    if (windowWidth <= 900) {
+      setSlides(2)
+    }
+    if (windowWidth <= 600) {
+      setSlides(1)
+    }
+  }, [windowWidth]);
+
   return (
     <section className={s.section} id="team">
       <div className={s.title}>Team</div>
@@ -51,7 +81,7 @@ const Team: React.FC = () => {
           ))}
         </div>
         <div className={s.teammatesMobile}>
-          <SimpleSlider classNameProp={s.slide} dots>
+          <SimpleSlider classNameProp={s.slide} slidesToShow={slides} showArrows>
             {teammates.map((teammate: any) => (
               <div className={s.teammate}>
                 <img src={teammate.avatar} alt="avatar" className={s.avatar} />

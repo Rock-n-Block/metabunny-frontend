@@ -10,6 +10,7 @@ interface IButton {
   transparent?: boolean;
   className?: string;
   insideShadow?: boolean;
+  image?: string;
 }
 
 const Button: React.FC<IButton> = ({
@@ -19,6 +20,7 @@ const Button: React.FC<IButton> = ({
   transparent,
   className,
   insideShadow,
+  image
 }) => {
   if (href) {
     return (
@@ -48,7 +50,7 @@ const Button: React.FC<IButton> = ({
         className,
       )}
     >
-      {title}
+      {image && <img src={image} alt="img" className={s.image} /> }{title}
     </button>
   );
 };

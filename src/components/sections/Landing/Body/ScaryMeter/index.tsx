@@ -49,6 +49,15 @@ const ScaryMeter: React.FC = () => {
 
   return (
     <section className={s.section}>
+      <div className={s.title}>Project</div>
+      <div className={s.info}>
+        <div className={s.text}>
+          Meta Bunny consists of 8,888 Bunnies completely generated via computer algorithm. Their
+          existence is to scare people but unfortunately not all of them Looks scary, sadly some are
+          even cute! Every Bunny has a scare meter which represents how scary are they. This will be
+          based on their accessory, appearance and the location they choose to scare people.
+        </div>
+      </div>
       <div className={s.title}>Scary Meter</div>
       <div className={s.content}>
         <div className={s.top}>
@@ -93,13 +102,7 @@ const ScaryMeter: React.FC = () => {
         </div>
       </div>
       <div className={s.nfts}>
-        <SimpleSlider
-          classNameProp={s.slide}
-          slidesToShow={4}
-          dots
-          classNameSlide={s.nftSlide}
-          classNameSlideActive={s.nftSlideActive}
-        >
+        <SimpleSlider classNameProp={s.slide} slidesToShow={4} dots>
           {[1, 2, 3, 4, 5].map(() => (
             <div className={s.nft}>
               <img src={bunny} alt="bunny" className={s.nftImage} />
