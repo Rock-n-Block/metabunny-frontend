@@ -11,11 +11,14 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 120px;
+    
+  @include b(mobile) {
+    padding: 50px;
+  }
   }
 
   @include b(mobile) {
     padding: 0;
-    padding-bottom: 75px;
 
     background: none;
   }
