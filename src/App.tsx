@@ -12,12 +12,10 @@ animate({ className: '.anim', animClassName: 'anim_active' });
 export const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
-    const time = setTimeout(() => {
-      setIsLoading(false);
-    }, 5000);
-    return () => clearTimeout(time);
-  }, []);
+    setIsLoading(false);
+  });
   return (
     <Router>
       <Route path="/">
