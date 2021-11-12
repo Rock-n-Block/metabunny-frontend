@@ -3,7 +3,7 @@
 .section {
   background: url('../../../../../assets/img/sections/landing/body/roadmap.png') center 0 no-repeat,
   #000;
-  background-size: 100% 818px;
+  background-size: 100%;
 
   &_inner {
     display: flex;
@@ -22,7 +22,7 @@
 
 .title {
   margin: 0 auto;
-  margin-top: 357px;
+  margin-top: 120px;
   padding: 17px 30px;
 
   box-sizing: border-box;
