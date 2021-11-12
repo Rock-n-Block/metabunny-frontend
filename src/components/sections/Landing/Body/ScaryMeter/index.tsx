@@ -49,17 +49,18 @@ const ScaryMeter: React.FC = () => {
 
   return (
     <section className={s.section}>
-      <div className={s.title}>Project</div>
-      <div className={s.info}>
-        <div className={s.text}>
-          Meta Bunny consists of 8,888 Bunnies completely generated via computer algorithm. Their
-          existence is to scare people but unfortunately not all of them Looks scary, sadly some are
-          even cute! Every Bunny has a scare meter which represents how scary are they. This will be
-          based on their accessory, appearance and the location they choose to scare people.
-        </div>
-      </div>
-      <div className={s.title}>Scary Meter</div>
       <div className={s.content}>
+        <div className={cn(s.title, s.titlePadding)}>Project</div>
+        <div className={s.info}>
+          <div className={s.text}>
+            Meta Bunny consists of 8,888 Bunnies completely generated via computer algorithm. Their
+            existence is to scare people but unfortunately not all of them Looks scary, sadly some
+            are even cute! Every Bunny has a scare meter which represents how scary are they. This
+            will be based on their accessory, appearance and the location they choose to scare
+            people.
+          </div>
+        </div>
+        <div className={s.title}>Scary Meter</div>
         <div className={s.top}>
           <div className={s.left}>
             <div className={s.levels}>

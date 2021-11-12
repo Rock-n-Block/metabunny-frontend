@@ -1,7 +1,6 @@
 @import '../../../../styles/mixins/media.scss';
 
 .block {
-  transform: translateY(-50px);
 
   @include b(mobile){
     transform: none;
