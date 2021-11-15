@@ -14,9 +14,9 @@ const Project: React.FC = () => {
           </div>
           <div className={s.info}>
             <div className={s.text}>
-              Meta Bunny consists of 8,888 Bunnies completely generated via computer algorithm.
-              Their existence is to scare people but unfortunately not all of them Looks scary,
-              sadly some are even cute! Every Bunny has a scare meter which represents how scary are
+              Meta Bunny consists of 10,000 Bunnies completely generated via computer algorithm.
+              Their existence is to scare people but unfortunately not all of them looks scary.
+              Sadly some are even cute! Every Bunny has a scary meter which represents how scary are
               they. This will be based on their accessory, appearance and the location they choose
               to scare people.
             </div>

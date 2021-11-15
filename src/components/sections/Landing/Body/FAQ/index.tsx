@@ -34,63 +34,39 @@ const FAQItem: React.FC<IFAQItemProps> = ({ title, subtitle }) => {
 const FaqData = [
   {
     id: 1,
-    title: 'What are the creation fees for the Token contract?',
+    title: 'What is an NFT?',
     subtitle:
-      'Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased) Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased)',
+      'Each Metabunny acts as a membership card to join our community where many different events such as poker nights, video game contests, art contests, trivia game awaits you. You will also be able to buy merchandises as well as receiving other benefits exclusive to Metabunny owners. Be sure to change your social media’s profile picture and tell your friends and family about it!',
   },
   {
     id: 2,
-    title: 'Can I use my Token contract with other contracts?',
+    title: 'What is a Metabunny?',
     subtitle:
-      'Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased) Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased)',
+      'Each Metabunny acts as a membership card to join our community where many different events such as poker nights, video game contests, art contests, trivia game awaits you. You will also be able to buy merchandises as well as receiving other benefits exclusive to Metabunny owners. Be sure to change your social media’s profile picture and tell your friends and family about it!',
   },
   {
     id: 3,
-    title: 'How To Add custom ERC20 Tokens in MEW wallet',
+    title: 'What can I do with my Metabunny?',
     subtitle:
-      'Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased) Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased)',
+      'Each Metabunny acts as a membership card to join our community where many different events such as poker nights, video game contests, art contests, trivia game awaits you. You will also be able to buy merchandises as well as receiving other benefits exclusive to Metabunny owners. Be sure to change your social media’s profile picture and tell your friends and family about it!',
   },
   {
     id: 4,
-    title: 'Can I use the same token in the preSALE and publicSALE contracts?',
+    title: 'How can I get a Metabunny?',
     subtitle:
-      'Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased) Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased)',
+      'Each Metabunny acts as a membership card to join our community where many different events such as poker nights, video game contests, art contests, trivia game awaits you. You will also be able to buy merchandises as well as receiving other benefits exclusive to Metabunny owners. Be sure to change your social media’s profile picture and tell your friends and family about it!',
   },
   {
     id: 5,
-    title: 'How to verify my token contract on Etherscan?',
+    title: 'Where can I get my Metabunny?',
     subtitle:
-      'Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased) Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased)',
+      'Each Metabunny acts as a membership card to join our community where many different events such as poker nights, video game contests, art contests, trivia game awaits you. You will also be able to buy merchandises as well as receiving other benefits exclusive to Metabunny owners. Be sure to change your social media’s profile picture and tell your friends and family about it!',
   },
   {
     id: 6,
-    title: 'What are the creation fees for the Token contract?',
+    title: 'When can I get my Metabunny?',
     subtitle:
-      'Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased) Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased)',
-  },
-  {
-    id: 7,
-    title: 'Can I use my Token contract with other contracts?',
-    subtitle:
-      'Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased) Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased)',
-  },
-  {
-    id: 8,
-    title: 'How To Add custom ERC20 Tokens in MEW wallet',
-    subtitle:
-      'Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased) Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased)',
-  },
-  {
-    id: 9,
-    title: 'Can I use the same token in the preSALE and publicSALE contracts?',
-    subtitle:
-      'Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased) Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased)',
-  },
-  {
-    id: 10,
-    title: 'How to verify my token contract on Etherscan?',
-    subtitle:
-      'Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased) Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased)',
+      'Each Metabunny acts as a membership card to join our community where many different events such as poker nights, video game contests, art contests, trivia game awaits you. You will also be able to buy merchandises as well as receiving other benefits exclusive to Metabunny owners. Be sure to change your social media’s profile picture and tell your friends and family about it!',
   },
 ];
 
