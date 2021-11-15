@@ -14,21 +14,18 @@ export const App: React.FC = () => {
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
-    setIsLoading(false);
-  });
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+  }, []);
   return (
     <Router>
       <Route path="/">
         <div className="app">
-          {isLoading ? (
-            <Loader />
-          ) : (
-            <>
-              <Header />
-              <LandingPage />
-              <Footer />
-            </>
-          )}
+          {isLoading && <Loader />}
+          <Header />
+          <LandingPage />
+          <Footer />
         </div>
       </Route>
       <div className="app-modals" />

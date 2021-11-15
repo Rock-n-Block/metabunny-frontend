@@ -1,7 +1,14 @@
 .wrapper{
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  background-color: black;
 }
 .lds_ring {
   display: inline-block;
