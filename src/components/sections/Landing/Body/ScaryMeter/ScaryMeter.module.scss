@@ -121,6 +121,9 @@
     font-size: 16px;
     line-height: 18px;
   }
+  @include b(extramobile) {
+    padding: 13px 20px;
+  }
 }
 
 .description {

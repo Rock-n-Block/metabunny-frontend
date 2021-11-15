@@ -67,12 +67,12 @@ const ScaryMeter: React.FC = () => {
     if (windowWidth <= 700) {
       setSlides(3)
     }
-    if (windowWidth <= 600) {
+    if (windowWidth <= 500) {
       setSlides(2)
     }
-    if (windowWidth <= 400) {
-      setSlides(1)
-    }
+    // if (windowWidth <= 400) {
+    //   setSlides(1)
+    // }
   }, [windowWidth]);
 
   const handleLevel = (level: any) => {
