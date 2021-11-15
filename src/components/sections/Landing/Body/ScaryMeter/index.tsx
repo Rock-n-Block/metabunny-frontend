@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import cn from 'classnames';
 
 import bunny from '../../../../../assets/img/sections/landing/body/bunny1.png';
@@ -42,6 +42,38 @@ const levels = [
 
 const ScaryMeter: React.FC = () => {
   const [activeLevel, setActiveLevel] = useState(levels[0]);
+  
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [slides, setSlides] = useState(5);
+
+  const getWindowWidth = () => {
+    const { innerWidth: width } = window;
+    return width;
+  };
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowWidth(getWindowWidth());
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (windowWidth <= 1200) {
+      setSlides(4)
+    }
+    if (windowWidth <= 900) {
+      setSlides(3)
+    }
+    if (windowWidth <= 600) {
+      setSlides(2)
+    }
+    if (windowWidth <= 400) {
+      setSlides(1)
+    }
+  }, [windowWidth]);
 
   const handleLevel = (level: any) => {
     setActiveLevel(level);
@@ -74,7 +106,7 @@ const ScaryMeter: React.FC = () => {
               ))}
             </div>
             <div className={s.levelsMobile}>
-              <SimpleSlider classNameProp={s.slider} slidesToShow={1}>
+              <SimpleSlider classNameProp={s.slider} slidesToShow={slides}>
                 {levels.map((level: any) => {
                   return (
                     <Button
