@@ -61,10 +61,10 @@ const ScaryMeter: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    if (windowWidth <= 1200) {
+    if (windowWidth <= 800) {
       setSlides(4)
     }
-    if (windowWidth <= 900) {
+    if (windowWidth <= 700) {
       setSlides(3)
     }
     if (windowWidth <= 600) {
