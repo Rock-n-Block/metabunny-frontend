@@ -6,6 +6,7 @@ import Button from '../../../../atoms/Button';
 import SimpleSlider from '../../../../atoms/Carousel';
 
 import s from './ScaryMeter.module.scss';
+import SimpleSwiper from '../../../../atoms/Swiper';
 
 const levels = [
   {
@@ -45,12 +46,12 @@ const ScaryMeter: React.FC = () => {
   
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [slides, setSlides] = useState(5);
-
+console.log(slides)
   const getWindowWidth = () => {
     const { innerWidth: width } = window;
     return width;
   };
-
+ 
   useEffect(() => {
     function handleResize() {
       setWindowWidth(getWindowWidth());
@@ -62,13 +63,13 @@ const ScaryMeter: React.FC = () => {
 
   useEffect(() => {
     if (windowWidth <= 800) {
-      setSlides(4)
+      setSlides(1)
     }
     if (windowWidth <= 700) {
-      setSlides(3)
+      setSlides(1)
     }
     if (windowWidth <= 500) {
-      setSlides(2)
+      setSlides(1)
     }
     // if (windowWidth <= 400) {
     //   setSlides(1)
@@ -106,7 +107,7 @@ const ScaryMeter: React.FC = () => {
               ))}
             </div>
             <div className={s.levelsMobile}>
-              <SimpleSlider classNameProp={s.slider} slidesToShow={slides}>
+              <SimpleSwiper>
                 {levels.map((level: any) => {
                   return (
                     <Button
@@ -117,7 +118,19 @@ const ScaryMeter: React.FC = () => {
                     />
                   );
                 })}
-              </SimpleSlider>
+              </SimpleSwiper>
+              {/* <SimpleSlider classNameProp={s.slider} slidesToShow={1} showArrows>
+                {levels.map((level: any) => {
+                  return (
+                    <Button
+                      title={level.title}
+                      className={cn(s.level, { [s.active]: level.key === activeLevel.key })}
+                      onClick={() => handleLevel(level)}
+                      insideShadow
+                    />
+                  );
+                })}
+              </SimpleSlider> */}
             </div>
           </div>
           <div className={s.right}>
