@@ -6,7 +6,7 @@ import disc from '../../../assets/img/sections/landing/header/disc.png';
 import twit from '../../../assets/img/sections/landing/header/twit.png';
 import boat from '../../../assets/img/sections/landing/header/boat.png';
 import banner from '../../../assets/img/sections/landing/header/banner.png';
-import { backendUrl, is_production } from '../../../config/index';
+import { is_production } from '../../../config/index';
 import { useModals } from '../../../context/Modal';
 import { useWeb3Context } from '../../../context/WalletConnect';
 import { notify } from '../../../utils/notify';
@@ -40,7 +40,7 @@ function timeToDate(date: string) {
 const PRESALE_DATE_END = '2021-09-19T21:00:00';
 // const TIME_FOR_UPDATE = 20000;
 const Header: React.FC = () => {
-  const { init, sendEth } = useWeb3Context();
+  const { init, user } = useWeb3Context();
   const { setModal } = useModals();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = useCallback(() => setIsMenuOpen(!isMenuOpen), [isMenuOpen]);
@@ -94,52 +94,52 @@ const Header: React.FC = () => {
 
     if ([404, 4].includes(info.code)) {
       notify(info.message.text, 'error');
-      return;
+      // return;
     }
 
-    if (info && !info.code) {
-      try {
-        const backendData = await fetch(`${backendUrl}info/?format=json`);
-        const data = await backendData.json();
+    // if (info && !info.code) {
+    //   try {
+    //     const backendData = await fetch(`${backendUrl}info/?format=json`);
+    //     const data = await backendData.json();
 
-        if (data.minted >= data.total_mint_amount) {
-          notify('All nfts are minted!', 'error');
-        } else if (data.address) {
-          notify('Please wait for your transaction to be approved!');
+    //     if (data.minted >= data.total_mint_amount) {
+    //       notify('All nfts are minted!', 'error');
+    //     } else if (data.address) {
+    //       notify('Please wait for your transaction to be approved!');
 
-          const txRes = await sendEth({
-            from: info.address,
-            to: data.address,
-            value: data.amount,
-          });
+    //       const txRes = await sendEth({
+    //         from: info.address,
+    //         to: data.address,
+    //         value: data.amount,
+    //       });
 
-          if (txRes.status) {
-            const hashesFromLS = localStorage.getItem('txHashes');
-            const hashes = hashesFromLS ? JSON.parse(hashesFromLS) : [];
-            hashes.push(txRes.transactionHash);
+    //       if (txRes.status) {
+    //         const hashesFromLS = localStorage.getItem('txHashes');
+    //         const hashes = hashesFromLS ? JSON.parse(hashesFromLS) : [];
+    //         hashes.push(txRes.transactionHash);
 
-            localStorage.setItem('txHashes', JSON.stringify(hashes));
+    //         localStorage.setItem('txHashes', JSON.stringify(hashes));
 
-            notify('The transaction has been sent!', 'success');
-            notify(
-              'Please stay on the site, your token will be generated within a couple of minutes!',
-              'success',
-            );
+    //         notify('The transaction has been sent!', 'success');
+    //         notify(
+    //           'Please stay on the site, your token will be generated within a couple of minutes!',
+    //           'success',
+    //         );
 
-            // const timerId = setInterval(() => {
-            //   hashes.forEach((txHash: string) => {
-            //     getInfoAboutTx(txHash);
-            //   });
-            // }, TIME_FOR_UPDATE);
+    //         // const timerId = setInterval(() => {
+    //         //   hashes.forEach((txHash: string) => {
+    //         //     getInfoAboutTx(txHash);
+    //         //   });
+    //         // }, TIME_FOR_UPDATE);
 
-            // // current timer id
-            // setLastTimerId((prev) => [...prev, timerId]);
-          }
-        }
-      } catch (error: any) {
-        notify(error.message, 'error');
-      }
-    }
+    //         // // current timer id
+    //         // setLastTimerId((prev) => [...prev, timerId]);
+    //       }
+    //     }
+    //   } catch (error: any) {
+    //     notify(error.message, 'error');
+    //   }
+    // }
   };
 
   useEffect(() => {
@@ -176,10 +176,14 @@ const Header: React.FC = () => {
             </a>
           </div>
         </div>
-      <div className={s.bannerWrapperMobile}>
-        <img src={banner} alt="banner" className={s.banner} />
-        <Button title="Mint" className={s.bannerButton} onClick={() => setModal('txHash')} />
-      </div>
+        <div className={s.bannerWrapperMobile}>
+          <img src={banner} alt="banner" className={s.banner} />
+          <Button
+            title="Mint"
+            className={s.bannerButton}
+            onClick={() => setModal(user.address ? 'txHash' : 'wallet')}
+          />
+        </div>
         <div className={s.right}>
           <div className={s.socials}>
             <a href="/" className={s.socialLink}>
@@ -192,12 +196,24 @@ const Header: React.FC = () => {
               <img src={boat} alt="boat" className={s.logoSoc} />
             </a>
           </div>
-          <Button title="Connect wallet" className={s.button} onClick={() => setModal('wallet')} />
+          {user.address ? (
+            `${user.address.slice(0, 7)}...${user.address.slice(-5)}`
+          ) : (
+            <Button
+              title="Connect wallet"
+              className={s.button}
+              onClick={() => setModal('wallet')}
+            />
+          )}
         </div>
       </div>
       <div className={s.bannerWrapper}>
         <img src={banner} alt="banner" className={s.banner} />
-        <Button title="Mint" className={s.bannerButton} onClick={() => setModal('txHash')} />
+        <Button
+          title="Mint"
+          className={s.bannerButton}
+          onClick={() => setModal(user.address ? 'txHash' : 'wallet')}
+        />
       </div>
       <WalletModal mintNft={mintNft} />
       {isMenuOpen && (
