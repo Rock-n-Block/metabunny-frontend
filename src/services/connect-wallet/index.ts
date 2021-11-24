@@ -1,8 +1,9 @@
-import { ConnectWallet } from '@amfi/connect-wallet';
-import Web3 from 'web3';
+import { ConnectWallet } from "@amfi/connect-wallet";
+import { notify } from "../../utils/notify";
+import Web3 from "web3";
 
-import { connectWalletConfig } from '../../config/index';
-import { clogData } from '../../utils/logger';
+import { connectWalletConfig } from "../../config/index";
+import { clogData } from "../../utils/logger";
 
 export class WalletConnect {
   private connectWallet: any;
@@ -23,7 +24,7 @@ export class WalletConnect {
         return connected;
       })
       .catch((err: any) => {
-        clogData('CONNECT ERR', err);
+        clogData("CONNECT ERR", err);
       });
 
     return Promise.all([connecting]).then((connect: any) => {
@@ -34,27 +35,37 @@ export class WalletConnect {
   private async checkEthNetwork() {
     const { connector, providerName } = this.connectWallet;
 
-    if (providerName === 'MetaMask') {
+    if (providerName === "MetaMask") {
       try {
-        const resChain = await connector.connector.request({ method: 'eth_chainId' });
+        const resChain = await connector.connector.request({
+          method: "eth_chainId",
+        });
         if (connectWalletConfig.network.chainID !== parseInt(resChain, 16)) {
           connector.connector.request({
-            method: 'wallet_switchEthereumChain',
-            params: [{ chainId: `0x${connectWalletConfig.network.chainID.toString(16)}` }],
+            method: "wallet_switchEthereumChain",
+            params: [
+              {
+                chainId: `0x${connectWalletConfig.network.chainID.toString(
+                  16
+                )}`,
+              },
+            ],
           });
           return true;
         }
         return true;
       } catch (error) {
-        clogData('checkNewErr', error);
+        clogData("checkNewErr", error);
         return false;
       }
     }
 
-    if (providerName === 'WalletConnect') {
-      const resChain = await connector.connector.request({ method: 'eth_chainId' });
+    if (providerName === "WalletConnect") {
+      const resChain = await connector.connector.request({
+        method: "eth_chainId",
+      });
       if (connectWalletConfig.network.chainID !== parseInt(resChain, 16)) {
-        localStorage.removeItem('walletconnect');
+        localStorage.removeItem("walletconnect");
         return false;
       }
       return true;
@@ -73,18 +84,22 @@ export class WalletConnect {
             },
             (err: any) => {
               resolve(err);
-            },
+            }
           );
         } else
           resolve({
             code: 404,
-            message: { text: `Wrong network, please choose ${connectWalletConfig.network.name}` },
+            message: {
+              text: `Wrong network, please choose ${connectWalletConfig.network.name}`,
+            },
           });
       });
     });
   }
 
   public logOut(): void {
+    localStorage.removeItem("metabunny_address");
+    notify("Wallet disconnected", "success");
     this.connectWallet.resetConect();
   }
 

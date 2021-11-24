@@ -20,7 +20,7 @@ const Button: React.FC<IButton> = ({
   transparent,
   className,
   insideShadow,
-  image
+  image,
 }) => {
   if (href) {
     return (
@@ -50,7 +50,8 @@ const Button: React.FC<IButton> = ({
         className,
       )}
     >
-      {image && <img src={image} alt="img" className={s.image} /> }{title}
+      {image && <img src={image} alt="img" className={s.image} />}
+      {title}
     </button>
   );
 };

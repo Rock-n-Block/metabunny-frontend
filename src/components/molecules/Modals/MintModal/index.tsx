@@ -35,6 +35,7 @@ const MintModal: React.FC<IMintModalProps> = ({ txHash, id }) => {
   return (
     <ModalWrapper close={handleClose} isActive={modals.includes(txHash)}>
       <div className={s.modal}>
+        <h2>Mint in live</h2>
         <input className={s.text} />
         <div className={s.buttons}>
           <div className={s.amountWrapper}>
@@ -55,10 +56,11 @@ const MintModal: React.FC<IMintModalProps> = ({ txHash, id }) => {
             >
               +
             </button>
-          </div>
-          <button type="button" className={s.mint}>
+            <button type="button" className={s.mint}>
             MINT
-          </button>
+            </button>
+          </div>
+
         </div>
       </div>
     </ModalWrapper>

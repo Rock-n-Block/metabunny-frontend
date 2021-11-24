@@ -1,11 +1,10 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import cn from 'classnames';
 
-import logo from '../../../assets/img/sections/landing/header/logo.png';
-import disc from '../../../assets/img/sections/landing/header/disc.png';
-import twit from '../../../assets/img/sections/landing/header/twit.png';
-import boat from '../../../assets/img/sections/landing/header/boat.png';
 import banner from '../../../assets/img/sections/landing/header/banner.png';
+import disc from '../../../assets/img/sections/landing/header/disc.png';
+import logo from '../../../assets/img/sections/landing/header/logo.png';
+import twit from '../../../assets/img/sections/landing/header/twit.png';
 import { is_production } from '../../../config/index';
 import { useModals } from '../../../context/Modal';
 import { useWeb3Context } from '../../../context/WalletConnect';
@@ -156,57 +155,58 @@ const Header: React.FC = () => {
     };
   }, []);
   return (
-    <header className={s.header}>
-      <div className={s.header_inner}>
-        <div className={s.logo}>
-          <Burger className={s.burger} onClick={toggleMenu} isMenuOpen={isMenuOpen} />
-          <img src={logo} alt="logo" className={s.logoImg} />
-          <div className={s.nav}>
-            <a href="#project" className={s.link}>
-              Project
-            </a>
-            <a href="#roadmap" className={s.link}>
-              Roadmap
-            </a>
-            <a href="#team" className={s.link}>
-              Team
-            </a>
-            <a href="#faq" className={s.link}>
-              Faq
-            </a>
+    <>
+      <header className={s.header}>
+        <div className={s.header_inner}>
+          <div className={s.logo}>
+            <Burger className={s.burger} onClick={toggleMenu} isMenuOpen={isMenuOpen} />
+            <img src={logo} alt="logo" className={s.logoImg} />
+            <div className={s.nav}>
+              <a href="#project" className={s.link}>
+                Project
+              </a>
+              <a href="#roadmap" className={s.link}>
+                Roadmap
+              </a>
+              <a href="#team" className={s.link}>
+                Team
+              </a>
+              <a href="#faq" className={s.link}>
+                Faq
+              </a>
+            </div>
           </div>
-        </div>
-        <div className={s.bannerWrapperMobile}>
-          <img src={banner} alt="banner" className={s.banner} />
-          <Button
-            title="Mint"
-            className={s.bannerButton}
-            onClick={() => setModal(user.address ? 'txHash' : 'wallet')}
-          />
-        </div>
-        <div className={s.right}>
-          <div className={s.socials}>
-            <a href="/" className={s.socialLink}>
-              <img src={disc} alt="disc" className={s.logoSoc} />
-            </a>
-            <a href="/" className={s.socialLink}>
-              <img src={twit} alt="twit" className={s.logoSoc} />
-            </a>
-            <a href="/" className={s.socialLink}>
-              <img src={boat} alt="boat" className={s.logoSoc} />
-            </a>
-          </div>
-          {user.address ? (
-            `${user.address.slice(0, 7)}...${user.address.slice(-5)}`
-          ) : (
+
+          <div className={s.right}>
+            <div className={s.socials}>
+              <a href="/" className={s.socialLink}>
+                <img src={disc} alt="disc" className={s.logoSoc} />
+              </a>
+              <a href="/" className={s.socialLink}>
+                <img src={twit} alt="twit" className={s.logoSoc} />
+              </a>
+            </div>
             <Button
-              title="Connect wallet"
+              title={
+                user.address
+                  ? `${user.address.slice(0, 7)}...${user.address.slice(-1)}`
+                  : 'Connect wallet'
+              }
               className={s.button}
               onClick={() => setModal('wallet')}
             />
-          )}
+          </div>
         </div>
-      </div>
+
+        <WalletModal mintNft={mintNft} />
+        {isMenuOpen && (
+          <MobileMenu
+            toggleMenu={toggleMenu}
+            connectWallet={() => setModal('wallet')}
+            className={cn(s.mobileMenu, { [s.mobileMenuOpen]: isMenuOpen })}
+          />
+        )}
+      </header>
       <div className={s.bannerWrapper}>
         <img src={banner} alt="banner" className={s.banner} />
         <Button
@@ -214,16 +214,9 @@ const Header: React.FC = () => {
           className={s.bannerButton}
           onClick={() => setModal(user.address ? 'txHash' : 'wallet')}
         />
+        <div className={s.foot}> </div>
       </div>
-      <WalletModal mintNft={mintNft} />
-      {isMenuOpen && (
-        <MobileMenu
-          toggleMenu={toggleMenu}
-          connectWallet={() => setModal('wallet')}
-          className={cn(s.mobileMenu, { [s.mobileMenuOpen]: isMenuOpen })}
-        />
-      )}
-    </header>
+    </>
   );
 };
 

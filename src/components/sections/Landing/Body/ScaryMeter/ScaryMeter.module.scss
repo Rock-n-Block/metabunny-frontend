@@ -2,7 +2,7 @@
 @import '../../../../../styles/mixins/media.scss';
 
 .section {
-  padding-top: 81px;
+  padding-top: 5px;
 
   background: url('../../../../../assets/img/sections/landing/body/roadmap.png') center 0 no-repeat,
     #000;
@@ -59,6 +59,7 @@
   @include b(mobile) {
     .image {
       width: 100%;
+      height: auto;
     }
   }
 }
@@ -66,16 +67,13 @@
 .title {
   margin: 0 auto;
   padding: 17px 30px;
-
   box-sizing: border-box;
   width: fit-content;
-
   font-family: 'TL';
-  font-size: 50px;
+  font-size: 36px;
+  letter-spacing:4px;
   line-height: 58px;
-
-  background: #000;
-  border: 4px solid #ff1616;
+  //border: 1px solid #ff1616;
   border-radius: 12px;
   &Padding {
     padding: 17px 45px;
@@ -92,7 +90,6 @@
 
 .levels {
   display: flex;
-
   &Mobile {
     display: none;
     @include b(mobile) {
@@ -109,6 +106,7 @@
   font-family: 'TL', sans-serif;
   font-size: 25px;
   line-height: 29px;
+  display:none;
 
   & + & {
     margin-left: 13px;
@@ -173,15 +171,11 @@
 
 .head {
   position: relative;
-
   margin-bottom: 17px;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   height: 42px;
-
   font-family: 'MSR', sans-serif;
   font-size: 24px;
   font-weight: 700;
@@ -250,9 +244,14 @@
 }
 
 .text {
+  width:70%;
+  margin:auto;
   text-align: center;
-  padding: 20px 15px 120px;
+  line-height:30px;
+  margin-bottom:100px;
+  //padding: 20px 15px 120px;
   @include b(mobile) {
+    width: 100%;
     padding-bottom: 50px;
   }
 }

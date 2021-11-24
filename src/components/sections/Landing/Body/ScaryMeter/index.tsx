@@ -2,11 +2,16 @@ import { useEffect, useState } from 'react';
 import cn from 'classnames';
 
 import bunny from '../../../../../assets/img/sections/landing/body/bunny1.png';
+import bunny1 from '../../../../../assets/img/sections/landing/body/bunny2.png';
+import bunny2 from '../../../../../assets/img/sections/landing/body/bunny3.png';
+import bunny3 from '../../../../../assets/img/sections/landing/body/bunny4.png';
+import bunny4 from '../../../../../assets/img/sections/landing/body/bunny5.png';
+import bunny5 from '../../../../../assets/img/sections/landing/body/bunny6.png';
 import Button from '../../../../atoms/Button';
 import SimpleSlider from '../../../../atoms/Carousel';
+import SimpleSwiper from '../../../../atoms/Swiper';
 
 import s from './ScaryMeter.module.scss';
-import SimpleSwiper from '../../../../atoms/Swiper';
 
 const levels = [
   {
@@ -43,15 +48,15 @@ const levels = [
 
 const ScaryMeter: React.FC = () => {
   const [activeLevel, setActiveLevel] = useState(levels[0]);
-  
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [slides, setSlides] = useState(5);
-console.log(slides)
+  console.log(slides);
   const getWindowWidth = () => {
     const { innerWidth: width } = window;
     return width;
   };
- 
+
   useEffect(() => {
     function handleResize() {
       setWindowWidth(getWindowWidth());
@@ -63,13 +68,13 @@ console.log(slides)
 
   useEffect(() => {
     if (windowWidth <= 800) {
-      setSlides(1)
+      setSlides(1);
     }
     if (windowWidth <= 700) {
-      setSlides(1)
+      setSlides(1);
     }
     if (windowWidth <= 500) {
-      setSlides(1)
+      setSlides(1);
     }
     // if (windowWidth <= 400) {
     //   setSlides(1)
@@ -133,27 +138,51 @@ console.log(slides)
               </SimpleSlider> */}
             </div>
           </div>
-          <div className={s.right}>
-            <img src={bunny} alt="bunny" className={s.image} />
-          </div>
+
         </div>
         <div className={s.nftsMobile}>
           <SimpleSlider classNameProp={s.slide} dots>
-            {[1, 2, 3, 4, 5].map(() => (
-              <div className={s.nft}>
-                <img src={bunny} alt="bunny" className={s.nftImage} />
-              </div>
-            ))}
+          <div className={s.nft}>
+              <img src={bunny} alt="bunny" className={s.nftImage} />
+            </div>
+            <div className={s.nft}>
+              <img src={bunny1} alt="bunny" className={s.nftImage} />
+            </div>
+            <div className={s.nft}>
+              <img src={bunny2} alt="bunny" className={s.nftImage} />
+            </div>
+            <div className={s.nft}>
+              <img src={bunny3} alt="bunny" className={s.nftImage} />
+            </div>
+            <div className={s.nft}>
+              <img src={bunny4} alt="bunny" className={s.nftImage} />
+            </div>
+            <div className={s.nft}>
+              <img src={bunny5} alt="bunny" className={s.nftImage} />
+            </div>
           </SimpleSlider>
         </div>
       </div>
       <div className={s.nfts}>
         <SimpleSlider classNameProp={s.slide} slidesToShow={4} dots>
-          {[1, 2, 3, 4, 5].map(() => (
             <div className={s.nft}>
               <img src={bunny} alt="bunny" className={s.nftImage} />
             </div>
-          ))}
+            <div className={s.nft}>
+              <img src={bunny1} alt="bunny" className={s.nftImage} />
+            </div>
+            <div className={s.nft}>
+              <img src={bunny2} alt="bunny" className={s.nftImage} />
+            </div>
+            <div className={s.nft}>
+              <img src={bunny3} alt="bunny" className={s.nftImage} />
+            </div>
+            <div className={s.nft}>
+              <img src={bunny4} alt="bunny" className={s.nftImage} />
+            </div>
+            <div className={s.nft}>
+              <img src={bunny5} alt="bunny" className={s.nftImage} />
+            </div>
         </SimpleSlider>
       </div>
     </section>

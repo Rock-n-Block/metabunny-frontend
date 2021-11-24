@@ -8,12 +8,12 @@ import s from './styles.module.scss';
 type Props = {
   className?: string;
   connectWallet: () => void;
-  toggleMenu: () => void
+  toggleMenu: () => void;
 };
 
 const MobileMenu: FC<Props> = ({ className, connectWallet, toggleMenu }) => {
   const handleScroll = (link: string) => {
-    toggleMenu()
+    toggleMenu();
     const element = document.getElementById(link);
     element?.scrollIntoView({ behavior: 'smooth' });
   };

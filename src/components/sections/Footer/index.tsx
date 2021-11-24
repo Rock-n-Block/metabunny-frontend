@@ -1,10 +1,9 @@
+import bg from '../../../assets/img/sections/landing/body/bg_upside.png';
+import disc from '../../../assets/img/sections/landing/header/disc.png';
+import logo from '../../../assets/img/sections/landing/header/logo.png';
+import twit from '../../../assets/img/sections/landing/header/twit.png';
 import Button from '../../atoms/Button';
 
-import logo from '../../../assets/img/sections/landing/header/logo.png';
-import disc from '../../../assets/img/sections/landing/header/disc.png';
-import twit from '../../../assets/img/sections/landing/header/twit.png';
-import boat from '../../../assets/img/sections/landing/header/boat.png';
-import bg from '../../../assets/img/sections/landing/body/bg_upside.png';
 import s from './Footer.module.scss';
 
 const Footer: React.FC = () => {
@@ -33,9 +32,6 @@ const Footer: React.FC = () => {
           </a>
           <a href="/" className={s.socialLink}>
             <img src={twit} alt="twit" className={s.logoSoc} />
-          </a>
-          <a href="/" className={s.socialLink}>
-            <img src={boat} alt="boat" className={s.logoSoc} />
           </a>
         </div>
       </div>

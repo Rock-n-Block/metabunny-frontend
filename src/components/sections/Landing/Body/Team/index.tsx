@@ -1,39 +1,30 @@
 import { useEffect, useState } from 'react';
+
 import ellipse from '../../../../../assets/img/sections/landing/body/ellipse.png';
+import ellipse2 from '../../../../../assets/img/sections/landing/body/ellipse2.png';
+import ellipse3 from '../../../../../assets/img/sections/landing/body/ellipse3.png';
 import SimpleSlider from '../../../../atoms/Carousel';
 
 import s from './Team.module.scss';
 
 const teammates = [
   {
-    avatar: ellipse,
-    name: 'Name Name',
+    avatar: ellipse2,
+    name: 'Riichi',
     descr:
-      'Text crowdsourced encyclopedia that rewards users for contributing and peer reviewing information. Lunyr was raised almost 48 000 ETH during ICO on April’17. It w',
+      'He has worked in a famous auction house as a Contemporary Art Specialist and has been obsessed with NFTs after being introduced by a friend. He is also a former World of Warcraft Guild master.',
+  },
+  {
+    avatar: ellipse3,
+    name: 'Anson',
+    descr:
+      'Lead Artist for the project. Former 3D animator at a VR game company. Passionate in playing video games and watching Japanese anime. He has sacraficed his life for this project.',
   },
   {
     avatar: ellipse,
-    name: 'Name Name',
+    name: 'ZEN',
     descr:
-      'Text crowdsourced encyclopedia that rewards users for contributing and peer reviewing information. Lunyr was raised almost 48 000 ETH during ICO on April’17. It w',
-  },
-  {
-    avatar: ellipse,
-    name: 'Name Name',
-    descr:
-      'Text crowdsourced encyclopedia that rewards users for contributing and peer reviewing information. Lunyr was raised almost 48 000 ETH during ICO on April’17. It w',
-  },
-  {
-    avatar: ellipse,
-    name: 'Name Name',
-    descr:
-      'Text crowdsourced encyclopedia that rewards users for contributing and peer reviewing information. Lunyr was raised almost 48 000 ETH during ICO on April’17. It w',
-  },
-  {
-    avatar: ellipse,
-    name: 'Name Name',
-    descr:
-      'Text crowdsourced encyclopedia that rewards users for contributing and peer reviewing information. Lunyr was raised almost 48 000 ETH during ICO on April’17. It w',
+      'ZEN is the Head of Cryptocurrency at HKD.com. He was introduced to Bitcoin since its inception, and began researching and investing heavily into crypto assets since the birth of Ethereum. ',
   },
 ];
 
@@ -57,13 +48,13 @@ const Team: React.FC = () => {
 
   useEffect(() => {
     if (windowWidth <= 1200) {
-      setSlides(3)
+      setSlides(3);
     }
     if (windowWidth <= 900) {
-      setSlides(2)
+      setSlides(2);
     }
     if (windowWidth <= 600) {
-      setSlides(1)
+      setSlides(1);
     }
   }, [windowWidth]);
 

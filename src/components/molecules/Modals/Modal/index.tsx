@@ -36,7 +36,7 @@ const ModalWrapper: React.FC<IModalWrapperProps> = ({ children, isActive, close,
       <section className={s.modal}>
         <div className={cn(s.modal_inner, 'grey-scroll', className)}>
           <button type="button" onClick={() => close()} className={s.cross}>
-            <Cross />
+            <Cross className={s.btnClose}/>
           </button>
           {children}
         </div>
