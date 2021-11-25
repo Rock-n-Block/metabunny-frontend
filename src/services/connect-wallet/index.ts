@@ -1,9 +1,11 @@
-import { ConnectWallet } from "@amfi/connect-wallet";
-import { notify } from "../../utils/notify";
-import Web3 from "web3";
+import { ConnectWallet } from '@amfi/connect-wallet';
+import { metabunnyAbi } from '../../config/abi';
+import Web3 from 'web3';
 
-import { connectWalletConfig } from "../../config/index";
-import { clogData } from "../../utils/logger";
+import { connectWalletConfig } from '../../config/index';
+import { clogData } from '../../utils/logger';
+import { notify } from '../../utils/notify';
+import BigNumber from 'bignumber.js';
 
 export class WalletConnect {
   private connectWallet: any;
@@ -14,7 +16,6 @@ export class WalletConnect {
 
   public async initWalletConnect(name: string): Promise<boolean> {
     const { provider, network, settings } = connectWalletConfig;
-
     const connecting = this.connectWallet
       .connect(provider[name], network, settings)
       .then((connected: boolean) => {
@@ -24,7 +25,7 @@ export class WalletConnect {
         return connected;
       })
       .catch((err: any) => {
-        clogData("CONNECT ERR", err);
+        clogData('CONNECT ERR', err);
       });
 
     return Promise.all([connecting]).then((connect: any) => {
@@ -35,19 +36,17 @@ export class WalletConnect {
   private async checkEthNetwork() {
     const { connector, providerName } = this.connectWallet;
 
-    if (providerName === "MetaMask") {
+    if (providerName === 'MetaMask') {
       try {
         const resChain = await connector.connector.request({
-          method: "eth_chainId",
+          method: 'eth_chainId',
         });
         if (connectWalletConfig.network.chainID !== parseInt(resChain, 16)) {
           connector.connector.request({
-            method: "wallet_switchEthereumChain",
+            method: 'wallet_switchEthereumChain',
             params: [
               {
-                chainId: `0x${connectWalletConfig.network.chainID.toString(
-                  16
-                )}`,
+                chainId: `0x${connectWalletConfig.network.chainID.toString(16)}`,
               },
             ],
           });
@@ -55,17 +54,17 @@ export class WalletConnect {
         }
         return true;
       } catch (error) {
-        clogData("checkNewErr", error);
+        clogData('checkNewErr', error);
         return false;
       }
     }
 
-    if (providerName === "WalletConnect") {
+    if (providerName === 'WalletConnect') {
       const resChain = await connector.connector.request({
-        method: "eth_chainId",
+        method: 'eth_chainId',
       });
       if (connectWalletConfig.network.chainID !== parseInt(resChain, 16)) {
-        localStorage.removeItem("walletconnect");
+        localStorage.removeItem('walletconnect');
         return false;
       }
       return true;
@@ -84,13 +83,13 @@ export class WalletConnect {
             },
             (err: any) => {
               resolve(err);
-            }
+            },
           );
         } else
           resolve({
             code: 404,
             message: {
-              text: `Wrong network, please choose ${connectWalletConfig.network.name}`,
+              text: `Wrong network, please choose ${connectWalletConfig.network.chainName}`,
             },
           });
       });
@@ -98,8 +97,6 @@ export class WalletConnect {
   }
 
   public logOut(): void {
-    localStorage.removeItem("metabunny_address");
-    notify("Wallet disconnected", "success");
     this.connectWallet.resetConect();
   }
 
@@ -111,5 +108,42 @@ export class WalletConnect {
     const currentWeb3 = this.currentWeb3();
     const res = await currentWeb3.eth.sendTransaction(data);
     return res;
+  }
+
+  public async getContract(address: string, abi: any) {
+    const contract = await this.connectWallet.getContract({
+      address,
+      abi,
+    });
+
+    return contract;
+  }
+
+  async mint(amount: number, userAddress: string) {
+    const contract = await this.getContract(
+      '0x88D5a12EAf4AB5441A3D54b87F7745c64548A330',
+      metabunnyAbi,
+    );
+    const isPaused = await contract.methods.paused().call();
+    if (isPaused) {
+      notify('Minting is paused now', 'error');
+      return;
+    }
+    const totalSupply = await contract.methods.totalSupply().call();
+    const allowance = await contract.methods.allowedToExist().call();
+    if (new BigNumber(totalSupply).plus(amount).isGreaterThan(new BigNumber(allowance))) {
+      notify('There is no tokens to mint', 'error');
+      return;
+    }
+    const price = await contract.methods.price().call();
+    const result = await contract.methods.buy(amount).send({
+      from: userAddress,
+      value: new BigNumber(amount.toString()).times(new BigNumber(price)).toFixed(),
+    });
+    if (result?.events?.Transfer?.returnValues?.tokenId) {
+      notify('View on opensea', 'link', result.events.Transfer.returnValues.tokenId)
+    } else {
+      notify('Something went wrong', 'error')
+    }
   }
 }

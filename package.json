@@ -17,7 +17,7 @@
     "lint-fix:scss": "stylelint \"src/**/*.scss\" --fix"
   },
   "dependencies": {
-    "@amfi/connect-wallet": "^1.0.6",
+    "@amfi/connect-wallet": "^1.1.12",
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.34",
     "@types/react-dom": "^17.0.0",
@@ -25,6 +25,7 @@
     "@types/react-slick": "^0.23.7",
     "@typescript-eslint/eslint-plugin": "^4.2.0",
     "@typescript-eslint/parser": "^4.2.0",
+    "bignumber.js": "^9.0.1",
     "cipher-base": "^1.0.4",
     "classnames": "^2.3.1",
     "eslint": "^7.2.0",

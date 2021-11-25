@@ -22,6 +22,7 @@ const wcService = new WalletConnect();
 
 interface IContext {
   init: (wallet: "MetaMask" | "WalletConnect") => any;
+  mint: (value: number, address: string) => any;
   disconnect: () => any;
   sendEth: (data: ITxData) => any;
   user: IUser;
@@ -52,13 +53,17 @@ const WalletConnectProvider: React.FC = ({ children }) => {
     return res;
   };
 
+  const mint = async (amount: number, address: string) => wcService.mint(amount, address)
+
   const disconnect = async () => {
     setUser({ address: '', provider: '' })
+    localStorage.removeItem("metabunny_address");
+    notify("Wallet disconnected", "success");
   }
 
   return (
     <Web3Context.Provider
-      value={{ init, disconnect, sendEth: (data: ITxData) => sendEth(data), user }}
+      value={{ init, disconnect, mint, sendEth: (data: ITxData) => sendEth(data), user }}
     >
       {children}
     </Web3Context.Provider>

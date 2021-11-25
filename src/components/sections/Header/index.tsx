@@ -17,7 +17,7 @@ import MobileMenu from './MobileMenu';
 
 import s from './Header.module.scss';
 
-function timeToDate(date: string) {
+function timeToDate(date: string) {  
   let secondsToDate = Math.round((+new Date(date) - +new Date(Date.now())) / 1000);
 
   if (secondsToDate < 0) return { days: 0, hours: 0, mins: 0, sec: 0 };

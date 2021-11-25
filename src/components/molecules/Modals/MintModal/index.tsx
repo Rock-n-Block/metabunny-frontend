@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useWeb3Context } from '../../../../context/WalletConnect';
 
 import { useModals } from '../../../../context/Modal';
 import ModalWrapper from '../Modal';
@@ -15,6 +16,7 @@ export interface IMintModalProps {
 const MintModal: React.FC<IMintModalProps> = ({ txHash, id }) => {
   const [amount, setAmount] = useState(1);
   const { modals, closeModal } = useModals();
+  const { mint, user } = useWeb3Context();
 
   const handleClose = () => {
     closeModal(txHash);
@@ -56,7 +58,7 @@ const MintModal: React.FC<IMintModalProps> = ({ txHash, id }) => {
             >
               +
             </button>
-            <button type="button" className={s.mint}>
+            <button type="button" className={s.mint} onClick={() => mint(amount, user.address || '')}>
             MINT
             </button>
           </div>

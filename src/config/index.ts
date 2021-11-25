@@ -28,7 +28,7 @@ export const chain: IChainConfig = {
 export const connectWalletConfig: IConnectWallet = {
   wallets: ['MetaMask', 'WalletConnect'],
   network: {
-    name: chain.name,
+    chainName: chain.name,
     chainID: chain.id,
   },
   provider: {
