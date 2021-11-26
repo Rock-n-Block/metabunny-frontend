@@ -120,6 +120,7 @@ export class WalletConnect {
   }
 
   async mint(amount: number, userAddress: string) {
+    console.log('amount', amount)
     const contract = await this.getContract(
       '0x88D5a12EAf4AB5441A3D54b87F7745c64548A330',
       metabunnyAbi,
@@ -140,6 +141,7 @@ export class WalletConnect {
       from: userAddress,
       value: new BigNumber(amount.toString()).times(new BigNumber(price)).toFixed(),
     });
+    console.log('result', result)
     if (result?.events?.Transfer?.returnValues?.tokenId) {
       notify('View on opensea', 'link', result.events.Transfer.returnValues.tokenId)
     } else {

@@ -86,7 +86,7 @@ const ScaryMeter: React.FC = () => {
   };
 
   return (
-    <section className={s.section}>
+    <section className={s.section} id="project">
       <div className={s.content}>
         <div className={cn(s.title, s.titlePadding)}>Project</div>
         <div className={s.info}>
