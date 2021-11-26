@@ -31,7 +31,11 @@ const MintModal: React.FC<IMintModalProps> = ({ txHash, id }) => {
   }
 
   const handleAmount = (num: number, type: 'plus' | 'minus') => {
-    setAmount(type === 'plus' ? num + 1 : num - 1);
+    if (num === 1) {
+      setAmount(type === 'plus' ? num + 1 : num);
+    } else {
+      setAmount(type === 'plus' ? num + 1 : num - 1);
+    }
   };
 
   return (
@@ -58,11 +62,14 @@ const MintModal: React.FC<IMintModalProps> = ({ txHash, id }) => {
             >
               +
             </button>
-            <button type="button" className={s.mint} onClick={() => mint(amount, user.address || '')}>
-            MINT
+            <button
+              type="button"
+              className={s.mint}
+              onClick={() => mint(amount, user.address || '')}
+            >
+              MINT
             </button>
           </div>
-
         </div>
       </div>
     </ModalWrapper>

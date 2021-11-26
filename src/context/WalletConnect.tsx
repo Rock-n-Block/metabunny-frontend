@@ -1,7 +1,7 @@
-import { createContext, useContext, useState } from "react";
-import { notify } from "../utils/notify";
+import { createContext, useContext, useState } from 'react';
+import { notify } from '../utils/notify';
 
-import { WalletConnect } from "../services/connect-wallet/index";
+import { WalletConnect } from '../services/connect-wallet/index';
 
 interface ITxData {
   from: string;
@@ -15,13 +15,13 @@ export interface IUser {
   message?: {
     message: string;
   };
-  provider: string | null
+  provider: string | null;
 }
 
 const wcService = new WalletConnect();
 
 interface IContext {
-  init: (wallet: "MetaMask" | "WalletConnect") => any;
+  init: (wallet: 'MetaMask' | 'WalletConnect') => any;
   mint: (value: number, address: string) => any;
   disconnect: () => any;
   sendEth: (data: ITxData) => any;
@@ -32,19 +32,16 @@ const Web3Context = createContext({} as IContext);
 
 const WalletConnectProvider: React.FC = ({ children }) => {
   const [user, setUser] = useState<IUser>({ address: null, provider: null });
-  const init = async (wallet: "MetaMask" | "WalletConnect") => {
+  const init = async (wallet: 'MetaMask' | 'WalletConnect') => {
     const account: any = await wcService.initWalletConnect(wallet);
     if (account.address) {
       notify(
-        `Wallet connected: ${account.address.slice(
-          0,
-          5
-        )}...${account.address.slice(-5)}`,
-        "success"
+        `Wallet connected: ${account.address.slice(0, 5)}...${account.address.slice(-5)}`,
+        'success',
       );
     }
     setUser({ address: account.address, provider: wallet });
-    localStorage.setItem('metabunny_address', account.address)
+    localStorage.setItem('metabunny_address', account.address);
     return account;
   };
 
@@ -53,13 +50,14 @@ const WalletConnectProvider: React.FC = ({ children }) => {
     return res;
   };
 
-  const mint = async (amount: number, address: string) => wcService.mint(amount, address)
+  const mint = async (amount: number, address: string) => wcService.mint(amount, address);
 
   const disconnect = async () => {
-    setUser({ address: '', provider: '' })
-    localStorage.removeItem("metabunny_address");
-    notify("Wallet disconnected", "success");
-  }
+    setUser({ address: '', provider: '' });
+    localStorage.removeItem('metabunny_address');
+    localStorage.removeItem('metabunny_provider');
+    notify('Wallet disconnected', 'success');
+  };
 
   return (
     <Web3Context.Provider

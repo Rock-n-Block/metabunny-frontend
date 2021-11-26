@@ -138,11 +138,10 @@ const ScaryMeter: React.FC = () => {
               </SimpleSlider> */}
             </div>
           </div>
-
         </div>
         <div className={s.nftsMobile}>
           <SimpleSlider classNameProp={s.slide} dots>
-          <div className={s.nft}>
+            <div className={s.nft}>
               <img src={bunny} alt="bunny" className={s.nftImage} />
             </div>
             <div className={s.nft}>
@@ -165,24 +164,24 @@ const ScaryMeter: React.FC = () => {
       </div>
       <div className={s.nfts}>
         <SimpleSlider classNameProp={s.slide} slidesToShow={4} dots>
-            <div className={s.nft}>
-              <img src={bunny} alt="bunny" className={s.nftImage} />
-            </div>
-            <div className={s.nft}>
-              <img src={bunny1} alt="bunny" className={s.nftImage} />
-            </div>
-            <div className={s.nft}>
-              <img src={bunny2} alt="bunny" className={s.nftImage} />
-            </div>
-            <div className={s.nft}>
-              <img src={bunny3} alt="bunny" className={s.nftImage} />
-            </div>
-            <div className={s.nft}>
-              <img src={bunny4} alt="bunny" className={s.nftImage} />
-            </div>
-            <div className={s.nft}>
-              <img src={bunny5} alt="bunny" className={s.nftImage} />
-            </div>
+          <div className={s.nft}>
+            <img src={bunny} alt="bunny" className={s.nftImage} />
+          </div>
+          <div className={s.nft}>
+            <img src={bunny1} alt="bunny" className={s.nftImage} />
+          </div>
+          <div className={s.nft}>
+            <img src={bunny2} alt="bunny" className={s.nftImage} />
+          </div>
+          <div className={s.nft}>
+            <img src={bunny3} alt="bunny" className={s.nftImage} />
+          </div>
+          <div className={s.nft}>
+            <img src={bunny4} alt="bunny" className={s.nftImage} />
+          </div>
+          <div className={s.nft}>
+            <img src={bunny5} alt="bunny" className={s.nftImage} />
+          </div>
         </SimpleSlider>
       </div>
     </section>

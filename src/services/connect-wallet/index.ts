@@ -16,6 +16,7 @@ export class WalletConnect {
 
   public async initWalletConnect(name: string): Promise<boolean> {
     const { provider, network, settings } = connectWalletConfig;
+    localStorage.setItem('metabunny_provider', name);
     const connecting = this.connectWallet
       .connect(provider[name], network, settings)
       .then((connected: boolean) => {
@@ -97,6 +98,8 @@ export class WalletConnect {
   }
 
   public logOut(): void {
+    localStorage.removeItem('metabunny_provider');
+    localStorage.removeItem('metabunny_address');
     this.connectWallet.resetConect();
   }
 
@@ -120,7 +123,7 @@ export class WalletConnect {
   }
 
   async mint(amount: number, userAddress: string) {
-    console.log('amount', amount)
+    console.log('amount', amount);
     const contract = await this.getContract(
       '0x88D5a12EAf4AB5441A3D54b87F7745c64548A330',
       metabunnyAbi,
@@ -133,7 +136,7 @@ export class WalletConnect {
     const totalSupply = await contract.methods.totalSupply().call();
     const allowance = await contract.methods.allowedToExist().call();
     if (new BigNumber(totalSupply).plus(amount).isGreaterThan(new BigNumber(allowance))) {
-      notify('There is no tokens to mint', 'error');
+      notify('There is not enough tokens to mint', 'error');
       return;
     }
     const price = await contract.methods.price().call();
@@ -141,11 +144,15 @@ export class WalletConnect {
       from: userAddress,
       value: new BigNumber(amount.toString()).times(new BigNumber(price)).toFixed(),
     });
-    console.log('result', result)
-    if (result?.events?.Transfer?.returnValues?.tokenId) {
-      notify('View on opensea', 'link', result.events.Transfer.returnValues.tokenId)
+    console.log('result', result);
+    if (result?.events?.Transfer) {
+      if (Array.isArray(result.events.Transfer)) {
+        notify('View on opensea', 'link', result.events.Transfer[0].returnValues.tokenId);
+      } else {
+        notify('View on opensea', 'link', result.events.Transfer.returnValues.tokenId);
+      }
     } else {
-      notify('Something went wrong', 'error')
+      notify('Something went wrong', 'error');
     }
   }
 }

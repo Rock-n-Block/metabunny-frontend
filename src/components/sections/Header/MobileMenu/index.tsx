@@ -4,6 +4,7 @@ import cx from 'classnames';
 import Button from '../../../atoms/Button';
 
 import s from './styles.module.scss';
+import { useWeb3Context } from '../../../../context/WalletConnect';
 
 type Props = {
   className?: string;
@@ -12,6 +13,8 @@ type Props = {
 };
 
 const MobileMenu: FC<Props> = ({ className, connectWallet, toggleMenu }) => {
+  const {user} = useWeb3Context()
+
   const handleScroll = (link: string) => {
     toggleMenu();
     const element = document.getElementById(link);
@@ -59,7 +62,18 @@ const MobileMenu: FC<Props> = ({ className, connectWallet, toggleMenu }) => {
         </div>
       </div>
       <div className={s.footer}>
-        <Button title="Connect Wallet" className={s.button} onClick={connectWallet} />
+        <Button
+          title={
+            user.address
+              ? `${user.address.slice(
+                  0,
+                  7,
+                )}...${user.address.slice(-1)}`
+              : 'Connect wallet'
+          }
+          className={s.button}
+          onClick={connectWallet}
+        />
       </div>
     </div>
   );
