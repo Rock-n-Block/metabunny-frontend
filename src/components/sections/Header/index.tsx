@@ -186,10 +186,10 @@ const Header: React.FC = () => {
 
           <div className={s.right}>
             <div className={s.socials}>
-              <a href="/" className={s.socialLink}>
+              <a href="https://discord.gg/TgYmPj9AjV" className={s.socialLink}>
                 <img src={disc} alt="disc" className={s.logoSoc} />
               </a>
-              <a href="/" className={s.socialLink}>
+              <a href="https://twitter.com/metabunnynft" className={s.socialLink}>
                 <img src={twit} alt="twit" className={s.logoSoc} />
               </a>
             </div>
