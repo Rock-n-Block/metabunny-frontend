@@ -123,7 +123,6 @@ export class WalletConnect {
   }
 
   async mint(amount: number, userAddress: string) {
-    console.log('amount', amount);
     const contract = await this.getContract(chain.contractAddress, metabunnyAbi);
     const isPaused = await contract.methods.paused().call();
     if (isPaused) {
@@ -137,19 +136,61 @@ export class WalletConnect {
       return;
     }
     const price = await contract.methods.price().call();
-    const result = await contract.methods.buy(amount).send({
-      from: userAddress,
-      value: new BigNumber(amount.toString()).times(new BigNumber(price)).toFixed(),
-    });
-    console.log('result', result);
-    if (result?.events?.Transfer) {
-      if (Array.isArray(result.events.Transfer)) {
-        notify('View on opensea', 'link', result.events.Transfer[0].returnValues.tokenId);
-      } else {
-        notify('View on opensea', 'link', result.events.Transfer.returnValues.tokenId);
-      }
-    } else {
-      notify('Something went wrong', 'error');
-    }
+    contract.methods
+      .buy(amount)
+      .send({
+        from: userAddress,
+        value: new BigNumber(amount.toString()).times(new BigNumber(price)).toFixed(),
+      })
+      .on('transactionHash', (transactionHash: any) => {
+        notify(
+          <>
+            <span>Mint in progress. View on </span>
+            <a
+              href={`https://rinkeby.etherscan.io/tx/${transactionHash}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              etherscan
+            </a>
+          </>,
+          'info',
+        );
+      })
+      .then((result: any) => {
+        if (result?.events?.Transfer) {
+          if (Array.isArray(result.events.Transfer)) {
+            notify(
+              <>
+                <span>Minted {amount} bunnies. View on </span>
+                <a
+                  href={`https://testnets.opensea.io/assets/${chain.contractAddress}/${result.events.Transfer[0].returnValues.tokenId}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  opensea
+                </a>
+              </>,
+              'info',
+            );
+          } else {
+            notify(
+              <>
+                <span>Minted 1 bunny. View on </span>
+                <a
+                  href={`https://testnets.opensea.io/assets/${chain.contractAddress}/${result.events.Transfer.returnValues.tokenId}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  opensea
+                </a>
+              </>,
+              'info',
+            );
+          }
+        } else {
+          notify('Something went wrong', 'error');
+        }
+      });
   }
 }
