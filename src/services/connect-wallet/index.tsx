@@ -164,7 +164,7 @@ export class WalletConnect {
               <>
                 <span>Minted {amount} bunnies. View on </span>
                 <a
-                  href={`https://testnets.opensea.io/assets/${chain.contractAddress}/${result.events.Transfer[0].returnValues.tokenId}`}
+                  href={`https://testnets.opensea.io/${result.from}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
