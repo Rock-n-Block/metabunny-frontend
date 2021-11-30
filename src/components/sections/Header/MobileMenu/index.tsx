@@ -2,9 +2,9 @@ import { FC } from 'react';
 import cx from 'classnames';
 
 import Button from '../../../atoms/Button';
+import { useWeb3Context } from '../../../../context/WalletConnect';
 
 import s from './styles.module.scss';
-import { useWeb3Context } from '../../../../context/WalletConnect';
 
 type Props = {
   className?: string;
@@ -12,7 +12,7 @@ type Props = {
   toggleMenu: () => void;
 };
 
-const MobileMenu: FC<Props> = ({ className, connectWallet, toggleMenu }) => {
+const MobileMenu: FC<Props> = ({ className, connectWallet, toggleMenu }) => {  
   const {user} = useWeb3Context()
 
   const handleScroll = (link: string) => {
@@ -34,15 +34,6 @@ const MobileMenu: FC<Props> = ({ className, connectWallet, toggleMenu }) => {
           Project
         </div>
         <div
-          onClick={() => handleScroll('roadmap')}
-          tabIndex={0}
-          onKeyDown={() => {}}
-          role="button"
-          className={s.link}
-        >
-          Roadmap
-        </div>
-        <div
           onClick={() => handleScroll('team')}
           tabIndex={0}
           onKeyDown={() => {}}
@@ -52,7 +43,16 @@ const MobileMenu: FC<Props> = ({ className, connectWallet, toggleMenu }) => {
           Team
         </div>
         <div
-          onClick={() => handleScroll('faq')}
+          onClick={() => handleScroll('roadmap')}
+          tabIndex={0}
+          onKeyDown={() => {}}
+          role="button"
+          className={s.link}
+        >
+          Roadmap
+        </div>
+        <div
+          onClick={() => handleScroll('Faq')}
           tabIndex={0}
           onKeyDown={() => {}}
           role="button"
@@ -65,10 +65,7 @@ const MobileMenu: FC<Props> = ({ className, connectWallet, toggleMenu }) => {
         <Button
           title={
             user.address
-              ? `${user.address.slice(
-                  0,
-                  7,
-                )}...${user.address.slice(-1)}`
+              ? `${user.address.slice(0, 7)}...${user.address.slice(-1)}`
               : 'Connect wallet'
           }
           className={s.button}

@@ -1,5 +1,6 @@
 import { toast, ToastOptions } from 'react-toastify';
 
+import { chain } from '../config';
 import 'react-toastify/dist/ReactToastify.css';
 
 export const notify = (
@@ -24,7 +25,7 @@ export const notify = (
     link: () =>
       toast.info(
         <a
-          href={`https://testnets.opensea.io/assets/0x88d5a12eaf4ab5441a3d54b87f7745c64548a330/${tokenId}`}
+          href={`https://testnets.opensea.io/assets/${chain.contractAddress}/${tokenId}`}
           target="_blank"
           rel="noopener noreferrer"
         >

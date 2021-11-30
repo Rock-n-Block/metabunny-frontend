@@ -12,6 +12,7 @@ import { notify } from '../../../utils/notify';
 import Burger from '../../atoms/Burger';
 import Button from '../../atoms/Button';
 import WalletModal from '../../molecules/Modals/WalletModal';
+import ReactPlayer from 'react-player';
 
 import MobileMenu from './MobileMenu';
 
@@ -74,6 +75,7 @@ const Header: React.FC = () => {
   //   },
   //   [setModal],
   // );
+
   const mintNft = async (wallet: 'MetaMask' | 'WalletConnect') => {
     if (!Object.values(timeBeforeEnd).every((el) => el === 0) && is_production) {
       notify("The presale hasn't started yet", 'error');
@@ -159,7 +161,7 @@ const Header: React.FC = () => {
     if (localStorage.metabunny_provider) {
       init(localStorage.metabunny_provider);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <>
@@ -186,10 +188,20 @@ const Header: React.FC = () => {
 
           <div className={s.right}>
             <div className={s.socials}>
-              <a href="https://discord.gg/TgYmPj9AjV" className={s.socialLink}>
+              <a
+                href="https://discord.com/invite/r5XrJgnH8Y"
+                className={s.socialLink}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 <img src={disc} alt="disc" className={s.logoSoc} />
               </a>
-              <a href="https://twitter.com/metabunnynft" className={s.socialLink}>
+              <a
+                href="https://twitter.com/metabunnynft"
+                rel="noopener noreferrer"
+                target="_blank"
+                className={s.socialLink}
+              >
                 <img src={twit} alt="twit" className={s.logoSoc} />
               </a>
             </div>
@@ -215,6 +227,26 @@ const Header: React.FC = () => {
         )}
       </header>
       <div className={s.bannerWrapper}>
+        <ReactPlayer
+          className={s.video}
+          width="100%"
+          url={[
+            { src: 'https://oninwar.com/raw/bunny.mp4', type: 'video/mp4' },
+            { src: 'https://oninwar.com/raw/bunny.webm', type: 'video/webm' },
+          ]}
+          playsinline
+          playing
+          loop
+          muted
+          config={{
+            file: {
+              attributes: {
+                preload: 'auto',
+              },
+            },
+          }}
+        />
+
         <img src={banner} alt="banner" className={s.banner} />
         <Button
           title="Mint"

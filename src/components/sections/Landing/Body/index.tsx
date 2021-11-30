@@ -11,7 +11,7 @@ import s from './Body.module.scss';
 const LandingBody: React.FC = () => {
   return (
     <section className={s.block}>
-      {/* <Project /> */}
+     {/*  <Project /> */}
       <ScaryMeter />
       {/* <Nfts /> */}
       <Roadmap />

@@ -2,7 +2,7 @@ import { ConnectWallet } from '@amfi/connect-wallet';
 import { metabunnyAbi } from '../../config/abi';
 import Web3 from 'web3';
 
-import { connectWalletConfig } from '../../config/index';
+import { chain, connectWalletConfig } from '../../config/index';
 import { clogData } from '../../utils/logger';
 import { notify } from '../../utils/notify';
 import BigNumber from 'bignumber.js';
@@ -124,10 +124,7 @@ export class WalletConnect {
 
   async mint(amount: number, userAddress: string) {
     console.log('amount', amount);
-    const contract = await this.getContract(
-      '0x88D5a12EAf4AB5441A3D54b87F7745c64548A330',
-      metabunnyAbi,
-    );
+    const contract = await this.getContract(chain.contractAddress, metabunnyAbi);
     const isPaused = await contract.methods.paused().call();
     if (isPaused) {
       notify('Minting is paused now', 'error');

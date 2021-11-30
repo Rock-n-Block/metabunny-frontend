@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { useWeb3Context } from '../../../../context/WalletConnect';
 
 import { useModals } from '../../../../context/Modal';
 import ModalWrapper from '../Modal';
+import { useWeb3Context } from '../../../../context/WalletConnect';
 
 import s from './MintModal.module.scss';
 

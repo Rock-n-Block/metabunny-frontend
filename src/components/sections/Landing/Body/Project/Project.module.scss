@@ -8,7 +8,7 @@
 
 .block {
   padding: 61px 170px 0;
-
+  height:400px;
   background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.85)),
     url('../../../../../assets/img/sections/landing/mint/bg.png') center center no-repeat;
   background-size: cover;
@@ -162,3 +162,75 @@
 .info{
   text-align: center;
 }
+
+
+.introTab {
+  position :relative;
+  z-index: 1;
+  width: 90%;
+  height: 300px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carte_button {
+  position :relative;
+  z-index: 3;
+  background-color: yellow;
+  color:#000;
+  width: 100px;
+  height: 50px;
+  float:left;
+}
+.carte_button2{
+  position :relative;
+  z-index: 3;
+  background-color: #666;
+  color:#000;
+  width: 100px;
+  height: 50px;
+  float:left;
+}
+
+.carte {
+  position :absolute;
+  top: 0px;
+  z-index: 2;
+  background-color: green;
+  width: auto;
+  display:none;
+  height: 0%;
+  margin: auto;
+  transition: height 500ms;
+}
+.carte2 {
+  position :absolute;
+  top: 0px;
+  z-index: 2;
+  background-color: #000;
+  width: auto;
+  display:none;
+  height: 0%;
+  margin: auto;
+  transition: height 500ms;
+}
+.carte_button:hover + .carte {
+  border-top: none;
+  top: 50px;
+  height: 300px;
+  display:block;
+}
+.carte_button2:hover + .carte2 {
+  border-top: none;
+  top: 50px;
+  height: 300px;
+  display:block;
+}
+
+.carte:hover {
+  height: 300px;
+}
+.carte2:hover {
+  height: 300px;
+}
+

@@ -1,6 +1,6 @@
 import bunny from '../../../../../assets/img/sections/landing/body/bunny2.png';
-
 import s from './Community.module.scss';
+
 
 const Community: React.FC = () => {
   return (
@@ -18,11 +18,12 @@ const Community: React.FC = () => {
               Poker nights, Tabletop games, Puzzle games, Meme contests and many more which some will
               be decided via voting among the community. There will be scoreboards of each game and
               the member ranked 1st as well as the most participated member of each month will receive
-              a special 1 of 1 Metabunny
+              a special 1 of 1 Metabunny.
+             <div className={s.button2}> <a href="https://discord.com/invite/r5XrJgnH8Y"  rel="noopener noreferrer" target="_blank" >Join Discord</a></div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
     </section>
   );
 };

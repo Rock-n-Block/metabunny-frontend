@@ -44,6 +44,17 @@ module.exports = {
       rules: {
         '@typescript-eslint/no-var-requires': 'off',
         '@typescript-eslint/explicit-function-return-type': 'off',
+        'jsx-a11y/media-has-caption': [ 2, {
+          'audio': [ 'Audio' ],
+          'video': [ 'Video' ],
+          'track': [ 'Track' ],
+        }],
+        "jsx-a11y/label-has-associated-control": [ 2, {
+          "labelComponents": ["CustomInputLabel"],
+          "labelAttributes": ["label"],
+          "controlComponents": ["CustomInput"],
+          "depth": 3,
+        }],
       },
     },
     {

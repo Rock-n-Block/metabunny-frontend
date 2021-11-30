@@ -43,6 +43,7 @@
     font-family: 'TL', sans-serif;
     font-size: 14px;
     line-height: 25px;
+    letter-spacing:4px;
     text-decoration: none;
     text-transform: uppercase;
     cursor: pointer;
@@ -50,7 +51,7 @@
   }
 
   .link + .link {
-    margin-top: 40px;
+    margin-top: 10px;
   }
 }
 
