@@ -151,7 +151,7 @@ export class WalletConnect {
               target="_blank"
               rel="noopener noreferrer"
             >
-              etherscan
+              Etherscan
             </a>
           </>,
           'info',
@@ -168,7 +168,7 @@ export class WalletConnect {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  opensea
+                  Opensea
                 </a>
               </>,
               'info',
@@ -182,7 +182,7 @@ export class WalletConnect {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  opensea
+                  Opensea
                 </a>
               </>,
               'info',
