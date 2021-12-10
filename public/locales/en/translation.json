@@ -88,13 +88,12 @@
       "title": "How to get OG status?",
       "text": "We will be giving out OG status to the first 500 discord members that joined the server. Please be sure to share with any friends or fam that might be interested."
     }
-    
   },
-  "account":{
+  "account": {
     "title": "account",
-    "text": "Connected with MetaMask",
+    "text": "Connected with",
     "disconnect": "Disconnect",
-    "delete": "If you want to disconnect your wallet please delete site.io from connected sites in MetaMask",
+    "delete": "If you want to disconnect your wallet please delete metabunny.io from connected sites in MetaMask",
     "copy": "Copy address",
     "success": "Success!"
   },
@@ -111,5 +110,11 @@
     "minted2": "bunnies. View on ",
     "minted3": "Minted 1 bunny. View on ",
     "error": "Something went wrong"
+  },
+  "modal": {
+    "connect": {
+      "title": "Select a wallet",
+      "subtitle": "Connect a wallet"
+    }
   }
 }

@@ -5,6 +5,7 @@ import ModalWrapper from '../Modal';
 import { useWeb3Context } from '../../../../context/WalletConnect';
 
 import s from './MintModal.module.scss';
+import { useTranslation } from 'react-i18next';
 
 export interface IMintModalProps {
   type: 'COMMON' | 'LEGENDARY';
@@ -17,6 +18,7 @@ const MintModal: React.FC<IMintModalProps> = ({ txHash, id }) => {
   const [amount, setAmount] = useState(1);
   const { modals, closeModal } = useModals();
   const { mint, user } = useWeb3Context();
+  const { t } = useTranslation();
 
   const handleClose = () => {
     closeModal(txHash);
@@ -41,7 +43,7 @@ const MintModal: React.FC<IMintModalProps> = ({ txHash, id }) => {
   return (
     <ModalWrapper close={handleClose} isActive={modals.includes(txHash)}>
       <div className={s.modal}>
-        <h2>Mint in live</h2>
+        <h2>{t('mint.title')}</h2>
         <input className={s.text} />
         <div className={s.buttons}>
           <div className={s.amountWrapper}>
@@ -67,7 +69,7 @@ const MintModal: React.FC<IMintModalProps> = ({ txHash, id }) => {
               className={s.mint}
               onClick={() => mint(amount, user.address || '')}
             >
-              MINT
+              {t('button.mint')}
             </button>
           </div>
         </div>

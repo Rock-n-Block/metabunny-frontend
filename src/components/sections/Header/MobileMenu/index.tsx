@@ -5,6 +5,7 @@ import Button from '../../../atoms/Button';
 import { useWeb3Context } from '../../../../context/WalletConnect';
 
 import s from './styles.module.scss';
+import { useTranslation } from 'react-i18next';
 
 type Props = {
   className?: string;
@@ -12,8 +13,9 @@ type Props = {
   toggleMenu: () => void;
 };
 
-const MobileMenu: FC<Props> = ({ className, connectWallet, toggleMenu }) => {  
-  const {user} = useWeb3Context()
+const MobileMenu: FC<Props> = ({ className, connectWallet, toggleMenu }) => {
+  const { user } = useWeb3Context();
+  const { t } = useTranslation();
 
   const handleScroll = (link: string) => {
     toggleMenu();
@@ -31,7 +33,7 @@ const MobileMenu: FC<Props> = ({ className, connectWallet, toggleMenu }) => {
           role="button"
           className={s.link}
         >
-          Project
+          {t('navigation.project')}
         </div>
         <div
           onClick={() => handleScroll('team')}
@@ -40,7 +42,7 @@ const MobileMenu: FC<Props> = ({ className, connectWallet, toggleMenu }) => {
           role="button"
           className={s.link}
         >
-          Team
+          {t('navigation.team')}
         </div>
         <div
           onClick={() => handleScroll('roadmap')}
@@ -49,7 +51,7 @@ const MobileMenu: FC<Props> = ({ className, connectWallet, toggleMenu }) => {
           role="button"
           className={s.link}
         >
-          Roadmap
+          {t('navigation.roadmap')}
         </div>
         <div
           onClick={() => handleScroll('Faq')}
@@ -58,7 +60,7 @@ const MobileMenu: FC<Props> = ({ className, connectWallet, toggleMenu }) => {
           role="button"
           className={s.link}
         >
-          Faq
+          {t('navigation.faq')}
         </div>
       </div>
       <div className={s.footer}>

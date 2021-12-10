@@ -49,7 +49,7 @@ const PRESALE_DATE_END = '2021-09-19T21:00:00';
 const Header: React.FC = () => {
   const { init, user } = useWeb3Context();
   const { setModal } = useModals();
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = useCallback(() => setIsMenuOpen(!isMenuOpen), [isMenuOpen]);
   const [language, setLanguage] = useState(
@@ -59,35 +59,6 @@ const Header: React.FC = () => {
   );
 
   const [timeBeforeEnd, setTimeBeforeEnd] = useState(timeToDate(PRESALE_DATE_END));
-  // const [lastTimerId, setLastTimerId] = useState<Array<NodeJS.Timeout>>([]);
-  // const [modalsData, setModalsData] = useState<Array<IMintModalProps>>([]);
-
-  // const getInfoAboutTx = useCallback(
-  //   async (txHash: string) => {
-  //     const headers = await fetch(`${backendUrl}payments/${txHash}/`);
-  //     const data = await headers.json();
-
-  //     if (data.status === 'SUCCESS') {
-  //       const hashesFromLs = localStorage.getItem('txHashes');
-  //       const hashes = hashesFromLs ? await JSON.parse(hashesFromLs) : [];
-
-  //       // if (hashes.includes(txHash)) {
-  //       //   setModalsData((prevState) => [
-  //       //     ...prevState.filter((modal) => modal.txHash !== txHash),
-  //       //     {
-  //       //       type: data.rarity === 'common' ? 'COMMON' : 'LEGENDARY',
-  //       //       img: data.image,
-  //       //       txHash,
-  //       //       id: data.id,
-  //       //     },
-  //       //   ]);
-
-  //       //   setModal(txHash);
-  //       // }
-  //     }
-  //   },
-  //   [setModal],
-  // );
 
   const mintNft = async (wallet: 'MetaMask' | 'WalletConnect') => {
     if (!Object.values(timeBeforeEnd).every((el) => el === 0) && is_production) {
@@ -244,16 +215,16 @@ const Header: React.FC = () => {
             <img src={logo} alt="logo" className={s.logoImg} />
             <div className={s.nav}>
               <a href="#project" className={s.link}>
-                Project
+                {t('navigation.project')}
               </a>
               <a href="#roadmap" className={s.link}>
-                Roadmap
+                {t('navigation.roadmap')}
               </a>
               <a href="#team" className={s.link}>
-                Team
+                {t('navigation.team')}
               </a>
               <a href="#faq" className={s.link}>
-                Faq
+                {t('navigation.faq')}
               </a>
             </div>
           </div>
@@ -282,7 +253,7 @@ const Header: React.FC = () => {
               title={
                 user.address
                   ? `${user.address.slice(0, 7)}...${user.address.slice(-1)}`
-                  : 'Connect wallet'
+                  : t('button.connect')
               }
               className={s.button}
               onClick={() => setModal('wallet')}
