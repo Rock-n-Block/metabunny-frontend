@@ -231,8 +231,7 @@ video {
     right: 5%;
     top: 25%;
 
-    flex-direction: column-reverse;
-    gap: 20px;
+    flex-direction: column;
     align-items: flex-end;
   }
 }
@@ -258,6 +257,10 @@ video {
   @include b(desktop) {
     font-size: 16px;
     line-height: 19px;
+  }
+
+  @include b(mobile) {
+    margin-top: 20px;
   }
 }
 
@@ -317,6 +320,10 @@ video {
     @include b(desktop) {
       padding: 10px 37px 10px 20px;
       font-size: 12px;
+    }
+
+    @include b(mobile) {
+      margin-right: 0;
     }
 
     &:hover {
