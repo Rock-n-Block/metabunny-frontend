@@ -68,7 +68,7 @@ const MobileMenu: FC<Props> = ({ className, connectWallet, toggleMenu }) => {
           title={
             user.address
               ? `${user.address.slice(0, 7)}...${user.address.slice(-1)}`
-              : 'Connect wallet'
+              : t('button.connect')
           }
           className={s.button}
           onClick={connectWallet}
