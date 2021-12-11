@@ -2,7 +2,7 @@
 
 .footer {
   background: linear-gradient(0deg, #300711 79.45%, rgba(35, 10, 16, 0) 113.22%);
-  background-color:rgba(0,0,0,.8);
+  background-color: rgba(0, 0, 0, 0.8);
   background-size: 100%;
   position: relative;
 }
@@ -47,7 +47,7 @@
   }
 
   .link {
-    font-family: 'TL', sans-serif;
+    font-family: 'TL', 'Caveat', sans-serif;
     font-size: 16px;
     line-height: 25px;
     letter-spacing: 4px;
@@ -82,9 +82,9 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  height:200px;
+  height: 200px;
   width: 100%;
 }
-.logoImg{
-  margin-bottom:30px;
+.logoImg {
+  margin-bottom: 30px;
 }

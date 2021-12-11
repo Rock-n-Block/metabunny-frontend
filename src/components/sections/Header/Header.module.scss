@@ -35,7 +35,7 @@
   .logoImg {
     // width: 60px;
     // height: 60px;
-    @include b(mobile) {
+    @include b(950) {
       display: none;
     }
   }
@@ -149,7 +149,8 @@ video {
   }
 
   .link {
-    font-family: 'TL', sans-serif;
+    font-family: 'TL', 'Caveat', sans-serif;
+    font-weight: 500;
     font-size: 14px;
     line-height: 25px;
     letter-spacing: 5px;
@@ -158,6 +159,7 @@ video {
     text-decoration: none;
     text-transform: uppercase;
     cursor: pointer;
+    text-align: center;
     color: #fff;
     position: relative;
 
@@ -228,6 +230,10 @@ video {
     position: absolute;
     right: 5%;
     top: 25%;
+
+    flex-direction: column-reverse;
+    gap: 20px;
+    align-items: flex-end;
   }
 }
 

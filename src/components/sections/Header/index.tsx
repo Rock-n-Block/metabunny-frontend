@@ -293,7 +293,7 @@ const Header: React.FC = () => {
 
         <img src={banner} alt="banner" className={s.banner} />
         <Button
-          title="Mint"
+          title={t('button.mint')}
           className={s.bannerButton}
           onClick={() => setModal(user.address ? 'txHash' : 'wallet')}
         />

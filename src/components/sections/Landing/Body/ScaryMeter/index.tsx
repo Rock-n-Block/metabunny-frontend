@@ -139,7 +139,7 @@ const ScaryMeter: React.FC = () => {
             <p> {t('project.preview.text3.4')}</p>
           </div>
         </div>
-        <div className={s.title}>Preview</div>
+        <div className={s.title}>{t('preview')}</div>
         <div className={s.top}>
           <div className={s.left}>
             <div className={s.levels}>
