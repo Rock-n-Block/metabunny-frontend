@@ -2,6 +2,7 @@ import { createContext, useContext, useState } from 'react';
 import { notify } from '../utils/notify';
 
 import { WalletConnect } from '../services/connect-wallet/index';
+import { useTranslation } from 'react-i18next';
 
 interface ITxData {
   from: string;
@@ -31,12 +32,13 @@ interface IContext {
 const Web3Context = createContext({} as IContext);
 
 const WalletConnectProvider: React.FC = ({ children }) => {
+  const { t } = useTranslation();
   const [user, setUser] = useState<IUser>({ address: null, provider: null });
   const init = async (wallet: 'MetaMask' | 'WalletConnect') => {
     const account: any = await wcService.initWalletConnect(wallet);
     if (account.address) {
       notify(
-        `Wallet connected: ${account.address.slice(0, 5)}...${account.address.slice(-5)}`,
+        `${t('toast.connected')}${account.address.slice(0, 5)}...${account.address.slice(-5)}`,
         'success',
       );
     }
@@ -56,7 +58,7 @@ const WalletConnectProvider: React.FC = ({ children }) => {
     setUser({ address: '', provider: '' });
     localStorage.removeItem('metabunny_address');
     localStorage.removeItem('metabunny_provider');
-    notify('Wallet disconnected', 'success');
+    notify(t('toast.disconnected'), 'success');
   };
 
   return (

@@ -13,6 +13,7 @@ import { useModals } from '../../../../context/Modal';
 import ModalWrapper from '../Modal';
 
 import s from './WalletModal.module.scss';
+import { useTranslation } from 'react-i18next';
 
 interface IWalletModalProps {
   mintNft?: (wallet: 'MetaMask' | 'WalletConnect') => void;
@@ -23,6 +24,7 @@ const WalletModal: React.FC<IWalletModalProps> = ({ mintNft }) => {
   const [isDisconnecting, setIsDisconnecting] = useState(false);
   const { modals, closeModal } = useModals();
   const { user, disconnect } = useWeb3Context();
+  const { t } = useTranslation();
 
   const handleClose = () => {
     closeModal('wallet');
@@ -46,7 +48,7 @@ const WalletModal: React.FC<IWalletModalProps> = ({ mintNft }) => {
   }, [isDisconnecting]);
 
   const handleLogout = () => {
-    disconnect()
+    disconnect();
     handleClose();
   };
 
@@ -56,8 +58,10 @@ const WalletModal: React.FC<IWalletModalProps> = ({ mintNft }) => {
         <div className={s.modal}>
           {!isDisconnecting && (
             <>
-              <div className={s.title}>Account</div>
-              <div className={s.subtitle}>Connected with {user.provider}</div>
+              <div className={s.title}>{t('account.title')}</div>
+              <div className={s.subtitle}>
+                {t('account.text')} {user.provider}
+              </div>
             </>
           )}
           <div className={s.account}>
@@ -67,7 +71,7 @@ const WalletModal: React.FC<IWalletModalProps> = ({ mintNft }) => {
               })}
             >
               {isDisconnecting
-                ? 'If you want to disconnect your wallet please delete site.io from connected sites in MetaMask'
+                ? t('account.delete')
                 : `${user.address.slice(0, 10)}...${user.address.slice(-7)}`}
               {!isDisconnecting && (
                 <span className={s.copy}>
@@ -87,15 +91,15 @@ const WalletModal: React.FC<IWalletModalProps> = ({ mintNft }) => {
                 <button type="button" onClick={changeDisconnect} className={s.disconnect}>
                   <img src={iconDisconnect} alt="disconnect" />
                 </button>
-                <span>Disconnect</span>
+                <span>{t('account.disconnect')}</span>
               </div>
             )}
           </div>
         </div>
       ) : (
         <div className={s.modal}>
-          <div className={s.title}>Select a Wallet</div>
-          <div className={s.subtitle}>Connect to a wallet</div>
+          <div className={s.title}>{t('modal.connect.title')}</div>
+          <div className={s.subtitle}>{t('modal.connect.subtitle')}</div>
           <div className={s.wallets}>
             <button type="button" onClick={() => handleMint('MetaMask')} className={s.wallet}>
               <div className={s.wallet_icon}>

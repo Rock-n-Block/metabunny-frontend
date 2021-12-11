@@ -27,9 +27,12 @@ const Project: React.FC = () => {
       </section>
       <div className={s.introTab}>
         <div className={s.carte_button}> intro</div>
-        <div className={s.carte}>Meta Bunny consists of 10,000 Bunnies completely generated via computer algorithm. Their existence is to scare people but unfortunately not all of them looks scary. Sadly</div>
+        <div className={s.carte}>
+          Meta Bunny consists of 10,000 Bunnies completely generated via computer algorithm. Their
+          existence is to scare people but unfortunately not all of them looks scary. Sadly
+        </div>
         <div className={s.carte_button2}> intro2</div>
-       
+
         <div className={s.carte2}>Meta Bunny</div>
       </div>
     </>
