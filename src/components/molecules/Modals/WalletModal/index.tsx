@@ -78,7 +78,7 @@ const WalletModal: React.FC<IWalletModalProps> = ({ mintNft }) => {
                   <img src={copy} alt="copy" onKeyPress={() => {}} onClick={handleCopy} />
                   <div className={s.tooltip}>
                     <span className={s.tooltiptext}>
-                      {copyAddress ? 'Success!' : 'Copy adress'}
+                      {copyAddress ? t('account.success') : t('account.copy')}
                     </span>
                   </div>
                 </span>
