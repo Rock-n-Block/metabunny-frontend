@@ -354,6 +354,12 @@ video {
   &:hover {
     background-color: rgba(230, 30, 10, 0.6);
   }
+  @include b(mobile) {
+    padding: 0 10px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+  }
 }
 .carte_button2 {
   position: relative;
@@ -385,7 +391,10 @@ video {
   }
   @include b(mobile) {
     font-size: 14px;
+    height: 40px;
     padding: 0 5px;
+    display: flex;
+    align-items: center;
   }
 }
 .carte {

@@ -109,7 +109,8 @@
     "minted1": "Minted",
     "minted2": "bunnies. View on ",
     "minted3": "Minted 1 bunny. View on ",
-    "error": "Something went wrong"
+    "error": "Something went wrong",
+    "whitelist": "Your address not in the whitelist"
   },
   "modal": {
     "connect": {

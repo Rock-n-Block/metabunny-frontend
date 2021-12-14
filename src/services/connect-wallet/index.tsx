@@ -133,6 +133,14 @@ export class WalletConnect {
       notify(this.t('toast.pausedMint'), 'error');
       return;
     }
+    const isWhitelistEnabled = await contract.methods.whitelistEnabled().call();
+    if (isWhitelistEnabled) {
+      const isAddressInWhitelist = await contract.methods.whitelist(userAddress).call();
+      if (!isAddressInWhitelist) {
+        notify(this.t('toast.whitelist'), 'error');
+        return;
+      }
+    }
     const totalSupply = await contract.methods.totalSupply().call();
     const allowance = await contract.methods.allowedToExist().call();
     if (new BigNumber(totalSupply).plus(amount).isGreaterThan(new BigNumber(allowance))) {
