@@ -23,7 +23,7 @@ export const chain: IChainConfig = {
     decimals: 18,
   },
   blockExp: is_production ? '' : '',
-  contractAddress: is_production ? '' : '0xA1AC21346dbC6f6D3d471bB43b8C3EE0b292EbB0',
+  contractAddress: is_production ? '' : '0xF236E11BcA8480b360F1Ff21F45644d481379a14',
 };
 
 export const connectWalletConfig: IConnectWallet = {
