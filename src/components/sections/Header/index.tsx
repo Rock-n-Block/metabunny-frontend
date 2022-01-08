@@ -11,6 +11,7 @@ import { useWeb3Context } from '../../../context/WalletConnect';
 import { notify } from '../../../utils/notify';
 import Burger from '../../atoms/Burger';
 import Button from '../../atoms/Button';
+import overview from '../../../assets/img/sections/landing/header/overview.png';
 import WalletModal from '../../molecules/Modals/WalletModal';
 import ReactPlayer from 'react-player';
 import OutsideClickHandler from 'react-outside-click-handler';
@@ -271,6 +272,7 @@ const Header: React.FC = () => {
         )}
       </header>
       <div className={s.bannerWrapper}>
+
         <ReactPlayer
           className={s.video}
           width="100%"
@@ -292,6 +294,7 @@ const Header: React.FC = () => {
         />
 
         <img src={banner} alt="banner" className={s.banner} />
+        <img src={overview} alt="overview" className={s.overview} />
         <Button
           title={t('button.mint')}
           className={s.bannerButton}

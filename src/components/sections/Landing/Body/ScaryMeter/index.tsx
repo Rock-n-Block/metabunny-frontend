@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useMemo, useEffect, useState } from 'react';
 import cn from 'classnames';
 
 import bunny from '../../../../../assets/img/sections/landing/body/bunny1.png';
@@ -11,9 +11,10 @@ import cap1 from '../../../../../assets/img/sections/landing/body/cap1.jpg';
 import cap2 from '../../../../../assets/img/sections/landing/body/cap2.jpg';
 import cap3 from '../../../../../assets/img/sections/landing/body/cap3.jpg';
 import cap4 from '../../../../../assets/img/sections/landing/body/cap4.jpg';
+import cap5 from '../../../../../assets/img/sections/landing/body/cap5.jpg';
 import Button from '../../../../atoms/Button';
 import SimpleSlider from '../../../../atoms/Carousel';
-import SimpleSwiper from '../../../../atoms/Swiper';
+
 import ReactPlayer from 'react-player';
 import s from './ScaryMeter.module.scss';
 import { useTranslation } from 'react-i18next';
@@ -23,50 +24,51 @@ const settings = {
   dots: true,
   pauseOnHover: false,
   infinite: true,
-  speed: 10,
+  speed: 100,
   autoplay: true,
   fade: true,
   variableWidth: false,
-  slidesToScroll: 5,
+  slidesToScroll: 2,
 };
-
-const levels = [
-  {
-    key: 1,
-    title: 'level 1',
-    descr:
-      '10% of profit will go to community wallet on buying hidden gems (non-blue chip projects)',
-  },
-  {
-    key: 2,
-    title: 'level 2',
-    descr:
-      '20% of profit will go to community wallet on buying hidden gems (non-blue chip projects) 20% of profit will go to community wallet on buying hidden gems (non-blue chip projects)',
-  },
-  {
-    key: 3,
-    title: 'level 3',
-    descr:
-      '30% of profit will go to community wallet on buying hidden gems (non-blue chip projects) 30% of profit will go to community wallet on buying hidden gems (non-blue chip projects) 30% of profit will go to community wallet on buying hidden gems (non-blue chip projects)',
-  },
-  {
-    key: 4,
-    title: 'level 4',
-    descr:
-      '40% of profit will go to community wallet on buying hidden gems (non-blue chip projects) 40% of profit will go to community wallet on buying hidden gems (non-blue chip projects) 40% of profit will go to community wallet on buying hidden gems (non-blue chip projects) 40% of profit will go to community wallet on buying hidden gems (non-blue chip projects)',
-  },
-  {
-    key: 5,
-    title: 'level 5',
-    descr:
-      '50% of profit will go to community wallet on buying hidden gems (non-blue chip projects) 50% of profit will go to community wallet on buying hidden gems (non-blue chip projects) 50% of profit will go to community wallet on buying hidden gems (non-blue chip projects) 50% of profit will go to community wallet on buying hidden gems (non-blue chip projects) 50% of profit will go to community wallet on buying hidden gems (non-blue chip projects)',
-  },
-];
 
 const ScaryMeter: React.FC = () => {
   const { t } = useTranslation();
+  const levels  = useMemo(
+    () => [
+    {
+        key: 0,
+        title: '',
+        descr: '',
+        subpic: '/static/media/cap5.a4f946cb.jpg',
+   },
+    {
+      key: 1,
+      title: t('intro.preview.bunnyverse'),
+      descr: t('intro.preview.text1.1'),
+      subpic: '/static/media/cap3.3ceec026.jpg',
+    },
+    {
+      key: 2,
+      title: t('intro.preview.gamefi'),
+      descr: t('intro.preview.text2'),
+      subpic: '/static/media/cap4.32614628.jpg',
+    },
+    {
+      key: 3,
+      title: t('intro.preview.staking'),
+      descr: t('intro.preview.text3.1'),
+      subpic: '/static/media/cap1.d7c6434a.jpg',
+    },
+    {
+      key: 4,
+      title: t('intro.preview.merchandise'),
+      descr: t('intro.preview.text4'),
+      subpic: '/static/media/cap2.54ac50c7.jpg',
+    },
+  ],
+  [t],
+);
   const [activeLevel, setActiveLevel] = useState(levels[0]);
-
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [slides, setSlides] = useState(5);
   console.log(slides);
@@ -74,6 +76,7 @@ const ScaryMeter: React.FC = () => {
     const { innerWidth: width } = window;
     return width;
   };
+  
 
   useEffect(() => {
     function handleResize() {
@@ -106,40 +109,10 @@ const ScaryMeter: React.FC = () => {
   return (
     <section className={s.section} id="project">
       <div className={s.content}>
-        <div className={cn(s.title, s.titlePadding)}>{t('navigation.project')}</div>
+      <div className={s.title}>{t('project')}</div>
         <div className={s.info}>
-          <div className={s.text}>{t('project.text')}</div>
+          <div className={s.text}>{t('intro.text')}</div>
         </div>
-        <div className={s.introTab}>
-          <div className={s.carte_button}>Bunnyverse</div>
-          <div className={s.carte}>
-            <p>{t('project.preview.text1.1')}</p>
-            <p>{t('project.preview.text1.2')}</p>
-            <img src={cap3} alt="Capscreen" className={s.verse} />
-          </div>
-
-          <div className={s.carte_button2}>GameFi</div>
-          <div className={s.carte2}>
-            {t('project.preview.text2')}
-            <div className={s.imageContent}>
-              <div className={s.images}>
-                <img src={cap4} alt="Capscreen" className={s.nftImage} />
-                <img src={cap1} alt="Capscreen" className={s.nftImage} />
-                <img src={cap2} alt="Capscreen" className={s.nftImage} />
-              </div>
-            </div>
-          </div>
-          <div className={s.carte_button2}>Staking</div>
-          <div className={s.carte2}>
-            <h2>
-              <p>{t('project.preview.text3.1')}</p>
-              {t('project.preview.text3.2')}
-            </h2>
-            <p> {t('project.preview.text3.3')}</p>
-            <p> {t('project.preview.text3.4')}</p>
-          </div>
-        </div>
-        <div className={s.title}>{t('preview')}</div>
         <div className={s.top}>
           <div className={s.left}>
             <div className={s.levels}>
@@ -152,34 +125,19 @@ const ScaryMeter: React.FC = () => {
                 />
               ))}
             </div>
-            <div className={s.levelsMobile}>
-              <SimpleSwiper>
-                {levels.map((level: any) => {
-                  return (
-                    <Button
-                      title={level.title}
-                      className={cn(s.level, { [s.active]: level.key === activeLevel.key })}
-                      onClick={() => handleLevel(level)}
-                      insideShadow
-                    />
-                  );
-                })}
-              </SimpleSwiper>
-              {/* <SimpleSlider classNameProp={s.slider} slidesToShow={1} showArrows>
-                {levels.map((level: any) => {
-                  return (
-                    <Button
-                      title={level.title}
-                      className={cn(s.level, { [s.active]: level.key === activeLevel.key })}
-                      onClick={() => handleLevel(level)}
-                      insideShadow
-                    />
-                  );
-                })}
-              </SimpleSlider> */}
+            <div className={s.description}>
+              <div className={s.txt}>{activeLevel.descr}</div>
+              <img src={activeLevel.subpic} alt="cap" />
             </div>
+           
           </div>
+          <img src={cap3}  alt="" className={s.pic} />
+          <img src={cap2}  alt="" className={s.pic} />
+          <img src={cap1}  alt="" className={s.pic} />
+          <img src={cap4}  alt="" className={s.pic} />
+          <img src={cap5}  alt="" className={s.pic} />
         </div>
+        <div className={s.title}>{t('preview')}</div>
         <div className={s.nftsMobile}>
           <SimpleSlider classNameProp={s.slide} slidesToShow={2} dots>
             <div className={s.nft}>
@@ -204,7 +162,7 @@ const ScaryMeter: React.FC = () => {
         </div>
       </div>
       <div className={s.nfts}>
-        <SimpleSlider classNameProp={s.slide} slidesToShow={3} {...settings}>
+        <SimpleSlider classNameProp={s.slide} slidesToShow={5} {...settings}>
           <div className={s.nft}>
             <img src={bunny} alt="bunny" className={s.nftImage} />
           </div>
@@ -225,9 +183,12 @@ const ScaryMeter: React.FC = () => {
           </div>
         </SimpleSlider>
       </div>
+
+
       <ReactPlayer
         className={s.videobg}
         width="100%"
+        height="60%"
         url={[{ src: 'https://oninwar.com/raw/ward_animation_v2.mp4', type: 'video/mp4' }]}
         playsinline
         playing

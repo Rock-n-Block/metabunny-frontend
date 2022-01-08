@@ -14,16 +14,17 @@
     "join": "Join Discord",
     "ok": "ok"
   },
-  "project": {
+  "intro": {
     "text": "Meta Bunny consists of 10,000 Bunnies completely generated via computer algorithm. Their existence is to scare people but unfortunately not all of them looks scary. Sadly some are even cute! Every Bunny has a scary meter which represents how scary are they. This will be based on their accessory, appearance and the location they choose to scare people.",
     "preview": {
-      "text1.1": "Being the NFT holder will grant you access to our Closed Alpha testing for the Bunnyverse.",
-      "text1.2": "Not only will you be able to traverse the Bunnyverse, as an NFT holder you will also have a vote on the direction on how you want the project to turn out.",
+      "text1.1": "Being the NFT holder will grant you access to our Closed Alpha testing for the Bunnyverse. Not only will you be able to traverse the Bunnyverse, as an NFT holder you will also have a vote on the direction on how you want the project to turn out.",
       "text2": "We will be creating a game for Metabunny which you will run around and try to scare people. The more the people felt scared, the more in game tokens ($CARATS) you can earn. Therefore your Metabunny’s Scary Meter will affect how much in game tokens you can earn!",
-      "text3.1": "NFT holders can also choose to stake Metabunnies ",
-      "text3.2": "to earn $CARATS and can be used for:",
-      "text3.3": " 1) in game token for the upcoming Bunnyverse Project",
-      "text3.4": " 2) To purchase future exclusive merchandise"
+      "text3.1": "NFT holders can also choose to stake Metabunnies to earn $CARATS and can be used for: 1) in game token for the upcoming Bunnyverse Project 2) To purchase future exclusive merchandise",
+      "text4": "If you’re a fan of our campaign for closer diplomatic relations between Metabunny, show your pride with our wide range of merchandise below.",
+      "bunnyverse": "bunnyverse",
+      "gamefi": "gamefi",
+      "staking": "staking",
+      "merchandise": "Merchandise"
     }
   },
   "preview": "preview",

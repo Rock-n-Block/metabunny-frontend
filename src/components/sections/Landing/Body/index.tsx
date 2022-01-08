@@ -1,4 +1,5 @@
 import Community from './Community/index';
+// import Intro from './Intro/index';
 import FAQ from './FAQ/index';
 // import Nfts from './Nfts/index';
 // import Project from './Project/index';
@@ -12,6 +13,7 @@ const LandingBody: React.FC = () => {
   return (
     <section className={s.block}>
      {/*  <Project /> */}
+     {/* <Intro /> */}
       <ScaryMeter />
       {/* <Nfts /> */}
       <Roadmap />

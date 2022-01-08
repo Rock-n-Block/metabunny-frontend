@@ -5,7 +5,7 @@
   width: 100%;
   height: 82px;
   position: fixed;
-  background: rgba(0, 0, 0, 0.7);
+  //background: rgba(0, 0, 0, 0.7);
   top: 0;
   background: url('../../../assets/img/sections/landing/body/bg2.png');
   display: flex;
@@ -33,8 +33,7 @@
 .logo {
   display: flex;
   .logoImg {
-    // width: 60px;
-    // height: 60px;
+    width: 200px;
     @include b(950) {
       display: none;
     }
@@ -85,14 +84,14 @@ video {
 
   .banner {
     margin: auto;
-    width: 400px;
+    width: 600px;
     height: auto;
     position: absolute;
     background-size: 100%;
     z-index: 1;
     left: 0;
     right: 0;
-    bottom: 20%;
+    bottom: 25%;
     @include b(tablet) {
       width: 60%;
       background-size: 100%;
@@ -102,9 +101,28 @@ video {
       bottom: 15%;
     }
   }
+  .overview {
+    margin: auto;
+    width: 600px;
+    height: auto;
+    position: absolute;
+    background-size: 100%;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    bottom: 20%;
+    @include b(tablet) {
+      width:100%;
+      bottom:15%;
+    }
+    @include b(mobile) {
+      width:100%;
+      bottom:9%;
+    }
+  }
   .bannerButton {
-    width: 200px;
-    height: 60px;
+    width: 180px;
+    height: 50px;
     position: absolute;
     z-index: 99;
     bottom: 15%;
@@ -115,6 +133,7 @@ video {
     line-height: 30px;
     font-family: 'TL', sans-serif;
     letter-spacing: 0.2em;
+    
     @include b(tablet) {
     }
     @include b(mobile) {
@@ -227,11 +246,11 @@ video {
   display: flex;
   align-items: center;
   @include b(mobile) {
-    position: absolute;
-    right: 5%;
-    top: 25%;
-
-    flex-direction: column;
+    position: fixed;
+    right: 5px;
+    top: 0%;
+    width: 80%;
+    justify-content: center;
     align-items: flex-end;
   }
 }
@@ -239,8 +258,13 @@ video {
 .socials {
   display: flex;
   margin-right: 20px;
+  img{
+    width:30px;
+    height:30px;
+  }
   .socialLink + .socialLink {
     margin-left: 10px;
+
   }
 
   @include b(desktop) {
@@ -250,13 +274,16 @@ video {
 }
 
 .button {
+  width:200px;
+  height:40px;
   font-family: 'TL', sans-serif;
-  font-size: 22px;
-  line-height: 25px;
+  font-size: 15px;
+  padding:0;
 
   @include b(desktop) {
     font-size: 16px;
     line-height: 19px;
+    margin-left:10px;
   }
 
   @include b(mobile) {
@@ -282,7 +309,6 @@ video {
   z-index: 99;
   top: 0;
   left: 0;
-
   transition: 300ms;
   transform: translateX(-100%);
 }
@@ -295,30 +321,30 @@ video {
 
 .translate {
   position: relative;
-
+  z-index: 9999;
   .head {
     position: relative;
-    display: flex;
+    display: block;
     align-items: center;
-    background: #000000;
-    padding: 17px 37px 17px 30px;
-    border: 2px solid #464646;
+    text-align: center;
+    background: #323232;
+    width:120px;
+    height:40px;
+    border-radius:5px;
+    line-height:40px;
     box-sizing: border-box;
-    border-radius: 12px;
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 12px;
     letter-spacing: 0.2em;
     font-family: 'TL', sans-serif;
     margin-right: 20px;
-
     color: #ffffff;
-
     cursor: pointer;
     transition: box-shadow 0.2s;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    box-shadow: 0 8px 0 #222, 0 10px 15px rgba(0,0,0,.35);
+    transition :#333 0.2s ease-in-out;
 
     @include b(desktop) {
-      padding: 10px 37px 10px 20px;
       font-size: 12px;
     }
 
@@ -336,7 +362,6 @@ video {
     width: 32px;
     height: 32px;
     margin-right: 4px;
-
     img {
       width: 100%;
       height: 100%;
@@ -355,13 +380,13 @@ video {
 
   .arrow {
     position: absolute;
-    top: calc(50% - 16px);
-    right: 8px;
+    top: 10px;
+    right: 9px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 32px;
-    height: 32px;
+    width: 20px;
+    height: 20px;
 
     svg {
       // fill: $logo-color-orange1;
@@ -377,31 +402,35 @@ video {
     border-radius: 12px;
     // background: $neutrals8;
     // box-shadow: inset 0 0 0 2px $neutrals6, 0 4px 12px rgba($neutrals2, 0.1);
+    border-radius:5px;
     visibility: hidden;
     opacity: 0;
     transform: translateY(3px);
     // transition: all $animation-timing-default;
-
+    @include b(mobile) {
+      top: calc(100% + 2px);
+    }
     span {
       white-space: nowrap;
     }
   }
 
   .option {
-    padding: 8px 16px;
+    width:120px;
+    height:30px;
+    line-height:30px;
     font-size: 14px;
     background: #000000;
-    padding: 17px 30px;
-    border: 2px solid #464646;
+    border-bottom: 1px dotted #464646;
     box-sizing: border-box;
-    border-radius: 12px;
     cursor: pointer;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    margin-right: 20px;
-
+    text-align: center;
     &:hover,
     &.selected {
       // color: $black;
+      background:coral;
+      color:#fff;
       font-weight: bold;
     }
   }
@@ -409,7 +438,6 @@ video {
 
 .active {
   z-index: 10;
-
   .head {
     .arrow {
       svg {

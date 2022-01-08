@@ -13,7 +13,7 @@ interface IFAQItemProps {
 }
 
 const FAQItem: React.FC<IFAQItemProps> = ({ title, subtitle }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div
