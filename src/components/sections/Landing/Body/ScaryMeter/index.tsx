@@ -63,7 +63,7 @@ const ScaryMeter: React.FC = () => {
       key: 4,
       title: t('intro.preview.merchandise'),
       descr: t('intro.preview.text4'),
-      subpic: '/static/media/cap2.54ac50c7.jpg',
+      subpic: '/static/media/cap2.c8c75e69.jpg',
     },
   ],
   [t],

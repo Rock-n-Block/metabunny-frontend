@@ -118,5 +118,8 @@
       "title": "Select a wallet",
       "subtitle": "Connect a wallet"
     }
+  },
+  "footer": {
+    "remark": "This product is not a financial product or any investment and wealth management product. The design purpose of the product is not for investment. Whether buying or selling this product, it is the buyer's own decision and responsibility. The company cannot predict the future price changes of the product. or control, if there is any price fluctuation, it has nothing to do with the company."
   }
 }

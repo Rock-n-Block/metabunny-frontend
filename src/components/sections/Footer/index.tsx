@@ -3,6 +3,8 @@ import bg from '../../../assets/img/sections/landing/body/bg_upside.png';
 import disc from '../../../assets/img/sections/landing/header/disc.png';
 import logo from '../../../assets/img/sections/landing/header/logo.png';
 import twit from '../../../assets/img/sections/landing/header/twit.png';
+import hkd from '../../../assets/img/sections/landing/body/hkd.png';
+import eth from '../../../assets/img/sections/landing/body/eth.png';
 
 import s from './Footer.module.scss';
 
@@ -26,6 +28,7 @@ const Footer: React.FC = () => {
             {t('navigation.faq')}
           </a>
         </div>
+
         <div className={s.socials}>
           <a
             href="https://discord.com/invite/r5XrJgnH8Y"
@@ -44,8 +47,18 @@ const Footer: React.FC = () => {
             <img src={twit} alt="twit" className={s.logoSoc} />
           </a>
         </div>
+        <span>{t('footer.remark')}</span>
+        <br />
+        <div className={s.cp}>
+        <div className={s.powered}>
+          <div className={s.desc}>Powered by</div>
+            <img src={hkd} alt='' className={s.hkd} />
+            <img src={eth} alt='' className={s.eth} />
+          </div>
+        </div>
       </div>
       <img src={bg} alt="bg" className={s.bgImg} />
+     
     </footer>
   );
 };

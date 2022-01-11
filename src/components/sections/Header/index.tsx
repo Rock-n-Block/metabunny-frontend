@@ -24,7 +24,7 @@ import s from './Header.module.scss';
 import { useTranslation } from 'react-i18next';
 import moment from 'moment';
 
-const languages = ['English', 'Русский'];
+const languages = ['English', 'Русский', '繁'];
 
 function timeToDate(date: string) {
   let secondsToDate = Math.round((+new Date(date) - +new Date(Date.now())) / 1000);
@@ -57,6 +57,7 @@ const Header: React.FC = () => {
     localStorage.metabunny_lang && localStorage.metabunny_lang === 'ru'
       ? languages[1]
       : languages[0],
+      
   );
 
   const [timeBeforeEnd, setTimeBeforeEnd] = useState(timeToDate(PRESALE_DATE_END));
@@ -134,6 +135,10 @@ const Header: React.FC = () => {
       i18n.changeLanguage('en');
       localStorage.metabunny_lang = 'en';
       moment.locale('en');
+    } else if (lang === '繁') {
+      i18n.changeLanguage('chi');
+      localStorage.metabunny_lang = 'chi';
+      moment.locale('chi');
     } else {
       i18n.changeLanguage('ru');
       localStorage.metabunny_lang = 'ru';

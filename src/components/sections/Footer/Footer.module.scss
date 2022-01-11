@@ -18,6 +18,41 @@
   & > * {
     z-index: 9;
   }
+  span{
+    display:block;
+    width:50%;
+    margin:auto;
+    padding:15px;
+    line-height:15px;
+    color:#676767;
+    text-align: left;
+    font-size:7px;
+  }
+  .cp{
+    color:#fff;
+    img{
+      margin-top:20px;
+    }
+  }
+  .powered{
+    width:300px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display:flex;
+    justify-content: center;
+    .desc{
+      position:absolute;
+      left:50px;
+    }
+    .hkd{
+      width:150px;
+    }
+    .eth{
+      width:30px;
+    }
+  }
 }
 
 .button {

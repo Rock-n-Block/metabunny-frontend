@@ -1,0 +1,126 @@
+{
+  "navigation": {
+    "project": "介紹",
+    "roadmap": "路線圖",
+    "team": "我們的團隊",
+    "faq": "Faq"
+  },
+  "button": {
+    "connect": "連接錢包",
+    "mint": "mint",
+    "bunnyverse": "bunnyverse",
+    "gamefi": "gamefi",
+    "staking": "staking",
+    "join": "加入 Discord",
+    "ok": "確定"
+  },
+  "intro": {
+    "text": "MetaBunny是透過演算法生成的10,000個兔子. 他們的存在是為了嚇唬人，但不幸的是，並不是所有的都看起來很嚇人. 因為有些兔子是非常可愛！ 而基於每個兔子他們的配飾、外表和他們選擇嚇唬人的地方都有一個可怕的外表，代表著它們有多恐怖。。",
+    "preview": {
+      "text1.1": "作為 NFT 持有者將授予您們權限訪問我們的封測. 您不僅可以穿越Bunnyverse,作為 NFT 持有者，您還將對項目的發展方向進行投票。",
+      "text2": "我們將為 Metabunny 設計一個遊戲，您將可以四處奔跑並試圖嚇唬人們。越多人感到害怕, 你就賺特越多的遊戲tokens ($CARATS). 因此，您的 Metabunny 的可怕多表將影響您可以獲得多少游戲tokens！",
+      "text3.1": "NFT 持有者也可以選擇抵押 Metabunnies 來賺取 $CARATS 並可用於： 1) 即將到來的 Bunnyverse 項目的遊戲token。 2)  購買我們的獨家商品",
+      "text4": "如果你是Metabunny的忠實粉絲， 使用我們獨家商品可以展示您的自豪感。",
+      "bunnyverse": "bunnyverse",
+      "gamefi": "gamefi",
+      "staking": "staking",
+      "merchandise": "Merchandise"
+    }
+  },
+  "preview": "預覽",
+  "project": "介紹",
+  "roadmap": {
+    "percents": {
+      "10": "100 NFT 頭像空投給前10%的買家。",
+      "20": "20% 的利潤將會在社區錢包購買hidden gems (non-blue chip projects)",
+      "30": "與其他 NFT 項目的合作",
+      "40": "每日為所有會員都有抽獎活動 (從抽獎中抽取的加密貨幣每天都會有所不同( 如果成為了 OG 成員, 會有更多的獎勵)",
+      "50": "50% 的Royalties將返還給每個 Metabunny NFT 持有者",
+      "60": "每週特定的遊戲競賽 (撲克，MEME比賽，小遊戲，桌面遊戲). 每個月後，第一名和參與最多的成員將獲得 1 個 Metabunny。",
+      "70": "每週掃地",
+      "80": "確認RoadMap 2.0，其中將包括另一個 NFT 發布",
+      "90": "免費空投給所有NFT擁有者 (以 Roadmap 2.0來界定)",
+      "100": "Meta Bunny Metaverse的開發將會啓動，和所有Token擁有者在遊戲公開都會獲得他們Metabunny的皮膚。"
+    }
+  },
+  "team": {
+    "team1": {
+      "title": "RICHI",
+      "text": "曾在知名拍賣行擔任當代藝術專​​員，經朋友介紹後迷上了 NFT。他也是前魔獸世界公會的高手。"
+    },
+    "team2": {
+      "title": "ANSON",
+      "text": "該項目的首席設計師。前 VR 遊戲公司的 3D 動畫師。喜歡玩電子遊戲和看日本動漫。他為這個項目犧牲了自己的生命。"
+    },
+    "team3": {
+      "title": "ZEN",
+      "text": "ZEN 是 HKD.com 的加密貨幣顧問. 自比特幣發行開始他就一直在研究、介紹和在太坊誕開始以來就大力投資加密資產。"
+    }
+  },
+  "community": {
+    "title": "社區",
+    "text": "我們是一群熱愛遊戲和樂趣的人, 所以我們希望社區也可以變得一樣! 而且將會定期舉行比賽，包括但不限於瑣事, 如撲克之夜、 桌面遊戲、 砌圖遊戲, Meme競賽等等遊戲，其中一些決定將通過社區投票，來增加我們與大家的互動。而每場比賽都會有記分記錄，排名第一的會員以及每月參與最多的會員將會獲得特別的 Metabunny."
+  },
+  "faq": {
+    "faq1": {
+      "title": "什麼是 NFT?",
+      "text": "非同質化代幣（Non-fungible token），指的是一類具有唯一性的數位資產，這些資產的所有權是在區塊鏈上流轉的。NFT相較於同質化的比特幣、以太幣等虛擬貨幣的枚枚等值，「非同質化」特性使每一個NFT都獨一無二。藉由區塊鏈技術，每一個NFT都擁有一串獨一無二的編號，且每一次的轉手資訊，都會自動寫入區塊鏈上，一旦寫入就無法修改。交易過程透明化加上不可修改等特性，一定程度上避免了偽造的出現。"
+    },
+    "faq2": {
+      "title": "什麼是 Metabunny?",
+      "text": "Metabunny 是由 NFT 愛好者團隊創建的 NFT，願意建立一個充滿樂趣和遊戲的社區！ 每個 Metabunny 都有一個可怕的外表，它將確定兔子的可怕或可愛程度。越可怕的，或者在某些情況下越不嚇窒你，而你就能獲得越多的獎勵！"
+    },
+    "faq3": {
+      "title": "我可以用我的 Metabunny 做什麼？",
+      "text": "每個 Metabunny 都可以作為會員加入我們的社區，那裡有許多不同的活動，例如撲克之夜, 電子遊戲比賽、藝術比賽等等遊戲都等著你. 您還可以購買商品以及獲得 Metabunny 擁有者都可獨有的其好處. 所以請務必更改您社交媒體的頭像並且告訴您的朋友和家人！"
+    },
+    "faq4": {
+      "title": "如何獲得 Metabunny？",
+      "text": "為了獲得 Metabunny，您只需要一個帶有一些以太坊的 MetaMask 錢包，然後您就可以開始了！"
+    },
+    "faq5": {
+      "title": "我在哪裡可以得到我的 Metabunny？",
+      "text": "當我們正在預售和公開發售啟動時，您可以通過我們的網站購買 Metabunny。在這之後，它將可以在 Opensea 上進行二手購買。"
+    },
+    "faq6": {
+      "title": "我什麼時候可以拿到我的 Metabunny？",
+      "text": "請繼續關注我們Twitter上的更新, 官方網站, Discord頻道上有關Metabunny發佈時間和我們未來計劃的任何消息！"
+    },
+    "faq7": {
+      "title": "如何獲得OG Status？",
+      "text": "我們將為前 500名加入的 Discord 會員發放OG Status. 請務必與任何可能感興趣的朋友或家人分享。"
+    }
+  },
+  "account": {
+    "title": "帳戶",
+    "text": "連接",
+    "disconnect": "中斷連線",
+    "delete": "如果你想中斷連線你的錢包，請刪除在MetaMask 中的連接站點metabunny.io",
+    "copy": "複製地址",
+    "success": "成功!"
+  },
+  "mint": {
+    "title": "mint in live"
+  },
+  "toast": {
+    "connected": "錢包已連接： ",
+    "disconnected": "錢包連接已中斷",
+    "allMinted": "沒有足夠的幣來 mint",
+    "pausedMint": "Minting已暫停",
+    "mintProgress": "Mint正在進行中。請查看 ",
+    "minted1": "Minted",
+    "minted2": "兔子. 請查看 ",
+    "minted3": "Minted 1 bunny. 請查看",
+    "error": "出問題了",
+    "whitelist": "您的地址不在白名單中"
+  },
+  "modal": {
+    "connect": {
+      "title": "請選擇錢包",
+      "subtitle": "連接錢包F"
+    }
+  },
+  "footer": {
+      "remark": "本商品並非金融商品或任何投資理財型商品，商品之設計目的並非作為投資之用，無論購入或出售本商品，為購買者自行決定且自行負責之行為，本公司就商品未來的價格變化無法預測或控制，如有任何價格波動，皆與本公司無關。"
+  }
+}
