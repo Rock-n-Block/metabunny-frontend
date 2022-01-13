@@ -23,8 +23,8 @@
 
 .indicator {
   margin-right: 10px;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   background: #444;
   border-radius: 12px;
   cursor: pointer;
@@ -116,10 +116,8 @@
 
 .slick-list {
   position: relative;
-
   margin: 0;
   padding: 0;
-
   display: block;
   overflow: hidden;
 
@@ -148,10 +146,8 @@
   position: relative;
   top: 0;
   left: 0;
-
   margin-right: auto;
   margin-left: auto;
-
   display: block;
 
   &::before {
@@ -173,7 +169,6 @@
 }
 
 .slick-slide {
-  display: none;
   float: left;
   height: 100%;
   min-height: 1px;
@@ -206,9 +201,7 @@
 
 .slick-vertical .slick-slide {
   display: block;
-
   height: auto;
-
   border: 1px solid transparent;
 }
 

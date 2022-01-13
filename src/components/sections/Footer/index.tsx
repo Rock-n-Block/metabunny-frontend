@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import bg from '../../../assets/img/sections/landing/body/bg_upside.png';
 import disc from '../../../assets/img/sections/landing/header/disc.png';
+import tele from '../../../assets/img/sections/landing/header/tele.png';
 import logo from '../../../assets/img/sections/landing/header/logo.png';
 import twit from '../../../assets/img/sections/landing/header/twit.png';
 import hkd from '../../../assets/img/sections/landing/body/hkd.png';
@@ -30,8 +31,16 @@ const Footer: React.FC = () => {
         </div>
 
         <div className={s.socials}>
+        <a
+            href="https://t.me/hkd_com"
+            className={s.socialLink}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img src={tele} alt="tele" className={s.logoSoc} />
+          </a>
           <a
-            href="https://discord.com/invite/r5XrJgnH8Y"
+            href="https://www.instagram.com/metabunny.nft/"
             className={s.socialLink}
             rel="noopener noreferrer"
             target="_blank"

@@ -1,6 +1,6 @@
 @import '../../../../../styles/mixins/container.scss';
 @import '../../../../../styles/mixins/media.scss';
-
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
 .section {
   padding: 15px 0;
   background: url('../../../../../assets/img/sections/landing/body/roadmap.png') center 0 no-repeat,
@@ -15,6 +15,7 @@
   // max-width: 1130px;
   // padding: 0 15px;
   // margin: 0 auto;
+  font-family: ‘Noto Sans TC’, sans-serif;
   @include b(mobile) {
     padding-bottom: 50px;
     justify-content: center;
@@ -99,7 +100,7 @@
   border-radius:0;
   & + & {
     border:0;
-    background: #651632;
+    background: #e52d27;
     box-shadow: inset 0 0 0 0 #ff1616;
     border-left:1px solid #7c1b3d;
     height:40px;

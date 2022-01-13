@@ -1,6 +1,6 @@
 import { useMemo, useEffect, useState } from 'react';
 import cn from 'classnames';
-
+import bunny0 from '../../../../../assets/img/sections/landing/body/bunny0.png';
 import bunny from '../../../../../assets/img/sections/landing/body/bunny1.png';
 import bunny1 from '../../../../../assets/img/sections/landing/body/bunny2.png';
 import bunny2 from '../../../../../assets/img/sections/landing/body/bunny3.png';
@@ -28,7 +28,7 @@ const settings = {
   autoplay: true,
   fade: true,
   variableWidth: false,
-  slidesToScroll: 2,
+  slidesToScroll: 4,
 };
 
 const ScaryMeter: React.FC = () => {
@@ -39,7 +39,7 @@ const ScaryMeter: React.FC = () => {
         key: 0,
         title: '',
         descr: '',
-        subpic: '/static/media/cap5.a4f946cb.jpg',
+        subpic: '/static/media/cap5.6789b5bd.jpg',
    },
     {
       key: 1,
@@ -153,6 +153,9 @@ const ScaryMeter: React.FC = () => {
               <img src={bunny3} alt="bunny" className={s.nftImage} />
             </div>
             <div className={s.nft}>
+              <img src={bunny0} alt="bunny" className={s.nftImage} />
+            </div>
+            <div className={s.nft}>
               <img src={bunny4} alt="bunny" className={s.nftImage} />
             </div>
             <div className={s.nft}>
@@ -163,6 +166,7 @@ const ScaryMeter: React.FC = () => {
       </div>
       <div className={s.nfts}>
         <SimpleSlider classNameProp={s.slide} slidesToShow={5} {...settings}>
+
           <div className={s.nft}>
             <img src={bunny} alt="bunny" className={s.nftImage} />
           </div>
@@ -174,6 +178,9 @@ const ScaryMeter: React.FC = () => {
           </div>
           <div className={s.nft}>
             <img src={bunny3} alt="bunny" className={s.nftImage} />
+          </div>
+          <div className={s.nft}>
+            <img src={bunny0} alt="bunny" className={s.nftImage} />
           </div>
           <div className={s.nft}>
             <img src={bunny4} alt="bunny" className={s.nftImage} />

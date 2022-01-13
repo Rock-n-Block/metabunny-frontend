@@ -3,6 +3,7 @@ import cn from 'classnames';
 
 import banner from '../../../assets/img/sections/landing/header/banner.png';
 import disc from '../../../assets/img/sections/landing/header/disc.png';
+import tele from '../../../assets/img/sections/landing/header/tele.png';
 import logo from '../../../assets/img/sections/landing/header/logo.png';
 import twit from '../../../assets/img/sections/landing/header/twit.png';
 import { is_production } from '../../../config/index';
@@ -24,7 +25,7 @@ import s from './Header.module.scss';
 import { useTranslation } from 'react-i18next';
 import moment from 'moment';
 
-const languages = ['English', 'Русский', '繁'];
+const languages = ['English', 'Русский', '中文'];
 
 function timeToDate(date: string) {
   let secondsToDate = Math.round((+new Date(date) - +new Date(Date.now())) / 1000);
@@ -135,7 +136,7 @@ const Header: React.FC = () => {
       i18n.changeLanguage('en');
       localStorage.metabunny_lang = 'en';
       moment.locale('en');
-    } else if (lang === '繁') {
+    } else if (lang === '中文') {
       i18n.changeLanguage('chi');
       localStorage.metabunny_lang = 'chi';
       moment.locale('chi');
@@ -237,8 +238,16 @@ const Header: React.FC = () => {
 
           <div className={s.right}>
             <div className={s.socials}>
+            <a
+                href="https://t.me/hkd_com"
+                className={s.socialLink}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <img src={tele} alt="tele" className={s.logoSoc} />
+              </a>
               <a
-                href="https://discord.com/invite/r5XrJgnH8Y"
+                href="https://www.instagram.com/metabunny.nft/"
                 className={s.socialLink}
                 rel="noopener noreferrer"
                 target="_blank"
