@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import bg from '../../../assets/img/sections/landing/body/bg_upside.png';
+import ig from '../../../assets/img/sections/landing/header/ig.png';
 import disc from '../../../assets/img/sections/landing/header/disc.png';
 import tele from '../../../assets/img/sections/landing/header/tele.png';
 import logo from '../../../assets/img/sections/landing/header/logo.png';
@@ -41,6 +42,14 @@ const Footer: React.FC = () => {
           </a>
           <a
             href="https://www.instagram.com/metabunny.nft/"
+            className={s.socialLink}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img src={ig} alt="disc" className={s.logoSoc} />
+          </a>
+          <a
+            href="https://discord.com/invite/UA8Z3fRR"
             className={s.socialLink}
             rel="noopener noreferrer"
             target="_blank"

@@ -18,7 +18,7 @@ const Community: React.FC = () => {
               <div className={s.button2}>
                 {' '}
                 <a
-                  href="https://discord.com/invite/r5XrJgnH8Y"
+                  href="https://discord.com/invite/UA8Z3fRR"
                   rel="noopener noreferrer"
                   target="_blank"
                 >

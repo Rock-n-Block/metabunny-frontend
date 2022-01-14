@@ -4,6 +4,7 @@ import cn from 'classnames';
 import banner from '../../../assets/img/sections/landing/header/banner.png';
 import disc from '../../../assets/img/sections/landing/header/disc.png';
 import tele from '../../../assets/img/sections/landing/header/tele.png';
+import ig from '../../../assets/img/sections/landing/header/ig.png';
 import logo from '../../../assets/img/sections/landing/header/logo.png';
 import twit from '../../../assets/img/sections/landing/header/twit.png';
 import { is_production } from '../../../config/index';
@@ -248,6 +249,14 @@ const Header: React.FC = () => {
               </a>
               <a
                 href="https://www.instagram.com/metabunny.nft/"
+                className={s.socialLink}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <img src={ig} alt="ig" className={s.logoSoc} />
+              </a>
+              <a
+                href="https://discord.com/invite/UA8Z3fRR"
                 className={s.socialLink}
                 rel="noopener noreferrer"
                 target="_blank"
