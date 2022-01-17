@@ -7,6 +7,9 @@ import ig from '../../../../assets/img/sections/landing/header/ig.png';
 import tele from '../../../../assets/img/sections/landing/header/tele.png';
 import twit from '../../../../assets/img/sections/landing/header/twit.png';
 import { useWeb3Context } from '../../../../context/WalletConnect';
+import guide01 from '../../../../assets/img/sections/landing/body/guide_01.jpg';
+import guide02 from '../../../../assets/img/sections/landing/body/guide_02.jpg';
+import guide03 from '../../../../assets/img/sections/landing/body/guide_03.jpg';
 import Button from '../../../atoms/Button';
 
 import s from './styles.module.scss';
@@ -102,6 +105,27 @@ const MobileMenu: FC<Props> = ({ className, connectWallet, toggleMenu }) => {
         >
           <img src={tele} alt="tele" className={s.logoSoc} />
         </a>
+      </div>
+      <a href="#popup2" className={s.link}>{t('guide.title')}</a>
+      <div id="popup2" className={s.popupcontainer}>
+        <div className={s.popupcontent}>
+          <a href="#banner" className={s.close}>&times;</a>
+          <h2>{t('guide.title')}</h2>
+          <h3>{t('guide.step1')}</h3>
+            <br />
+            <br />
+            {t('guide.step1texta')} <a href="https://www.metabunny.io" target="_blank" rel="noreferrer">https://www.metabunny.io</a>
+            <br />{t('guide.step1textb')} <a href="https://youtu.be/G9jwLbmGziw" target="_blank" rel="noreferrer">https://youtu.be/G9jwLbmGziw</a>)
+            <img src={guide01} alt=""/>
+            {t('guide.step1textc')}
+          <h2>{t('guide.step2')}</h2>
+          <h3>{t('guide.step2texta')}</h3>
+          <img src={guide02} alt=""/>
+          <h2>{t('guide.step3')}</h2>
+          <h3>{t('guide.step3texta')}</h3>
+          <img src={guide03} alt=""/> 
+          <h3>{t('guide.step4')}</h3>
+        </div>
       </div>
       <div className={s.footer}>
         <Button

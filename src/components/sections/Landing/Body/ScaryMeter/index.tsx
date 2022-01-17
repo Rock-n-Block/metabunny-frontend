@@ -7,6 +7,13 @@ import bunny2 from '../../../../../assets/img/sections/landing/body/bunny3.png';
 import bunny3 from '../../../../../assets/img/sections/landing/body/bunny4.png';
 import bunny4 from '../../../../../assets/img/sections/landing/body/bunny5.png';
 import bunny5 from '../../../../../assets/img/sections/landing/body/bunny6.png';
+import bunny6 from '../../../../../assets/img/sections/landing/body/bunny7.png';
+import bunny7 from '../../../../../assets/img/sections/landing/body/bunny8.png';
+import bunny8 from '../../../../../assets/img/sections/landing/body/bunny9.png';
+import bunny9 from '../../../../../assets/img/sections/landing/body/bunny10.png';
+import bunny10 from '../../../../../assets/img/sections/landing/body/bunny11.png';
+import bunny11 from '../../../../../assets/img/sections/landing/body/bunny12.png';
+import bunny12 from '../../../../../assets/img/sections/landing/body/bunny13.png';
 import cap1 from '../../../../../assets/img/sections/landing/body/cap1.jpg';
 import cap2 from '../../../../../assets/img/sections/landing/body/cap2.jpg';
 import cap3 from '../../../../../assets/img/sections/landing/body/cap3.jpg';
@@ -144,6 +151,9 @@ const ScaryMeter: React.FC = () => {
               <img src={bunny} alt="bunny" className={s.nftImage} />
             </div>
             <div className={s.nft}>
+              <img src={bunny0} alt="bunny" className={s.nftImage} />
+            </div>
+            <div className={s.nft}>
               <img src={bunny1} alt="bunny" className={s.nftImage} />
             </div>
             <div className={s.nft}>
@@ -153,13 +163,31 @@ const ScaryMeter: React.FC = () => {
               <img src={bunny3} alt="bunny" className={s.nftImage} />
             </div>
             <div className={s.nft}>
-              <img src={bunny0} alt="bunny" className={s.nftImage} />
-            </div>
-            <div className={s.nft}>
               <img src={bunny4} alt="bunny" className={s.nftImage} />
             </div>
             <div className={s.nft}>
               <img src={bunny5} alt="bunny" className={s.nftImage} />
+            </div>
+            <div className={s.nft}>
+              <img src={bunny6} alt="bunny" className={s.nftImage} />
+            </div>
+            <div className={s.nft}>
+              <img src={bunny7} alt="bunny" className={s.nftImage} />
+            </div>
+            <div className={s.nft}>
+              <img src={bunny8} alt="bunny" className={s.nftImage} />
+            </div>
+            <div className={s.nft}>
+              <img src={bunny9} alt="bunny" className={s.nftImage} />
+            </div>
+            <div className={s.nft}>
+              <img src={bunny10} alt="bunny" className={s.nftImage} />
+            </div>
+            <div className={s.nft}>
+              <img src={bunny11} alt="bunny" className={s.nftImage} />
+            </div>
+            <div className={s.nft}>
+              <img src={bunny12} alt="bunny" className={s.nftImage} />
             </div>
           </SimpleSlider>
         </div>
@@ -167,27 +195,48 @@ const ScaryMeter: React.FC = () => {
       <div className={s.nfts}>
         <SimpleSlider classNameProp={s.slide} slidesToShow={5} {...settings}>
 
-          <div className={s.nft}>
-            <img src={bunny} alt="bunny" className={s.nftImage} />
-          </div>
-          <div className={s.nft}>
-            <img src={bunny1} alt="bunny" className={s.nftImage} />
-          </div>
-          <div className={s.nft}>
-            <img src={bunny2} alt="bunny" className={s.nftImage} />
-          </div>
-          <div className={s.nft}>
-            <img src={bunny3} alt="bunny" className={s.nftImage} />
-          </div>
-          <div className={s.nft}>
-            <img src={bunny0} alt="bunny" className={s.nftImage} />
-          </div>
-          <div className={s.nft}>
-            <img src={bunny4} alt="bunny" className={s.nftImage} />
-          </div>
-          <div className={s.nft}>
-            <img src={bunny5} alt="bunny" className={s.nftImage} />
-          </div>
+        <div className={s.nft}>
+              <img src={bunny} alt="bunny" className={s.nftImage} />
+            </div>
+            <div className={s.nft}>
+              <img src={bunny0} alt="bunny" className={s.nftImage} />
+            </div>
+            <div className={s.nft}>
+              <img src={bunny1} alt="bunny" className={s.nftImage} />
+            </div>
+            <div className={s.nft}>
+              <img src={bunny2} alt="bunny" className={s.nftImage} />
+            </div>
+            <div className={s.nft}>
+              <img src={bunny3} alt="bunny" className={s.nftImage} />
+            </div>
+            <div className={s.nft}>
+              <img src={bunny4} alt="bunny" className={s.nftImage} />
+            </div>
+            <div className={s.nft}>
+              <img src={bunny5} alt="bunny" className={s.nftImage} />
+            </div>
+            <div className={s.nft}>
+              <img src={bunny6} alt="bunny" className={s.nftImage} />
+            </div>
+            <div className={s.nft}>
+              <img src={bunny7} alt="bunny" className={s.nftImage} />
+            </div>
+            <div className={s.nft}>
+              <img src={bunny8} alt="bunny" className={s.nftImage} />
+            </div>
+            <div className={s.nft}>
+              <img src={bunny9} alt="bunny" className={s.nftImage} />
+            </div>
+            <div className={s.nft}>
+              <img src={bunny10} alt="bunny" className={s.nftImage} />
+            </div>
+            <div className={s.nft}>
+              <img src={bunny11} alt="bunny" className={s.nftImage} />
+            </div>
+            <div className={s.nft}>
+              <img src={bunny12} alt="bunny" className={s.nftImage} />
+            </div>
         </SimpleSlider>
       </div>
 

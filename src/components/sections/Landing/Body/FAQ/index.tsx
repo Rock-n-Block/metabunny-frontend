@@ -9,7 +9,6 @@ import plogo2 from '../../../../../assets/img/icons/plogo2.png';
 import plogo3 from '../../../../../assets/img/icons/plogo3.jpg';
 import plogo4 from '../../../../../assets/img/icons/plogo4.png';
 import plogo5 from '../../../../../assets/img/icons/plogo5.png';
-
 import s from './FAQ.module.scss';
 
 interface IFAQItemProps {
@@ -91,22 +90,29 @@ const FAQ: React.FC = () => {
           ))}
         </div>
       </div>
-      <div className={s.partner} id="logo">
-        <a href="https://www.hkd.com/" target="_blank" rel="noreferrer">
-          <img src={plogo4} alt="" />
-        </a>
-        <a href="https://www.three.com.hk/tc/home.html" target="_blank" rel="noreferrer">
-          <img src={plogo5} alt="" className={s.logo5} />
-        </a>
-        <a href="https://www.huobi.com/zh-cn/" target="_blank" rel="noreferrer">
-          <img src={plogo2} alt="" />
-        </a>
-        <a href="https://times.capital/" target="_blank" rel="noreferrer">
-          <img src={plogo3} alt="" />
-        </a>
-        <a href="https://monaconft.io/discover" target="_blank" rel="noreferrer">
-          <img src={plogo1} alt="" />
-        </a>
+
+            <div className={s.logo} id="logo">
+        <div className={s.creator}>
+          <div className={s.subTitle}>Creator:</div>
+          <a href="https://www.hkd.com/" target="_blank" rel="noreferrer">
+            <img src={plogo4} alt="" />
+          </a>
+        </div>
+        <div className={s.partners}>  
+          <div className={s.subTitle}>Partners:</div>
+            <a href="https://www.three.com.hk/tc/home.html" target="_blank" rel="noreferrer">
+              <img src={plogo5} alt="" className={s.logo5} />
+            </a>
+            <a href="https://www.huobi.com/zh-cn/" target="_blank" rel="noreferrer">
+              <img src={plogo2} alt="" />
+            </a>
+            <a href="https://times.capital/" target="_blank" rel="noreferrer">
+              <img src={plogo3} alt="" />
+            </a>
+            <a href="https://monaconft.io/discover" target="_blank" rel="noreferrer">
+              <img src={plogo1} alt="" />
+            </a>
+         </div>
       </div>
     </section>
   );

@@ -22,6 +22,10 @@ import Burger from '../../atoms/Burger';
 import Button from '../../atoms/Button';
 import WalletModal from '../../molecules/Modals/WalletModal';
 
+import guide01 from '../../../assets/img/sections/landing/body/guide_01.jpg';
+import guide02 from '../../../assets/img/sections/landing/body/guide_02.jpg';
+import guide03 from '../../../assets/img/sections/landing/body/guide_03.jpg';
+
 import MobileMenu from './MobileMenu';
 
 import s from './Header.module.scss';
@@ -230,9 +234,18 @@ const Header: React.FC = () => {
               <a href="#team" className={s.link}>
                 {t('navigation.team')}
               </a>
-              <a href="#faq" className={s.link}>
-                {t('navigation.faq')}
-              </a>
+              <div className={s.menuwrap}>
+                  <ul className={s.menu}>
+                      <li className={s.menuitem}>
+                          <a href="#faq" className={s.link}>{t('navigation.faq')}</a>
+                          <ul className={s.dropmenu}>
+                              <li className={s.dropmenuitem}>
+                                  <a href="#popup2">{t('guide.title')}</a>
+                              </li>
+                          </ul>
+                      </li>
+                  </ul>
+              </div>
             </div>
           </div>
 
@@ -294,6 +307,8 @@ const Header: React.FC = () => {
           />
         )}
       </header>
+     
+
       <div className={s.bannerWrapper}>
         <ReactPlayer
           className={s.video}
@@ -318,6 +333,7 @@ const Header: React.FC = () => {
         <img src={banner} alt="banner" className={s.banner} />
         <img src={overview} alt="overview" className={s.overview} />
         <div className={s.bcontent}>
+        
           <Button
             title={t('button.mint')}
             className={s.bannerButton}
@@ -328,6 +344,26 @@ const Header: React.FC = () => {
           </a>
         </div>
         <div className={s.foot}> </div>
+      </div>
+      <div id="popup2" className={s.popupcontainer}>
+        <div className={s.popupcontent}>
+          <a href="#banner" className={s.close}>&times;</a>
+          <h2>{t('guide.title')}</h2>
+          <h3>{t('guide.step1')}</h3>
+            <br />
+            <br />
+            {t('guide.step1texta')} <a href="https://www.metabunny.io" target="_blank" rel="noreferrer">https://www.metabunny.io</a>
+            <br />{t('guide.step1textb')} <a href="https://youtu.be/G9jwLbmGziw" target="_blank" rel="noreferrer">https://youtu.be/G9jwLbmGziw</a>)
+            <img src={guide01} alt=""/>
+            {t('guide.step1textc')}
+          <h2>{t('guide.step2')}</h2>
+          <h3>{t('guide.step2texta')}</h3>
+          <img src={guide02} alt=""/>
+          <h2>{t('guide.step3')}</h2>
+          <h3>{t('guide.step3texta')}</h3>
+          <img src={guide03} alt=""/> 
+          <h3>{t('guide.step4')}</h3>
+        </div>
       </div>
     </>
   );

@@ -13,7 +13,7 @@ const Team: React.FC = () => {
         <div className={s.teammates}>
           <div className={s.teammate}>
             <img src={ellipse} alt="avatar" className={s.avatar} />
-            <span className={s.name}>Riichi</span>
+            <span className={s.name}>Nihilist</span>
             <span className={s.description}>{t('team.team1.text')}</span>
           </div>
         </div>
@@ -27,7 +27,7 @@ const Team: React.FC = () => {
         <div className={s.teammates}>
           <div className={s.teammate}>
             <img src={ellipse3} alt="avatar" className={s.avatar} />
-            <span className={s.name}>ZEN</span>
+            <span className={s.name}>EZEN</span>
             <span className={s.description}>{t('team.team3.text')}</span>
           </div>
         </div>

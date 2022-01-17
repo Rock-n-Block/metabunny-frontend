@@ -8,34 +8,16 @@ const Roadmap: React.FC = () => {
   const { t } = useTranslation();
   const stages = useMemo(
     () => [
-      { title: '10%', descr: t('roadmap.percents.10') },
+      { title: t('roadmap.desc.10') , descr: t('roadmap.percents.10') },
       {
-        title: '20%',
+        title: t('roadmap.desc.20') ,
         descr: t('roadmap.percents.20'),
       },
-      { title: '30%', descr: t('roadmap.percents.30') },
+      { title: t('roadmap.desc.30') , descr: t('roadmap.percents.30') },
       {
-        title: '40%',
+        title: t('roadmap.desc.40') ,
         descr: t('roadmap.percents.40'),
-      },
-      {
-        title: '50%',
-        descr: t('roadmap.percents.50'),
-      },
-      {
-        title: '60%',
-        descr: t('roadmap.percents.60'),
-      },
-      { title: '70%', descr: t('roadmap.percents.70') },
-      {
-        title: '80%',
-        descr: t('roadmap.percents.80'),
-      },
-      { title: '90%', descr: t('roadmap.percents.90') },
-      {
-        title: '100%',
-        descr: t('roadmap.percents.100'),
-      },
+      }
     ],
     [t],
   );

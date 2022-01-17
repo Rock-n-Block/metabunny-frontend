@@ -76,7 +76,8 @@
   }
 }
 .left {
-  width:900px;
+  width:100%;
+  max-width:900px;
   align-items: center;
   margin-bottom: 40px;
   @include b(mobile) {
@@ -220,7 +221,7 @@
 
 .nft {
   @include b(mobile) {
-    padding: 5px;
+    padding: 0px;
     width: fit-content;
   }
   &Slide {

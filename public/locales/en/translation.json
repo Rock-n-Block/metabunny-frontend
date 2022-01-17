@@ -1,10 +1,22 @@
-{
-  "navigation": {
+  {
+    "navigation": {
     "project": "project",
     "roadmap": "roadmap",
     "team": "team",
     "faq": "faq",
     "litepaper": "litepaper"
+  },
+    "guide": {
+    "title": "How to mint from the official website?",
+    "step1": "Step 1. Click the mint button",
+    "step1texta": "Click on the mint button located in the centre of the official website",
+    "step1textb": "(A cryptocurrency wallet needs to be created in advance. You can refer to our tutorial video on how to create your MetaMask wallet",
+    "step1textc": "After entering the official website, click the mint option to go to the purchase page; usually the mint option will appear in the center of the web page or prominently at the top right",
+    "step2": "Step 2. Connect your wallet",
+    "step2texta": "Connect your wallet by selecting the type of crypto wallet you are using (choose either MetaMask or Wallet Connect)",
+    "step3": "Step 3. Select and confirm your order",
+    "step3texta": "Choose your desired purchase quantity and click mint. A window will pop up confirming the purchase amount along with the associated gas fee (gas fee will fluctuate depending on the traffic condition on the Ethereum Blockchain). Check your order and click confirm",
+    "step4": "Done!"
   },
   "button": {
     "connect": "connect wallet",
@@ -30,22 +42,22 @@
   },
   "preview": "preview",
   "roadmap": {
+    "desc": {
+      "10": "Initial Launch (Presale 20th 4PM HKT, Public Launch 21st 4PM HKT)",
+      "20": "Staking and Tokenization (Q1 2022)",
+      "30": "MetaDinosaurs (H1 2022)",
+      "40": "Bunnyverse (H2 2022)"
+    },
     "percents": {
-      "10": "100 NFT pcs airdrop to first 10% buyers",
-      "20": "20% of profit will go to community wallet on buying hidden gems (non-blue chip projects)",
-      "30": "Collaboration with other NFT projects",
-      "40": "Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased)",
-      "50": "50% of all royalties will be given back to each Metabunny NFT holders",
-      "60": "Weekly contest for a specific game (poker, meme contest, Trivia game, tabletop games). After each month a 1of 1 Metabunny will be given to the person in 1st place as well as the most participated member.",
-      "70": "Weekly floor sweeping",
-      "80": "Confirm on Roadmap 2.0 which will include another NFT launch",
-      "90": "Free air drop for all NFT holders (separate from Roadmap 2.0)",
-      "100": "The development of the Meta Bunny Metaverse will kick-off and all the token holders will receive a skin of their Meta Bunny after the game launches."
+      "10": "We want to create a strong community filled with fun and games. Our NFT acts as a membership to our community where we will have regular game nights, contests and events with lucrative prizes and raffles. The giveaways will be handed out based on the scoreboard and will be reset monthly. The design of every traits of each Metabunny had gone over many discussions before the finalising. We want to make sure every Metabunny will be unique with some being cute and others being scary. Each Metabunny will be classified by their Scary Meter on deciding which type it will be.  ",
+      "20": "1-2 months down the road after launch, we will allow Metabunnies to be staked in order to earn $CARATS. $CARATS is the utility token for our Metabunny Project and can be used to purchase future exclusive merchandises which will be exclusive to Metabunny Holders. The purpose of staking is to provide overtime value for our Metabunny holders in order to maintain a high floor price. We currently have no plans to list on DEXes as we want to make the token exclusive only to diamond hands(small letters) $CARATS will only be used for the Metabunny Ecosystem, our merchandise and has no real monetary value.",
+      "30": "We will introduce the MetaDinosaur after the staking is made available. The MetaDinosaur is scarier than any Metabunny and is only available to mint when ETH drops to a certain amount of threshold in a day. The Threshold will be varied and an announcement will be made available to everyone so that it won’t be missed but nobody will know exactly when it will happen. NFT holders can choose 2 Metabunnies and pay a certain amount of $CARATS to fuse into a MetaDinosaur. The maximum number of MetaDinosaur that can be minted will be 5,000 and each Metabunny can only be used for fusion once! More information on MetaDinosaur will be revealed later.",
+      "40": "The Metabunny will be expanded to the Game-Fi sector and ultimately, its own Metaverse which we will call Bunnyverse. We will integrate every Metabunny into the Bunnyverse so that Metabunny owners will be able to choose an avatar based on the appearance of their Metabunnies. There will be a “Scary to Earn” Mechanism where the more scary the bunny is, the more $CARATS it can earn. We will also be collaborating with other projects to build an exciting and diverse Bunnyverse for everyone.Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased)"
     }
   },
   "team": {
     "team1": {
-      "title": "RICHI",
+      "title": "Nihilist",
       "text": "He has worked in a famous auction house as a Contemporary Art Specialist and has been obsessed with NFTs after being introduced by a friend. He is also a former World of Warcraft Guild master."
     },
     "team2": {
@@ -53,8 +65,8 @@
       "text": "Lead Artist for the project. Former 3D animator at a VR game company. Passionate in playing video games and watching Japanese anime. He has sacraficed his life for this project."
     },
     "team3": {
-      "title": "ZEN",
-      "text": "ZEN is the Head of Cryptocurrency at HKD.com. He was introduced to Bitcoin since its inception, and began researching and investing heavily into crypto assets since the birth of Ethereum."
+      "title": "EZEN",
+      "text": "EZEN is a Crypto Consultant. He was introduced to Bitcoin since its inception, and began researching and investing heavily into crypto assets since the birth of Ethereum."
     }
   },
   "community": {
