@@ -129,3 +129,24 @@
     display: none;
   }
 }
+.partner{
+  width:100%;
+  padding:50px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#000;
+  flex-wrap:wrap;
+  img{
+    width:170px;
+  }
+  .logo5{
+    width:50px;
+  }
+  @include b(mobile) {
+    padding:0;
+    img{
+      width:130px;
+    }
+  }
+}

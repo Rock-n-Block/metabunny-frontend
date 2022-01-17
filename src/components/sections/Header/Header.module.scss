@@ -98,7 +98,7 @@ video {
     }
     @include b(mobile) {
       height: auto;
-      bottom: 15%;
+      bottom: 30%;
     }
   }
   .overview {
@@ -117,27 +117,49 @@ video {
     }
     @include b(mobile) {
       width:100%;
-      bottom:9%;
+      bottom:24%;
     }
   }
-  .bannerButton {
-    width: 180px;
-    height: 50px;
+  .bcontent{
+    width:50%;
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap;
     position: absolute;
     z-index: 99;
     bottom: 15%;
     left: 0;
     right: 0;
     margin: auto;
+    @include b(mobile) {
+      bottom:0;
+    }
+  }
+  .bannerButton {
+    width: 180px;
+    height: 50px;
     font-size: 18px;
     line-height: 30px;
     font-family: 'TL', sans-serif;
     letter-spacing: 0.2em;
+    margin: 5px;
     
     @include b(tablet) {
     }
     @include b(mobile) {
-      bottom: 2%;
+    }
+  }
+  .bannerButton2 {
+    width: 180px;
+    height: 50px;
+    font-size: 18px;
+    line-height: 30px;
+    font-family: 'TL', sans-serif;
+    letter-spacing: 0.2em;
+    margin: 5px;
+    @include b(tablet) {
+    }
+    @include b(mobile) {
     }
   }
   &Mobile {

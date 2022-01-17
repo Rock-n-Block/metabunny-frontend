@@ -1,5 +1,11 @@
 import { useTranslation } from 'react-i18next';
+
 import bunny from '../../../../../assets/img/sections/landing/body/bunny2.png';
+import disc from '../../../../../assets/img/sections/landing/header/disc.png';
+import ig from '../../../../../assets/img/sections/landing/header/ig.png';
+import tele from '../../../../../assets/img/sections/landing/header/tele.png';
+import twit from '../../../../../assets/img/sections/landing/header/twit.png';
+
 import s from './Community.module.scss';
 
 const Community: React.FC = () => {
@@ -15,14 +21,39 @@ const Community: React.FC = () => {
           <div className={s.right}>
             <div className={s.text}>
               {t('community.text')}
-              <div className={s.button2}>
-                {' '}
+              <div className={s.socials}>
                 <a
                   href="https://discord.com/invite/UA8Z3fRR"
+                  className={s.socialLink}
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  {t('button.join')}
+                  <img src={disc} alt="disc" className={s.logoSoc} />
+                </a>
+                <a
+                  href="https://www.instagram.com/metabunny.nft/"
+                  className={s.socialLink}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <img src={ig} alt="disc" className={s.logoSoc} />
+                </a>
+
+                <a
+                  href="https://twitter.com/metabunnynft"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className={s.socialLink}
+                >
+                  <img src={twit} alt="twit" className={s.logoSoc} />
+                </a>
+                <a
+                  href="https://t.me/hkd_com"
+                  className={s.socialLink}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <img src={tele} alt="tele" className={s.logoSoc} />
                 </a>
               </div>
             </div>

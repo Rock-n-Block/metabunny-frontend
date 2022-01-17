@@ -1,12 +1,11 @@
 import { useTranslation } from 'react-i18next';
+
 import bg from '../../../assets/img/sections/landing/body/bg_upside.png';
-import ig from '../../../assets/img/sections/landing/header/ig.png';
 import disc from '../../../assets/img/sections/landing/header/disc.png';
-import tele from '../../../assets/img/sections/landing/header/tele.png';
+import ig from '../../../assets/img/sections/landing/header/ig.png';
 import logo from '../../../assets/img/sections/landing/header/logo.png';
+import tele from '../../../assets/img/sections/landing/header/tele.png';
 import twit from '../../../assets/img/sections/landing/header/twit.png';
-import hkd from '../../../assets/img/sections/landing/body/hkd.png';
-import eth from '../../../assets/img/sections/landing/body/eth.png';
 
 import s from './Footer.module.scss';
 
@@ -32,22 +31,6 @@ const Footer: React.FC = () => {
         </div>
 
         <div className={s.socials}>
-        <a
-            href="https://t.me/hkd_com"
-            className={s.socialLink}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <img src={tele} alt="tele" className={s.logoSoc} />
-          </a>
-          <a
-            href="https://www.instagram.com/metabunny.nft/"
-            className={s.socialLink}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <img src={ig} alt="disc" className={s.logoSoc} />
-          </a>
           <a
             href="https://discord.com/invite/UA8Z3fRR"
             className={s.socialLink}
@@ -56,6 +39,16 @@ const Footer: React.FC = () => {
           >
             <img src={disc} alt="disc" className={s.logoSoc} />
           </a>
+
+          <a
+            href="https://www.instagram.com/metabunny.nft/"
+            className={s.socialLink}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img src={ig} alt="disc" className={s.logoSoc} />
+          </a>
+
           <a
             href="https://twitter.com/metabunnynft"
             rel="noopener noreferrer"
@@ -64,19 +57,18 @@ const Footer: React.FC = () => {
           >
             <img src={twit} alt="twit" className={s.logoSoc} />
           </a>
+          <a
+            href="https://t.me/hkd_com"
+            className={s.socialLink}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img src={tele} alt="tele" className={s.logoSoc} />
+          </a>
         </div>
         <span>{t('footer.remark')}</span>
-        <br />
-        <div className={s.cp}>
-        <div className={s.powered}>
-          <div className={s.desc}>Powered by</div>
-            <img src={hkd} alt='' className={s.hkd} />
-            <img src={eth} alt='' className={s.eth} />
-          </div>
-        </div>
       </div>
       <img src={bg} alt="bg" className={s.bgImg} />
-     
     </footer>
   );
 };

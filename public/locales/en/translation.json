@@ -3,7 +3,8 @@
     "project": "project",
     "roadmap": "roadmap",
     "team": "team",
-    "faq": "faq"
+    "faq": "faq",
+    "litepaper": "litepaper"
   },
   "button": {
     "connect": "connect wallet",

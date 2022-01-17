@@ -1,11 +1,18 @@
 import React, { useCallback, useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import nextId from 'react-id-generator';
+import OutsideClickHandler from 'react-outside-click-handler';
+import ReactPlayer from 'react-player';
 import cn from 'classnames';
+import moment from 'moment';
 
+import { ReactComponent as IconArrow } from '../../../assets/img/icons/arrowBottom.svg';
 import banner from '../../../assets/img/sections/landing/header/banner.png';
 import disc from '../../../assets/img/sections/landing/header/disc.png';
-import tele from '../../../assets/img/sections/landing/header/tele.png';
 import ig from '../../../assets/img/sections/landing/header/ig.png';
 import logo from '../../../assets/img/sections/landing/header/logo.png';
+import overview from '../../../assets/img/sections/landing/header/overview.png';
+import tele from '../../../assets/img/sections/landing/header/tele.png';
 import twit from '../../../assets/img/sections/landing/header/twit.png';
 import { is_production } from '../../../config/index';
 import { useModals } from '../../../context/Modal';
@@ -13,18 +20,11 @@ import { useWeb3Context } from '../../../context/WalletConnect';
 import { notify } from '../../../utils/notify';
 import Burger from '../../atoms/Burger';
 import Button from '../../atoms/Button';
-import overview from '../../../assets/img/sections/landing/header/overview.png';
 import WalletModal from '../../molecules/Modals/WalletModal';
-import ReactPlayer from 'react-player';
-import OutsideClickHandler from 'react-outside-click-handler';
-import { ReactComponent as IconArrow } from '../../../assets/img/icons/arrowBottom.svg';
-import nextId from 'react-id-generator';
 
 import MobileMenu from './MobileMenu';
 
 import s from './Header.module.scss';
-import { useTranslation } from 'react-i18next';
-import moment from 'moment';
 
 const languages = ['English', 'Русский', '中文'];
 
@@ -59,7 +59,6 @@ const Header: React.FC = () => {
     localStorage.metabunny_lang && localStorage.metabunny_lang === 'ru'
       ? languages[1]
       : languages[0],
-      
   );
 
   const [timeBeforeEnd, setTimeBeforeEnd] = useState(timeToDate(PRESALE_DATE_END));
@@ -239,22 +238,6 @@ const Header: React.FC = () => {
 
           <div className={s.right}>
             <div className={s.socials}>
-            <a
-                href="https://t.me/hkd_com"
-                className={s.socialLink}
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <img src={tele} alt="tele" className={s.logoSoc} />
-              </a>
-              <a
-                href="https://www.instagram.com/metabunny.nft/"
-                className={s.socialLink}
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <img src={ig} alt="ig" className={s.logoSoc} />
-              </a>
               <a
                 href="https://discord.com/invite/UA8Z3fRR"
                 className={s.socialLink}
@@ -264,12 +247,29 @@ const Header: React.FC = () => {
                 <img src={disc} alt="disc" className={s.logoSoc} />
               </a>
               <a
+                href="https://www.instagram.com/metabunny.nft/"
+                className={s.socialLink}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <img src={ig} alt="ig" className={s.logoSoc} />
+              </a>
+
+              <a
                 href="https://twitter.com/metabunnynft"
                 rel="noopener noreferrer"
                 target="_blank"
                 className={s.socialLink}
               >
                 <img src={twit} alt="twit" className={s.logoSoc} />
+              </a>
+              <a
+                href="https://t.me/hkd_com"
+                className={s.socialLink}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <img src={tele} alt="tele" className={s.logoSoc} />
               </a>
             </div>
             <Translate />
@@ -295,7 +295,6 @@ const Header: React.FC = () => {
         )}
       </header>
       <div className={s.bannerWrapper}>
-
         <ReactPlayer
           className={s.video}
           width="100%"
@@ -318,11 +317,16 @@ const Header: React.FC = () => {
 
         <img src={banner} alt="banner" className={s.banner} />
         <img src={overview} alt="overview" className={s.overview} />
-        <Button
-          title={t('button.mint')}
-          className={s.bannerButton}
-          onClick={() => setModal(user.address ? 'txHash' : 'wallet')}
-        />
+        <div className={s.bcontent}>
+          <Button
+            title={t('button.mint')}
+            className={s.bannerButton}
+            onClick={() => setModal(user.address ? 'txHash' : 'wallet')}
+          />
+          <a href="litepaper.pdf" target="_blank" rel="noreferrer">
+            <Button title={t('navigation.litepaper')} className={s.bannerButton2} />
+          </a>
+        </div>
         <div className={s.foot}> </div>
       </div>
     </>
