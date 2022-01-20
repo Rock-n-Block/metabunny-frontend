@@ -34,6 +34,15 @@ const MobileMenu: FC<Props> = ({ className, connectWallet, toggleMenu }) => {
     <div className={cx(s.container, className)}>
       <div className={s.nav}>
         <div
+          onClick={() => handleScroll('whitelist')}
+          tabIndex={0}
+          onKeyDown={() => {}}
+          role="button"
+          className={s.link}
+        >
+          {t('whitelist.title')}
+        </div>
+        <div
           onClick={() => handleScroll('project')}
           tabIndex={0}
           onKeyDown={() => {}}
@@ -41,24 +50,6 @@ const MobileMenu: FC<Props> = ({ className, connectWallet, toggleMenu }) => {
           className={s.link}
         >
           {t('navigation.project')}
-        </div>
-        <div
-          onClick={() => handleScroll('team')}
-          tabIndex={0}
-          onKeyDown={() => {}}
-          role="button"
-          className={s.link}
-        >
-          {t('navigation.team')}
-        </div>
-        <div
-          onClick={() => handleScroll('roadmap')}
-          tabIndex={0}
-          onKeyDown={() => {}}
-          role="button"
-          className={s.link}
-        >
-          {t('navigation.roadmap')}
         </div>
         <div
           onClick={() => handleScroll('Faq')}

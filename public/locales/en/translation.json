@@ -1,12 +1,23 @@
   {
     "navigation": {
     "project": "project",
+    "sales": "Initial Launch",
     "roadmap": "roadmap",
     "team": "team",
     "faq": "faq",
     "litepaper": "litepaper"
   },
-    "guide": {
+  "benefits":  {
+    "title": "Benefits as a MetaBunny Holder",
+    "01": "1. Join the Private Sale of HDAO, HKD.com Digital Asset Exchange Platform Token and premium exchange rates",
+    "02": "2. Get free MetaBunny Airdrop",
+    "03": "3. Join exclusive Sandbox Metaverse Events",
+    "04": "4. Privilege to buy Limited Edition MetaBunny Figures and Goods",
+    "05": "5. Free entry to MetaBunny private event at the Club ZFU",
+    "06": "6. MetaBunny Holders can also go to 3 HK Physical store to claim a free 4G LTE prepaid card, as well as get a HKD500 discount on buying iPhone 13 / 12% off on buying Android phones"
+  },
+  "guide": {
+    "how": "how to mint?",
     "title": "How to mint from the official website?",
     "step1": "Step 1. Click the mint button",
     "step1texta": "Click on the mint button located in the centre of the official website",
@@ -18,6 +29,18 @@
     "step3texta": "Choose your desired purchase quantity and click mint. A window will pop up confirming the purchase amount along with the associated gas fee (gas fee will fluctuate depending on the traffic condition on the Ethereum Blockchain). Check your order and click confirm",
     "step4": "Done!"
   },
+  "whitelist": {
+    "title": "How to get whitelist?",
+    "01": "Whitelist Instructions:",
+    "02": "1. Follow  ",
+    "03": "and",
+    "04": "2. Join our ",
+    "05": "3. Do one of the followings:",
+    "06": "Twitter: Like, RT and tag 3 friends under this tweet ",
+    "07": "Instagram: like, share and tag 3 friends on this post  ",
+    "08": "4. Download the HKD.com App and sign up with HKD.com ",
+    "09": "Once you have done the above, fill in the form here for your whitelist!"
+  },
   "button": {
     "connect": "connect wallet",
     "mint": "mint",
@@ -28,12 +51,14 @@
     "ok": "ok"
   },
   "intro": {
-    "text": "Meta Bunny consists of 10,000 Bunnies completely generated via computer algorithm. Their existence is to scare people but unfortunately not all of them looks scary. Sadly some are even cute! Every Bunny has a scary meter which represents how scary are they. This will be based on their accessory, appearance and the location they choose to scare people.",
+    "text": "MetaBunny consists of 10,000 Bunnies completely generated via computer algorithm. Their existence is to scare people but unfortunately not all of them looks scary. Sadly some are even cute! Every Bunny has a scary meter which represents how scary are they. This will be based on their accessory, appearance and the location they choose to scare people. Presale 20th 4PM HKT, 0.26 eth each. Public Launch 21st 4PM HKT, 0.26 eth each",
+    "text2": "",
+    "text3": "",
     "preview": {
       "text1.1": "Being the NFT holder will grant you access to our Closed Alpha testing for the Bunnyverse. Not only will you be able to traverse the Bunnyverse, as an NFT holder you will also have a vote on the direction on how you want the project to turn out.",
-      "text2": "We will be creating a game for Metabunny which you will run around and try to scare people. The more the people felt scared, the more in game tokens ($CARATS) you can earn. Therefore your Metabunny’s Scary Meter will affect how much in game tokens you can earn!",
-      "text3.1": "NFT holders can also choose to stake Metabunnies to earn $CARATS and can be used for: 1) in game token for the upcoming Bunnyverse Project 2) To purchase future exclusive merchandise",
-      "text4": "If you’re a fan of our campaign for closer diplomatic relations between Metabunny, show your pride with our wide range of merchandise below.",
+      "text2": "We will be creating a game for MetaBunny which you will run around and try to scare people. The more the people felt scared, the more in game tokens ($CARROT) you can earn. Therefore your MetaBunny’s Scary Meter will affect how much in game tokens you can earn!",
+      "text3.1": "NFT holders can also choose to stake MetaBunny to earn $CARROT and can be used for: 1) in game token for the upcoming Bunnyverse Project 2) To purchase future exclusive merchandise",
+      "text4": "If you’re a fan of our campaign for closer diplomatic relations between MetaBunny, show your pride with our wide range of merchandise below.",
       "bunnyverse": "bunnyverse",
       "gamefi": "gamefi",
       "staking": "staking",
@@ -49,10 +74,10 @@
       "40": "Bunnyverse (H2 2022)"
     },
     "percents": {
-      "10": "We want to create a strong community filled with fun and games. Our NFT acts as a membership to our community where we will have regular game nights, contests and events with lucrative prizes and raffles. The giveaways will be handed out based on the scoreboard and will be reset monthly. The design of every traits of each Metabunny had gone over many discussions before the finalising. We want to make sure every Metabunny will be unique with some being cute and others being scary. Each Metabunny will be classified by their Scary Meter on deciding which type it will be.  ",
-      "20": "1-2 months down the road after launch, we will allow Metabunnies to be staked in order to earn $CARATS. $CARATS is the utility token for our Metabunny Project and can be used to purchase future exclusive merchandises which will be exclusive to Metabunny Holders. The purpose of staking is to provide overtime value for our Metabunny holders in order to maintain a high floor price. We currently have no plans to list on DEXes as we want to make the token exclusive only to diamond hands(small letters) $CARATS will only be used for the Metabunny Ecosystem, our merchandise and has no real monetary value.",
-      "30": "We will introduce the MetaDinosaur after the staking is made available. The MetaDinosaur is scarier than any Metabunny and is only available to mint when ETH drops to a certain amount of threshold in a day. The Threshold will be varied and an announcement will be made available to everyone so that it won’t be missed but nobody will know exactly when it will happen. NFT holders can choose 2 Metabunnies and pay a certain amount of $CARATS to fuse into a MetaDinosaur. The maximum number of MetaDinosaur that can be minted will be 5,000 and each Metabunny can only be used for fusion once! More information on MetaDinosaur will be revealed later.",
-      "40": "The Metabunny will be expanded to the Game-Fi sector and ultimately, its own Metaverse which we will call Bunnyverse. We will integrate every Metabunny into the Bunnyverse so that Metabunny owners will be able to choose an avatar based on the appearance of their Metabunnies. There will be a “Scary to Earn” Mechanism where the more scary the bunny is, the more $CARATS it can earn. We will also be collaborating with other projects to build an exciting and diverse Bunnyverse for everyone.Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased)"
+      "10": "We want to create a strong community filled with fun and games. Our NFT acts as a membership to our community where we will have regular game nights, contests and events with lucrative prizes and raffles. The giveaways will be handed out based on the scoreboard and will be reset monthly. The design of every traits of each MetaBunny had gone over many discussions before the finalising. We want to make sure every MetaBunny will be unique with some being cute and others being scary. Each MetaBunny will be classified by their Scary Meter on deciding which type it will be.  ",
+      "20": "1-2 months down the road after launch, we will allow MetaBunny to be staked in order to earn $CARROT. $CARROT is the utility token for our MetaBunny Project and can be used to purchase future exclusive merchandises which will be exclusive to MetaBunny Holders. The purpose of staking is to provide overtime value for our MetaBunny holders in order to maintain a high floor price. We currently have no plans to list on DEXes as we want to make the token exclusive only to diamond hands(small letters) $CARROT will only be used for the MetaBunny Ecosystem, our merchandise and has no real monetary value.",
+      "30": "We will introduce the MetaDinosaur after the staking is made available. The MetaDinosaur is scarier than any MetaBunny and is only available to mint when ETH drops to a certain amount of threshold in a day. The Threshold will be varied and an announcement will be made available to everyone so that it won’t be missed but nobody will know exactly when it will happen. NFT holders can choose 2 MetaBunny and pay a certain amount of $CARROT to fuse into a MetaDinosaur. The maximum number of MetaDinosaur that can be minted will be 5,000 and each MetaBunny can only be used for fusion once! More information on MetaDinosaur will be revealed later.",
+      "40": "The MetaBunny will be expanded to the Game-Fi sector and ultimately, its own Metaverse which we will call Bunnyverse. We will integrate every MetaBunny into the Bunnyverse so that MetaBunny owners will be able to choose an avatar based on the appearance of their MetaBunny. There will be a “Scary to Earn” Mechanism where the more scary the bunny is, the more $CARROT it can earn. We will also be collaborating with other projects to build an exciting and diverse Bunnyverse for everyone.Daily Crypto raffle to all members (every day will be different for which crypto be drawn from the raffle (If OG members are chosen, the reward will be increased)"
     }
   },
   "team": {
@@ -71,7 +96,7 @@
   },
   "community": {
     "title": "community",
-    "text": "We are a group of people that love games and fun, so we want the community to be like that as well! There will be contests held regularly including but not limited to Trivia, Poker nights, Tabletop games, Puzzle games, Meme contests and many more which some will be decided via voting among the community. There will be scoreboards of each game and the member ranked 1st as well as the most participated member of each month will receive a special 1 of 1 Metabunny."
+    "text": "We are a group of people that love games and fun, so we want the community to be like that as well! There will be contests held regularly including but not limited to Trivia, Poker nights, Tabletop games, Puzzle games, Meme contests and many more which some will be decided via voting among the community. There will be scoreboards of each game and the member ranked 1st as well as the most participated member of each month will receive a special 1 of 1 MetaBunny."
   },
   "faq": {
     "faq1": {
@@ -79,23 +104,23 @@
       "text": "Non-Fungible Token (NFT) is a unique and non-interchangeable unit of data on the blockchain stored on a digital ledger. Its purpose is to establish the proof of ownership of digital assets such as jpg, videos, gifs and more."
     },
     "faq2": {
-      "title": "What is a Metabunny?",
-      "text": "Metabunny is an NFT created by a team of NFT enthusiasts who would like to build a community full of fun and games! Every Metabunny has a scary meter which will determine how scary or cute the bunny is. The more scary you are, or in some cases the less scary you are, the more rewards you will be able to yield!"
+      "title": "What is a MetaBunny?",
+      "text": "MetaBunny is an NFT created by a team of NFT enthusiasts who would like to build a community full of fun and games! Every MetaBunny has a scary meter which will determine how scary or cute the bunny is. The more scary you are, or in some cases the less scary you are, the more rewards you will be able to yield!"
     },
     "faq3": {
-      "title": "What can I do with my Metabunny?",
-      "text": "Each Metabunny acts as a membership to join our community where many different events such as poker nights, video game contests, art contests, trivia game awaits you. You will also be able to buy merchandises as well as receiving other benefits exclusive to Metabunny owners. Be sure to change your social media’s profile picture and tell your friends and family about it!"
+      "title": "What can I do with my MetaBunny?",
+      "text": "Each MetaBunny acts as a membership to join our community where many different events such as poker nights, video game contests, art contests, trivia game awaits you. You will also be able to buy merchandises as well as receiving other benefits exclusive to MetaBunny owners. Be sure to change your social media’s profile picture and tell your friends and family about it!"
     },
     "faq4": {
-      "title": "How can I get a Metabunny?",
-      "text": "In order to get a Metabunny, all you need is a MetaMask wallet with some Ethereum in it, then you are good to go!"
+      "title": "How can I get a MetaBunny?",
+      "text": "In order to get a MetaBunny, all you need is a MetaMask wallet with some Ethereum in it, then you are good to go!"
     },
     "faq5": {
-      "title": "Where can I get my Metabunny?",
-      "text": "You can get a Metabunny through our website when our presale and public sale launches. After that, it will be available for purchase on Opensea for second hand purchases."
+      "title": "Where can I get my MetaBunny?",
+      "text": "You can get a MetaBunny through our website when our presale and public sale launches. After that, it will be available for purchase on Opensea for second hand purchases."
     },
     "faq6": {
-      "title": "When can I get my Metabunny?",
+      "title": "When can I get my MetaBunny?",
       "text": "Stay tuned for updates on our Twitter, Official Website, Discord Channel for any news regarding to the launch time and our future plans!"
     },
     "faq7": {
@@ -107,7 +132,7 @@
     "title": "account",
     "text": "Connected with",
     "disconnect": "Disconnect",
-    "delete": "If you want to disconnect your wallet please delete metabunny.io from connected sites in MetaMask",
+    "delete": "If you want to disconnect your wallet please delete MetaBunny.io from connected sites in MetaMask",
     "copy": "Copy address",
     "success": "Success!"
   },

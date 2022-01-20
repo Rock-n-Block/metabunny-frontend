@@ -245,6 +245,22 @@
     padding-bottom: 50px;
   }
 }
+.text2 {
+  width: 80%;
+  margin: auto;
+  text-align: left;
+  line-height: 30px;
+  li{
+    margin: 1em 0;
+    display: block;
+    position: relative;
+    line-height:20px;
+  }
+  @include b(mobile) {
+    width: 100%;
+    padding-bottom: 50px;
+  }
+}
 video {
   position: absolute;
   object-fit: cover;

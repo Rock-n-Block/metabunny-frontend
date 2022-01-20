@@ -31,7 +31,7 @@ function timeToDate(date: string) {
   return { days, hours, mins, sec };
 }
 
-const PRESALE_DATE_END = '2021-09-19T21:00:00';
+const PRESALE_DATE_END = '2022-01-20T16:00:00';
 const TIME_FOR_UPDATE = 20000;
 
 const FirstBlockPresale: React.FC = () => {
@@ -188,20 +188,9 @@ const FirstBlockPresale: React.FC = () => {
       ))}
 
       <div className={s.block_inner}>
-        {/* <div className={s.left}>
-          <div className={s.devil}>
-            <img src={devil} alt="devil" />
-          </div>
-          <div className={s.light}>
-            <img src={light} alt="light" />
-          </div>
-          <div className={s.cosmo}>
-            <img src={cosmo} alt="cosmo" />
-          </div>
-        </div> */}
-        <div className={s.right}>
+        <div className={s.content}>
           <div className={`${s.title} anim`}>
-            Presale Launch <span>starts in</span>
+            Initial Launch
             <span className={s.white}>…</span>
           </div>
           <div className={`${s.date} anim`}>
@@ -222,9 +211,6 @@ const FirstBlockPresale: React.FC = () => {
               <div className={s.date_item__subtitle}>Sec</div>
             </div>
           </div>
-          <button type="button" onClick={() => setModal('wallet')} className={`${s.mint} anim`}>
-            mint presale
-          </button>
         </div>
       </div>
     </section>

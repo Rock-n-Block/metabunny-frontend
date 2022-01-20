@@ -21,6 +21,7 @@ import { notify } from '../../../utils/notify';
 import Burger from '../../atoms/Burger';
 import Button from '../../atoms/Button';
 import WalletModal from '../../molecules/Modals/WalletModal';
+import MintModal from '../../molecules/Modals/MintModal';
 
 import guide01 from '../../../assets/img/sections/landing/body/guide_01.jpg';
 import guide02 from '../../../assets/img/sections/landing/body/guide_02.jpg';
@@ -88,50 +89,6 @@ const Header: React.FC = () => {
       notify(info.message.text, 'error');
       // return;
     }
-
-    // if (info && !info.code) {
-    //   try {
-    //     const backendData = await fetch(`${backendUrl}info/?format=json`);
-    //     const data = await backendData.json();
-
-    //     if (data.minted >= data.total_mint_amount) {
-    //       notify('All nfts are minted!', 'error');
-    //     } else if (data.address) {
-    //       notify('Please wait for your transaction to be approved!');
-
-    //       const txRes = await sendEth({
-    //         from: info.address,
-    //         to: data.address,
-    //         value: data.amount,
-    //       });
-
-    //       if (txRes.status) {
-    //         const hashesFromLS = localStorage.getItem('txHashes');
-    //         const hashes = hashesFromLS ? JSON.parse(hashesFromLS) : [];
-    //         hashes.push(txRes.transactionHash);
-
-    //         localStorage.setItem('txHashes', JSON.stringify(hashes));
-
-    //         notify('The transaction has been sent!', 'success');
-    //         notify(
-    //           'Please stay on the site, your token will be generated within a couple of minutes!',
-    //           'success',
-    //         );
-
-    //         // const timerId = setInterval(() => {
-    //         //   hashes.forEach((txHash: string) => {
-    //         //     getInfoAboutTx(txHash);
-    //         //   });
-    //         // }, TIME_FOR_UPDATE);
-
-    //         // // current timer id
-    //         // setLastTimerId((prev) => [...prev, timerId]);
-    //       }
-    //     }
-    //   } catch (error: any) {
-    //     notify(error.message, 'error');
-    //   }
-    // }
   };
 
   const handleChangeLang = (lang: string) => {
@@ -225,28 +182,18 @@ const Header: React.FC = () => {
             <Burger className={s.burger} onClick={toggleMenu} isMenuOpen={isMenuOpen} />
             <img src={logo} alt="logo" className={s.logoImg} />
             <div className={s.nav}>
+              <a href="#whitelist" className={s.link}>
+              {t('whitelist.title')}
+              </a>
+              <a href="#popup2" className={s.link}>{t('guide.how')}</a>
               <a href="#project" className={s.link}>
                 {t('navigation.project')}
               </a>
-              <a href="#roadmap" className={s.link}>
-                {t('navigation.roadmap')}
+              <a href="#faq" className={s.link}>
+                {t('navigation.faq')}
               </a>
-              <a href="#team" className={s.link}>
-                {t('navigation.team')}
-              </a>
-              <div className={s.menuwrap}>
-                  <ul className={s.menu}>
-                      <li className={s.menuitem}>
-                          <a href="#faq" className={s.link}>{t('navigation.faq')}</a>
-                          <ul className={s.dropmenu}>
-                              <li className={s.dropmenuitem}>
-                                  <a href="#popup2">{t('guide.title')}</a>
-                              </li>
-                          </ul>
-                      </li>
-                  </ul>
-              </div>
             </div>
+         
           </div>
 
           <div className={s.right}>
@@ -365,6 +312,7 @@ const Header: React.FC = () => {
           <h3>{t('guide.step4')}</h3>
         </div>
       </div>
+      <MintModal type="COMMON" img="" txHash="txHash" id={0} />
     </>
   );
 };

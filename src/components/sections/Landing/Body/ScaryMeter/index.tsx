@@ -116,10 +116,22 @@ const ScaryMeter: React.FC = () => {
   return (
     <section className={s.section} id="project">
       <div className={s.content}>
-      <div className={s.title}>{t('project')}</div>
+        <div className={s.title}>{t('project')}</div>
         <div className={s.info}>
           <div className={s.text}>{t('intro.text')}</div>
         </div>
+        <div className={s.title}>{t('benefits.title')}</div>
+        <div className={s.info}>
+          <div className={s.text2}>
+            <li>{t('benefits.01')}</li>
+            <li>{t('benefits.02')} </li>
+            <li>{t('benefits.03')}</li>
+            <li>{t('benefits.04')}</li>
+            <li>{t('benefits.05')}</li>
+            <li>{t('benefits.06')}</li>
+          </div>
+        </div>
+        
         <div className={s.top}>
           <div className={s.left}>
             <div className={s.levels}>

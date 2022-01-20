@@ -1,6 +1,6 @@
 import { IChainConfig, IConnectWallet } from '../types/index';
 
-export const is_production = false;
+export const is_production = true;
 
 export const show_logs = true;
 
@@ -11,7 +11,7 @@ export const open_sea_link = '';
 export const backendUrl = is_production ? '' : '';
 
 export const chain: IChainConfig = {
-  name: is_production ? 'Ethereum Mainnet' : 'Ethereum Testnet Rinkeby',
+ name: is_production ? 'Ethereum Mainnet' : 'Ethereum Testnet Rinkeby',
   id: is_production ? 1 : 4,
   rpc: '',
   tx: {
@@ -23,7 +23,7 @@ export const chain: IChainConfig = {
     decimals: 18,
   },
   blockExp: is_production ? '' : '',
-  contractAddress: is_production ? '' : '0x1c1bb98d74435918e0a2e4c6b93de7605b9c5f5a',
+  contractAddress: is_production ? '0x21ce4608ba98d782e6754801a48b77f5cf427468' : '0x1c1bb98d74435918e0a2e4c6b93de7605b9c5f5a',
 };
 
 export const connectWalletConfig: IConnectWallet = {

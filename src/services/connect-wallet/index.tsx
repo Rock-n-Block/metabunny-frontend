@@ -3,7 +3,7 @@ import { metabunnyAbi } from '../../config/abi';
 import Web3 from 'web3';
 import i18n from 'i18next';
 
-import { chain, connectWalletConfig } from '../../config/index';
+import { chain, connectWalletConfig, is_production } from '../../config/index';
 import { clogData } from '../../utils/logger';
 import { notify } from '../../utils/notify';
 import BigNumber from 'bignumber.js';
@@ -159,7 +159,11 @@ export class WalletConnect {
           <>
             <span>{this.t('toast.mintProgress')}</span>
             <a
-              href={`https://rinkeby.etherscan.io/tx/${transactionHash}`}
+              href={
+                is_production
+                  ? `https://etherscan.io/tx/${transactionHash}`
+                  : `https://rinkeby.etherscan.io/tx/${transactionHash}`
+              }
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -178,7 +182,11 @@ export class WalletConnect {
                   {this.t('toast.minted1')} {amount} {this.t('toast.minted2')}{' '}
                 </span>
                 <a
-                  href={`https://testnets.opensea.io/${result.from}`}
+                  href={
+                    is_production
+                      ? `https://opensea.io/${result.from}`
+                      : `https://testnets.opensea.io/${result.from}`
+                  }
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -192,7 +200,11 @@ export class WalletConnect {
               <>
                 <span>{this.t('toast.minted3')} </span>
                 <a
-                  href={`https://testnets.opensea.io/assets/${chain.contractAddress}/${result.events.Transfer.returnValues.tokenId}`}
+                  href={
+                    is_production
+                      ? `https://opensea.io/assets/${chain.contractAddress}/${result.events.Transfer.returnValues.tokenId}`
+                      : `https://testnets.opensea.io/assets/${chain.contractAddress}/${result.events.Transfer.returnValues.tokenId}`
+                  }
                   target="_blank"
                   rel="noopener noreferrer"
                 >

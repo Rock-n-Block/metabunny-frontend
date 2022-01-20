@@ -9,6 +9,7 @@ import plogo2 from '../../../../../assets/img/icons/plogo2.png';
 import plogo3 from '../../../../../assets/img/icons/plogo3.jpg';
 import plogo4 from '../../../../../assets/img/icons/plogo4.png';
 import plogo5 from '../../../../../assets/img/icons/plogo5.png';
+import plogo6 from '../../../../../assets/img/icons/plogo6.jpg';
 import s from './FAQ.module.scss';
 
 interface IFAQItemProps {
@@ -33,6 +34,7 @@ const FAQItem: React.FC<IFAQItemProps> = ({ title, subtitle }) => {
       </div>
       <div className={cn(s.item_subtitle, { [s.active]: isOpen })}>{subtitle}</div>
     </div>
+    
   );
 };
 
@@ -70,12 +72,7 @@ const FAQ: React.FC = () => {
         id: 6,
         title: t('faq.faq6.title'),
         subtitle: t('faq.faq6.text'),
-      },
-      {
-        id: 7,
-        title: t('faq.faq7.title'),
-        subtitle: t('faq.faq7.text'),
-      },
+      }
     ],
     [t],
   );
@@ -89,9 +86,25 @@ const FAQ: React.FC = () => {
             <FAQItem key={data.id} {...data} />
           ))}
         </div>
+        <div className={s.title} id="whitelist">{t('whitelist.title')}</div>
+        <div className={s.text}>
+          <li><b>{t('whitelist.01')}</b></li>
+          <li>{t('whitelist.02')}<a href="https://twitter.com/metabunnynft" target="_blank" rel="noreferrer">https://twitter.com/metabunnynft</a>{t('whitelist.03')}<a href="https://instagram.com/metabunny.nft" target="_blank" rel="noreferrer">https://instagram.com/metabunny.nft</a></li>
+          <li>{t('whitelist.04')}<a href="https://discord.gg/metabunnynft" target="_blank" rel="noreferrer">https://discord.gg/metabunnynft</a></li>
+          <li>
+          {t('whitelist.05')}<br />
+          {t('whitelist.06')}<a href="https://twitter.com/metabunnynft/status/1482668240371601417" target="_blank" rel="noreferrer">https://twitter.com/metabunnynft/status/1482668240371601417</a>
+          {t('whitelist.07')}<a href="https://www.instagram.com/p/CYyfJ_PL5Yj/" target="_blank" rel="noreferrer">https://www.instagram.com/p/CYyfJ_PL5Yj/</a>
+          </li>
+          <li>
+          {t('whitelist.08')}<a href="https://www.hkd.com/download/en.html" target="_blank" rel="noreferrer">https://www.hkd.com/download/en.html</a>
+          </li>
+          <li>
+          {t('whitelist.09')}<a href="https://forms.gle/3YDYybax9cZJrE3c6" target="_blank" rel="noreferrer">https://forms.gle/3YDYybax9cZJrE3c6</a></li>
+        </div>
       </div>
 
-            <div className={s.logo} id="logo">
+       <div className={s.logo} id="logo">
         <div className={s.creator}>
           <div className={s.subTitle}>Creator:</div>
           <a href="https://www.hkd.com/" target="_blank" rel="noreferrer">
@@ -100,19 +113,27 @@ const FAQ: React.FC = () => {
         </div>
         <div className={s.partners}>  
           <div className={s.subTitle}>Partners:</div>
-            <a href="https://www.three.com.hk/tc/home.html" target="_blank" rel="noreferrer">
-              <img src={plogo5} alt="" className={s.logo5} />
-            </a>
+
             <a href="https://www.huobi.com/zh-cn/" target="_blank" rel="noreferrer">
-              <img src={plogo2} alt="" />
+              <img src={plogo2} alt=""  className={s.plogo2}/>
             </a>
             <a href="https://times.capital/" target="_blank" rel="noreferrer">
-              <img src={plogo3} alt="" />
+              <img src={plogo3} alt="" className={s.plogo3}/>
             </a>
             <a href="https://monaconft.io/discover" target="_blank" rel="noreferrer">
-              <img src={plogo1} alt="" />
+              <img src={plogo1} alt="" className={s.plogo1}/>
             </a>
+
          </div>
+          <div className={s.three}>  
+           <div className={s.subTitle}>Privileges Providers:</div>
+           <a href="https://www.three.com.hk/tc/home.html" target="_blank" rel="noreferrer">
+              <img src={plogo5} alt="" className={s.logo5} />
+            </a>
+            <a href="https://www.zfu.com/" target="_blank" rel="noreferrer">
+              <img src={plogo6} alt="" className={s.plogo6}/>
+            </a>
+          </div>
       </div>
     </section>
   );
